@@ -1,0 +1,274 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Living Specification",
+    "section": "",
+    "text": "Preface\nThank you for picking up this book.\nIf you’re anything like me, you’ve probably spent quite some time thinking about software engineering. Maybe you’ve gone through different methodologies, experimented with architectures, discovered new modeling techniques or simply learned through years of building software with other people.\nI certainly did.\nOver the last fifteen years I’ve been fortunate to work with many ideas that fundamentally changed how I think about software. Domain-Driven Design taught me that software should speak the language of the business. Event Sourcing showed me how business events can become the backbone of a system. Event Storming and later Event Modeling demonstrated how quickly people with different backgrounds can build a shared understanding when conversations are structured around those events. Team Topologies reminded me that software architecture and team communication cannot be separated. They continuously influence each other.\nNone of these ideas exist in isolation.\nEach solves a different part of the same problem.\nLooking back, I think that’s what fascinated me most. Every time I learned something new, it wasn’t replacing what I already knew. It became another piece of a much larger picture.\nThis book is my attempt to connect those pieces.\nIt isn’t a book about Domain-Driven Design.\nIt isn’t a book about Event Sourcing.\nIt isn’t a book about Event Storming.\nIt isn’t a book about Event Modeling.\nAnd despite the many screenshots, examples and workflows, it isn’t really a book about prooph board either.\nThose are all important topics and we’ll discuss many of them throughout the following chapters. But they’re means to an end.\nThe real subject of this book is how software teams can create, preserve and continuously evolve a shared understanding of the systems they build.\nFor many years, I thought this was simply good engineering practice.\nOnly recently did I realize that it had become something much bigger.\nAs AI agents entered software engineering, many discussions started revolving around prompts, context windows and code generation. Those topics are certainly important, but I couldn’t shake the feeling that they were addressing the wrong bottleneck.\nWriting code is no longer the difficult part.\nUnderstanding what should be built has become the scarce resource.\nThat’s where specifications suddenly moved to the center of software engineering.\nNot as static documents written at the beginning of a project and forgotten afterwards, but as living artifacts that continuously evolve together with the software itself.\nThat’s what I mean by a Living Specification.\nThroughout this book we’ll explore how specifications can become much more than documentation. They become design tools, communication tools, planning tools and eventually the shared language between humans and AI agents.\nThis book is written for engineers who enjoy understanding problems before implementing solutions.\nIt’s for product engineers, architects, Forward Deployed Engineers, technical founders and everyone who believes that software should remain understandable and adaptable long after the first release.\nIf you’re primarily looking for prompt engineering techniques or the fastest way to generate more code with AI, this probably isn’t the right book.\nIf, on the other hand, you’re interested in building software that remains easy to reason about as it evolves, I hope you’ll find ideas here that challenge your own way of thinking.\nOne final note before we begin.\nI don’t expect you to agree with everything I write.\nSoftware engineering has taught me to be suspicious of absolute truths. Every system is different. Every team is different. Every organization has different constraints.\nRead this book as an invitation to think.\nKeep what helps you.\nQuestion what doesn’t.\nAdapt the ideas to your own context.\nIf, by the end of this book, you find yourself asking better questions before writing software, then it has achieved exactly what I hoped for.\nWelcome.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Why I wrote this book",
+    "section": "",
+    "text": "I spent quite some time thinking about what this book should actually be about.\nAt first, I thought it would simply be a book about Event Modeling and prooph board. After all, that’s what I’ve been working on for many years. Event Modeling has become the backbone of prooph board and I’ve had countless discussions with customers, colleagues and workshop participants about why it works so well.\nThe more I thought about it, however, the more I realized that Event Modeling is only part of the story.\nThis book is really about software engineering.\nWhen I started my career, writing software and understanding the problem were closely connected. Of course we gathered requirements before touching the code, but the real understanding often emerged during implementation. That’s where I noticed inconsistencies in business rules, discovered missing requirements or suddenly realized that my mental model of the problem was incomplete.\nLooking back, I don’t think this was unusual. Agile development encouraged exactly this way of working. Build something, get feedback, learn, improve. The feedback cycles became shorter and software became better because of it.\nStill, something always bothered me.\nEvery important insight that emerged during implementation came at a price. By the time I discovered a misconception, I had already written code, discussed implementation details with colleagues and sometimes even built additional functionality on top of an assumption that turned out to be wrong. Sometimes the necessary correction was small. Sometimes it wasn’t. Either way, the thinking happened rather late in the process.\nAround 2018, I rediscovered something that, looking back, had probably always been there.\nI had already spent several years working with Domain-Driven Design and Event Sourcing. What fascinated me most wasn’t the architecture itself. It was the idea that software could be described in the language of the business. Business events became much more than technical messages. They became milestones in a story that everybody could understand, regardless of whether they wrote code or not.\nThat naturally led me to Event Storming.\nI loved the workshop format. Within a few hours, people with completely different backgrounds could build a shared understanding of a business process. Developers, domain experts, product owners and stakeholders suddenly spoke the same language. Instead of discussing abstract requirements, we talked about things that had happened, things that should happen next and why they mattered.\nBut something kept bothering me.\nAfter the workshop, what remained?\nMany experienced facilitators argued that the board itself wasn’t important. The real outcome was the conversations. Shared understanding had been created, so the artifact had served its purpose and could be thrown away.\nI understood the argument.\nBut it wasn’t enough for me.\nIf shared understanding is one of the most valuable outcomes of a workshop, why would we throw away the artifact that helped create it? More importantly, how should a team continue building that understanding once development starts and new people join the project months later?\nThat question stayed with me for quite a while.\nMy first experiments happened in Miro. I tried to keep Event Storming boards alive after the workshop instead of treating them as temporary artifacts. Gradually they became more than workshop notes. They became design artifacts. They became implementation plans. They became documentation. And the more I worked that way, the more I noticed that I was asking many of the same questions I previously only discovered while writing code.\nChanging a model was much cheaper than changing a code base.\nI could explore different ideas, validate them with domain experts, discover misconceptions and throw solutions away before they became expensive. Looking back, I think this was the moment when I started practicing what I would later call Spec-Driven Development, although the term didn’t exist for me at the time.\nThe whiteboard, however, slowly became the limiting factor.\nWhiteboards are fantastic for brainstorming because they allow almost anything. Living specifications need something different. They need structure. They need conventions. They need enough consistency that somebody joining the project six months later can understand what they’re looking at without first asking the original author.\nThat realization eventually led to prooph board.\nIt started as a better environment for remote Event Storming workshops. Later, Event Modeling became the central modeling technique because it provides the structure I had been looking for. Over time, prooph board evolved from a collaborative whiteboard into a platform for creating and maintaining living specifications.\nThen agents entered the stage.\nLike many developers, I was fascinated by how quickly they could turn an idea into working software. The first question everybody seemed to ask was how to write better prompts or how to make agents generate better code.\nThose are interesting questions.\nBut I found myself thinking about something else.\nAgents don’t discover the solution while implementing it.\nThey implement the solution we describe.\nFor decades, implementation had been part of our thinking process. We discovered missing requirements while coding. We challenged assumptions because the code forced us to think through every detail. Agents don’t work that way. They faithfully implement the understanding we already have.\nThat suddenly made something very obvious.\nThe engineering discipline I had gradually developed over the previous years hadn’t become less relevant.\nIt had become essential.\nThe thinking that used to happen during implementation now has to happen before implementation starts. Somehow, the industry had arrived at the same conclusion, only from the opposite direction.\nThis is where Spec-Driven Development begins.\nA specification isn’t just a document that describes a feature. It’s a place where ideas can be explored, challenged and validated before implementation begins. It captures conversations with domain experts, describes business processes, defines expected behaviour and provides enough context that humans and agents can collaborate without constantly rediscovering the same knowledge.\nA good specification doesn’t become obsolete once the first version of the software is shipped.\nSoftware evolves continuously.\nThe specification should evolve with it.\nOver time it becomes the shared understanding that allows a team to extend a system months or years later without reverse engineering their own decisions first.\nOne thing has also changed since I started working on prooph board.\nIn the beginning, I spent a lot of time talking about Event Sourcing because it had shaped my own thinking. Today, I rarely start there. Architecture is important, but long before implementation choices become relevant, teams need a shared understanding of the problem they’re trying to solve. They need to understand business processes, user interactions, edge cases, acceptance criteria and the language of the domain. Those conversations are valuable regardless of whether the final implementation uses Event Sourcing, CRUD, microservices or a monolith.\nThat’s the perspective I’d like to share in this book.\nWe’ll use Event Modeling as our primary way of thinking about software because I believe it provides an excellent foundation for creating living specifications. But we’ll also look beyond business processes. User interfaces deserve the same level of attention. Rich interactions are often just as difficult to understand and communicate as backend workflows. We’ll use techniques like Breadboarding, wireframe sketches and Given-When-Then scenarios whenever they help us build a better shared understanding of the system.\nIf there’s one thing I’d like you to take away from this book, it’s this:\nSoftware engineering has never been about writing code.\nWriting code was simply the activity that forced us to think.\nToday we have the opportunity to separate thinking from implementation. I believe that’s one of the biggest changes our profession has seen in decades. It changes our tools, our workflows and last but not least our role as software engineers.\nThis book is about making that change a conscious engineering practice.\nI hope my experiences over the last years can help you build software that doesn’t just work, but remains understandable, adaptable and enjoyable to evolve for many years to come.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Why I wrote this book</span>"
+    ]
+  },
+  {
+    "objectID": "thinking/shared-understanding.html",
+    "href": "thinking/shared-understanding.html",
+    "title": "2  Shared Understanding",
+    "section": "",
+    "text": "Truck unloading cars while another team tries to reconcile Excel sheets.\n\n\nIn 2013, I joined a large legacy modernization program at one of Europe’s most successful car rental companies. Most of the core system was still written in COBOL. Hard to maintain. Hard to evolve. Like many modernization projects, the obvious goal was to replace the old technology with something more modern.\nAt least that’s what I thought when I joined the project.\nI became part of the Infleet team. Our mission wasn’t only to modernize the existing system. We also wanted to simplify the entire infleet process and make it less error-prone. Looking back, I think that second part was much more interesting than the first, although I certainly didn’t realize it at the time.\nOne of the team’s biggest challenges was matching newly delivered vehicles to the yearly orders made by the purchasing department.\nYou might think that this should be a solved problem. Purchase orders cars. Manufacturers deliver cars. Someone confirms that everything arrived and puts the vehicles into service.\nThat’s not how the business worked.\nPurchase didn’t negotiate contracts for individual vehicles. They negotiated yearly contracts for vehicle models with different manufacturers. Every month, trucks arrived with new vehicles, often with different equipment or model variants than originally expected. As long as the delivered vehicles fulfilled the contract, the manufacturer had done nothing wrong.\nInfleet had a completely different problem.\nTheir work only started once those physical vehicles arrived at one of the rental locations. Someone had to figure out which delivered vehicle belonged to which ordered model pool. There was no electronic contract linking one to the other. Most of that work happened manually.\nEvery two weeks, people from Purchase, Infleet, Outfleet and Controlling met in a room full of Excel sheets. Each department had its own numbers. The goal was always the same: compare everything and find out whether the company had actually received what it had ordered.\nYou might imagine how well that worked.\nWe always joked that someone could probably operate a small shadow rental business with vehicles nobody would notice were missing. It was one of those engineering jokes that becomes funnier the longer you work on the system, because everyone knows there is more truth in it than they’d like to admit.\nWhy am I telling you this?\nYou see, it’s thirteen years ago and I can still feel the pain.\nTo be honest, I don’t remember much of the code anymore.\nWhat I do remember are the conversations. Sitting together with the people from Infleet. Listening to them explain why things worked the way they did. Walking over to the Purchase team because our understanding didn’t quite match theirs. Realizing that two departments could use almost the same words while talking about completely different things.\nBefore joining the project I had already read Eric Evans’ Domain-Driven Design (Evans 2003). In fact, reading the “Blue Book” was one of the requirements for joining the team. So the ideas weren’t new to me. I already knew what a Domain Expert was. I knew about Ubiquitous Language and Bounded Contexts.\nWhat the project gave me was something completely different.\nIt gave those concepts real people.\nSuddenly, Domain Experts weren’t a paragraph in a book anymore. They were the people sitting next to me every day, patiently explaining why Purchase thought about vehicle models while Infleet cared about physical vehicles. Ubiquitous Language stopped being a modeling concept and became something we constantly struggled with. Every conversation either increased or reduced our shared understanding of the business.\nLooking back, that’s probably the biggest thing I took away from those two years.\nSince then, direct collaboration with domain experts has become non-negotiable for me. Every project I’ve joined afterwards started with the same question: How do we get the right people into the same conversation? Because once that works, many of the technical decisions suddenly become much easier.\nIt also changed the way I approached conversations with domain experts.\nWhen I joined the project, I assumed that understanding the business meant learning the business terminology. It didn’t take long to realize that things were a little more complicated than that.\nTake the word vehicle.\nIt sounds like a perfectly reasonable business term. In fact, I think most developers would happily create a Vehicle class, a Vehicle table and probably a VehicleService without thinking twice about it.\nThat’s exactly what the legacy system had done.\nThe database contained more than five thousand tables, all somehow connected to a handful of central concepts. Vehicle was one of them. Looking at the schema, you could easily get the impression that the business revolved around vehicles.\nIt didn’t.\nThe longer we worked with the different departments, the more we realized that every one of them looked at the same business from a different perspective.\nPurchase didn’t really care about physical vehicles. Their job was negotiating contracts for vehicle models and making sure the company bought the right fleet for the coming year.\nInfleet had a completely different perspective. Their work only started once physical vehicles arrived at one of the rental locations.\nDamage Management looked at the same vehicle again, but from yet another angle. For them, it often represented an insurance case waiting to be clarified.\nThe interesting part is that nobody ever argued about those different perspectives.\nThey simply existed.\nThe people in the departments had worked that way for years. They instinctively knew what another colleague meant when talking about a vehicle.\nWe didn’t.\nAs developers, we had to learn that understanding the business wasn’t about memorizing terminology.\nIt was about understanding who was using a particular term, when they were using it and why they were looking at the business from that perspective.\nOnly then did the conversations start making sense.\nReading about concepts like Ubiquitous Language or Bounded Contexts is one thing. Sitting in a meeting where two departments unknowingly use the same word for different concepts is something completely different. That’s when those concepts stop being theory.\nThere was another observation that stayed with me long after the project had finished.\nOne of my colleagues spent almost two years reading COBOL code.\nHis job was to understand what the existing system actually did and document its behaviour in Word. Those documents then became the basis for discussions with domain experts. Sometimes they confirmed that everything was correct. Sometimes they told us that the system had behaved differently for years than the business actually expected. And every now and then they looked at each other because nobody was completely sure anymore.\nI still find that fascinating.\nToday we’d probably use Event Storming, Event Modeling or another collaborative modeling technique. Back then, Word documents were simply the best tool we had.\nThe interesting part wasn’t the tool anyway.\nIt was the conversations the documents enabled.\nOne thing became obvious very quickly.\nNobody could tell the complete story.\nPurchase could explain purchasing.\nInfleet could explain infleet.\nOur COBOL expert could explain what the system did.\nBut none of them could explain the entire business from end to end.\nThat’s why those Word documents became so valuable. They weren’t documentation in the traditional sense. They became a place where different pieces of the story slowly came together. Every review with domain experts filled another gap. Every discussion corrected another assumption. Bit by bit we developed something that nobody had when the project started: a shared understanding of how this part of the business actually worked.\nI didn’t appreciate that at the time.\nI thought we were documenting a legacy system so that we could replace it.\nOnly later did I realize what we were actually documenting Business knowledge.\nThe source code happened to be one place where parts of that knowledge still existed, but it was only one part of the story. Another part lived in the heads of experienced employees. Some of it was written down in old documents. Some of it had already disappeared completely. Every workshop, every review session and every discussion helped us recover another small piece.\nLooking back, I don’t think the biggest challenge was replacing COBOL.\nThe biggest challenge was understanding the business well enough that we could confidently change it.\nOnly then could we start modernizing the software.\nSo what were we actually creating during those two years?\nToday, I’d simply call it shared understanding.\nI don’t mean that everyone suddenly knew everything. That’s impossible in a business of that size, and even after two years I only understood a tiny part of it. Shared understanding doesn’t require everyone to know everything. It means that the people working together on a business capability develop the same mental model of their part of the business. They gradually learn to speak the same language, understand the same concepts and, just as importantly, know where the boundaries of their own understanding are.\nLooking back, that’s exactly what happened in our team.\nThe developers learned from the domain experts because we needed their knowledge to understand the business. At the same time, the domain experts learned from us because every question challenged assumptions that had never been questioned before. Purchase started understanding why Infleet struggled with matching delivered vehicles to yearly contracts. We started understanding why Purchase couldn’t simply order individual cars. None of that happened because someone wrote a perfect specification. It happened because people sat together, asked questions, challenged each other’s assumptions and slowly developed the same picture of the business.\nThat’s interesting because we usually describe software engineering as the discipline of building software.\nMy experience has been different.\nBefore you can build software, you first have to build a shared understanding of the business. Otherwise every architecture discussion is based on assumptions that nobody realizes they are making. Requirements get interpreted slightly differently by every person reading them. Conversations become translations between departments instead of collaborative problem solving.\nYou might still build good software.\nIn fact, many teams do.\nThe problem only appears later.\nEvery change becomes more expensive because the team first has to recover the understanding that was lost between meetings, documents and source code. That’s exactly what we experienced during the modernization project. We weren’t only replacing COBOL. We spent a considerable amount of time recovering business knowledge that had slowly disappeared from the organization over many years.\nSince then, I’ve seen the same pattern again and again.\nWhenever a project struggled, the visible problems were usually technical. The architecture wasn’t flexible enough. The backlog kept growing. Teams argued about requirements. Delivery became slower and slower. But when I looked a little deeper, the root cause was surprisingly often the same. Business and technology no longer shared the same understanding of the business they were trying to change.\nThat’s why direct collaboration with domain experts has become a non-negotiable requirement for me. Not because I believe they can write better requirements, but because requirements are only snapshots of what people know at a particular moment in time. Shared understanding is what allows a team to continuously make good decisions long after those requirements have been written down. It enables a team to reason together when the business changes, new information becomes available or yesterday’s assumptions turn out to be wrong.\nLooking back, this is probably the biggest lesson I took away from those two years.\nI no longer see software engineering primarily as the discipline of writing code.\nTo me, software engineering is the discipline of creating and maintaining shared understanding.\n\n\n\n\nEvans, Eric. 2003. Domain-Driven Design: Tackling Complexity in the Heart of Software. Addison-Wesley Professional.",
+    "crumbs": [
+      "Part I – Thinking Before Coding",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Shared Understanding</span>"
+    ]
+  },
+  {
+    "objectID": "thinking/living-specification.html",
+    "href": "thinking/living-specification.html",
+    "title": "3  The Living Specification",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will introduce the concept of living specifications, why specifications evolve, how they differ from documentation, and why they matter in a world of humans and AI agents working together.",
+    "crumbs": [
+      "Part I – Thinking Before Coding",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>The Living Specification</span>"
+    ]
+  },
+  {
+    "objectID": "storm/introduction.html",
+    "href": "storm/introduction.html",
+    "title": "4  Why We Start with Conversations",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explain why every good specification begins with a conversation (not a requirements document) and how structured conversations lead to shared understanding.",
+    "crumbs": [
+      "Part II – Storm",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Why We Start with Conversations</span>"
+    ]
+  },
+  {
+    "objectID": "storm/event-storming.html",
+    "href": "storm/event-storming.html",
+    "title": "5  Event Storming",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover the purpose, history, and practice of Event Storming. How a room full of orange sticky notes can reveal an entire business domain.",
+    "crumbs": [
+      "Part II – Storm",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Event Storming</span>"
+    ]
+  },
+  {
+    "objectID": "storm/asking-better-questions.html",
+    "href": "storm/asking-better-questions.html",
+    "title": "6  Asking Better Questions",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the role of the facilitator, the art of discovering knowledge through conversation, and why the right questions matter more than the right answers.",
+    "crumbs": [
+      "Part II – Storm",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Asking Better Questions</span>"
+    ]
+  },
+  {
+    "objectID": "design/from-understanding-to-structure.html",
+    "href": "design/from-understanding-to-structure.html",
+    "title": "7  From Understanding to Structure",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explain how the understanding gained through storming transforms into a structured design and why design is a discipline, not a one-time activity.",
+    "crumbs": [
+      "Part III – Design",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>From Understanding to Structure</span>"
+    ]
+  },
+  {
+    "objectID": "design/why-event-modeling.html",
+    "href": "design/why-event-modeling.html",
+    "title": "8  Why Event Modeling",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will make the case for Event Modeling as a design discipline, not just a diagram, but a way of thinking about software behavior over time.",
+    "crumbs": [
+      "Part III – Design",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Why Event Modeling</span>"
+    ]
+  },
+  {
+    "objectID": "design/from-events-to-specifications.html",
+    "href": "design/from-events-to-specifications.html",
+    "title": "9  From Events to Specifications",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how events become commands, read models, actors, and policies. The building blocks of a complete specification.",
+    "crumbs": [
+      "Part III – Design",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>From Events to Specifications</span>"
+    ]
+  },
+  {
+    "objectID": "design/specifying-user-interfaces.html",
+    "href": "design/specifying-user-interfaces.html",
+    "title": "10  Specifying User Interfaces",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore Breadboarding, wireframes, user flows, and how UI specifications become part of the living specification.",
+    "crumbs": [
+      "Part III – Design",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Specifying User Interfaces</span>"
+    ]
+  },
+  {
+    "objectID": "design/organizing-specifications.html",
+    "href": "design/organizing-specifications.html",
+    "title": "11  Organizing Specifications",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how to organize specifications in an easy-to-maintain structure, and how this organization provides context for both humans and AI agents.",
+    "crumbs": [
+      "Part III – Design",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Organizing Specifications</span>"
+    ]
+  },
+  {
+    "objectID": "validate/given-when-then.html",
+    "href": "validate/given-when-then.html",
+    "title": "12  Given-When-Then",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover acceptance criteria, behavior specifications, and the power of concrete examples to validate your understanding before writing any code.",
+    "crumbs": [
+      "Part IV – Validate",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Given-When-Then</span>"
+    ]
+  },
+  {
+    "objectID": "validate/finding-misconceptions-early.html",
+    "href": "validate/finding-misconceptions-early.html",
+    "title": "13  Finding Misconceptions Early",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the real value of modeling, finding what you got wrong before implementation makes it expensive to change.",
+    "crumbs": [
+      "Part IV – Validate",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Finding Misconceptions Early</span>"
+    ]
+  },
+  {
+    "objectID": "validate/quality-gates.html",
+    "href": "validate/quality-gates.html",
+    "title": "14  Quality Gates",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will introduce guardrails for your specification workflow, from simple use cases to business value validation and edge case discovery.",
+    "crumbs": [
+      "Part IV – Validate",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Quality Gates</span>"
+    ]
+  },
+  {
+    "objectID": "validate/ai-review.html",
+    "href": "validate/ai-review.html",
+    "title": "15  AI Review",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore how AI agents can critique and improve specifications, not implementation, but the specifications themselves.",
+    "crumbs": [
+      "Part IV – Validate",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>AI Review</span>"
+    ]
+  },
+  {
+    "objectID": "build/handing-specifications-to-agents.html",
+    "href": "build/handing-specifications-to-agents.html",
+    "title": "16  Handing Specifications to Agents",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how to provide context, slices, and incremental implementation tasks to AI agents, turning specifications into working software.",
+    "crumbs": [
+      "Part V – Build",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Handing Specifications to Agents</span>"
+    ]
+  },
+  {
+    "objectID": "build/human-agent-collaboration.html",
+    "href": "build/human-agent-collaboration.html",
+    "title": "17  Human-Agent Collaboration",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the feedback loop between humans and AI agents: reviewing, iterating, and collaborating on implementation.",
+    "crumbs": [
+      "Part V – Build",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Human-Agent Collaboration</span>"
+    ]
+  },
+  {
+    "objectID": "build/tracking-progress.html",
+    "href": "build/tracking-progress.html",
+    "title": "18  Tracking Progress",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will show how prooph board tracks implementation status, making progress visible across the entire specification.",
+    "crumbs": [
+      "Part V – Build",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Tracking Progress</span>"
+    ]
+  },
+  {
+    "objectID": "build/refactoring-specifications.html",
+    "href": "build/refactoring-specifications.html",
+    "title": "19  Refactoring Specifications",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will address what happens when software changes require specification changes and why both evolving together is a feature, not a problem.",
+    "crumbs": [
+      "Part V – Build",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Refactoring Specifications</span>"
+    ]
+  },
+  {
+    "objectID": "evolve/keeping-specifications-alive.html",
+    "href": "evolve/keeping-specifications-alive.html",
+    "title": "20  Keeping Specifications Alive",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will address the challenge of documentation rot and how living specifications avoid it by remaining connected to the evolving product.",
+    "crumbs": [
+      "Part VI – Evolve",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Keeping Specifications Alive</span>"
+    ]
+  },
+  {
+    "objectID": "evolve/teams.html",
+    "href": "evolve/teams.html",
+    "title": "21  Teams",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore how Domain-Driven Design, Team Topologies, and communication structures shape the way specifications are owned and evolved across teams.",
+    "crumbs": [
+      "Part VI – Evolve",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "evolve/product-engineering.html",
+    "href": "evolve/product-engineering.html",
+    "title": "22  Product Engineering",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will look ahead at the future of product engineering and how specifications become the interface between human intent and machine execution.",
+    "crumbs": [
+      "Part VI – Evolve",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Product Engineering</span>"
+    ]
+  },
+  {
+    "objectID": "evolve/final-thoughts.html",
+    "href": "evolve/final-thoughts.html",
+    "title": "23  Final Thoughts",
+    "section": "",
+    "text": "Coming soon\n\n\n\nThis chapter is currently being written. Not a conclusion, more of a reflection on where we’ve been, where we’re going, and why specifications will keep evolving long after this book is finished.",
+    "crumbs": [
+      "Part VI – Evolve",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Final Thoughts</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Evans, Eric. 2003. Domain-Driven Design: Tackling Complexity in the\nHeart of Software. Addison-Wesley Professional.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
