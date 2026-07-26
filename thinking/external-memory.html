@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>17&nbsp; AI Review – The Living Specification</title>
+<title>4&nbsp; A Team’s Shared External Memory – The Living Specification</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../build/handing-specifications-to-agents.html" rel="next">
-<link href="../validate/quality-gates.html" rel="prev">
+<link href="../thinking/why-understanding-decays.html" rel="next">
+<link href="../thinking/conversations-to-model.html" rel="prev">
 <link href="../images/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../validate/given-when-then.html">Part IV – Validate</a></li><li class="breadcrumb-item"><a href="../validate/ai-review.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">AI Review</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../thinking/shared-understanding.html">Part I – Thinking Before Coding</a></li><li class="breadcrumb-item"><a href="../thinking/external-memory.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Team’s Shared External Memory</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -142,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../thinking/external-memory.html" class="sidebar-item-text sidebar-link">
+  <a href="../thinking/external-memory.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Team’s Shared External Memory</span></span></a>
   </div>
 </li>
@@ -253,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../validate/ai-review.html" class="sidebar-item-text sidebar-link active">
+  <a href="../validate/ai-review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">AI Review</span></span></a>
   </div>
 </li>
@@ -346,9 +346,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../validate/given-when-then.html">Part IV – Validate</a></li><li class="breadcrumb-item"><a href="../validate/ai-review.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">AI Review</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../thinking/shared-understanding.html">Part I – Thinking Before Coding</a></li><li class="breadcrumb-item"><a href="../thinking/external-memory.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Team’s Shared External Memory</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">AI Review</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Team’s Shared External Memory</span></h1>
 </div>
 
 
@@ -365,19 +365,212 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Coming soon
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This chapter is currently being written. It will explore how AI agents can critique and improve specifications, not implementation, but the specifications themselves.</p>
-</div>
-</div>
+<p>There is a limit to what a team can keep in their heads.</p>
+<p>This sounds obvious, but I think we underestimate this limit all the time.</p>
+<p>When we talk about complex software systems, we often talk about complexity as if it was a property of the technology. The database is complex. The integration is complex. The business rules are complex.</p>
+<p>But there is another kind of complexity that is much more difficult to see.</p>
+<p>It is the complexity of understanding.</p>
+<p>I experienced this in the project I told you about in the last chapter.</p>
+<p>When we started using Event Storming, something changed.</p>
+<p>Not because the model was a better documentation format.</p>
+<p>That was not the case.</p>
+<p>The interesting part was that we had something that represented our current understanding of the system. Something we could point at when we discussed decisions. Something that allowed six people with six different perspectives to create one picture together.</p>
+<p>But after working this way for a while, another problem became visible.</p>
+<p>Understanding the system was only half the challenge.</p>
+<p>The other half was keeping that understanding connected to reality.</p>
+<p>Because the moment we started building the system, reality did not stop changing.</p>
+<p>The challenge became especially visible when we started dealing with customer master data.</p>
+<p>At first, it looked like a typical migration problem.</p>
+<p>The company was moving from a home-grown ERP system to SAP. The existing customer master data structure had evolved over many years. The new SAP structure was different. Our system had to build the bridge between these two worlds.</p>
+<p>The first assumption was that this was mainly a technical problem.</p>
+<p>We had to transform data from one structure into another. We had to integrate with SAP. We had to build APIs and make sure the systems could communicate.</p>
+<p>But the longer we worked on it, the more we realized that moving data was not the difficult part.</p>
+<p>The difficult part was understanding what the data actually meant.</p>
+<p>The old system contained decisions that had accumulated over many years. The new system had its own concepts and limitations. Between those two worlds were contracts, customer relationships and business rules that were not always visible in any single place.</p>
+<p>Our system had to reconstruct customer master data from a completely new structure that was fragmented across different parts of SAP. SAP could not represent the data in exactly the way the company’s services expected it, so our system had to translate between the two worlds.</p>
+<p>And this translation was tricky.</p>
+<p>I don’t remember the exact moment when it happened. There wasn’t one big incident where we suddenly realized: “This is too much.”</p>
+<p>It was more gradual.</p>
+<p>More and more details accumulated.</p>
+<p>The mapping of the old customer master data structure to the new structure. Changes in contracts. Exceptions for specific customers. Special cases that only existed because of decisions made years ago.</p>
+<p>At some point, it became too much to keep in anyone’s head.</p>
+<p>The interesting thing was that the knowledge was not missing.</p>
+<p>We had everything we needed somewhere.</p>
+<p>The domain experts knew how customer data was actually used inside the company. The business analysts understood the processes and documented many of our decisions. We developers understood the implementation details and the technical constraints.</p>
+<p>Everybody had an important piece of the puzzle.</p>
+<p>The problem was that nobody had the complete picture alone.</p>
+<p>We did have documentation.</p>
+<p>The business analysts were good at capturing decisions and documenting processes. Without them, we would have lost a lot of important knowledge.</p>
+<p>But after working this way for a while, I noticed a limitation.</p>
+<p>The documents were snapshots.</p>
+<p>That sounds obvious when you say it like that, but it took me some time to really understand what that meant.</p>
+<p>A document can describe the understanding we have at a certain point in time. And for many things, that is exactly what we need.</p>
+<p>The problem is that in a complex system, the understanding itself keeps changing.</p>
+<p>During implementation, we constantly discovered new details. A contract rule that looked simple turned out to have another exception. A customer type that looked similar to another one behaved differently when you looked at how contracts were managed. A technical decision revealed that we had made an assumption somewhere that was not completely correct.</p>
+<p>These discoveries were not failures.</p>
+<p>Actually, they were the reason we worked so closely together.</p>
+<p>But they also meant that the understanding of the system was not something we created once and then documented.</p>
+<p>It was something that continued to evolve.</p>
+<p>And that created a strange situation.</p>
+<p>The documentation was still valuable. We used it. We needed it.</p>
+<p>But whenever we wanted to understand the current state of the system, the documents were only one part of the picture.</p>
+<p>We still had to talk to people.</p>
+<p>We still had to ask questions.</p>
+<p>We still had to find the people who remembered why something was implemented in a certain way.</p>
+<p>The knowledge was there.</p>
+<p>It just wasn’t in one place.</p>
+<p>The strange thing was that the places where the knowledge lived were very different.</p>
+<p>Some parts were easy to access.</p>
+<p>Some parts were not.</p>
+<p>The business analysts had the documentation. They knew the processes and could explain many of the decisions we had made.</p>
+<p>We developers had the source code.</p>
+<p>And the source code contained a lot of knowledge.</p>
+<p>It contained all the rules we had implemented. It contained the decisions we had made while translating the business requirements into software.</p>
+<p>But of course, source code is not written for everybody.</p>
+<p>A developer can look at a piece of code and understand why something happens.</p>
+<p>A domain expert usually cannot.</p>
+<p>Not because they are not capable of understanding the logic, but because the representation is completely different from the way they think about the business.</p>
+<p>The same was true for the database.</p>
+<p>The data contained the history of what had happened. All the decisions that had been made in the past were somehow reflected in the data.</p>
+<p>But looking at a relational database does not automatically reveal the business meaning behind it.</p>
+<p>You need to know which tables belong together.</p>
+<p>You need to know why certain values exist.</p>
+<p>You need to know which strange-looking cases are actually valid business scenarios and which ones indicate a problem.</p>
+<p>In other words, the system knew a lot.</p>
+<p>But the knowledge was hidden inside representations that were not equally accessible to everyone.</p>
+<p>And that created a lot of situations where we had to decode what was happening.</p>
+<p>Someone would discover something unexpected.</p>
+<p>Maybe a customer was not mapped as we expected.</p>
+<p>Maybe a contract ended up in a strange state.</p>
+<p>Maybe an update from SAP did not lead to the result we thought it would.</p>
+<p>Then we started investigating.</p>
+<p>We looked into the data.</p>
+<p>We looked into the code.</p>
+<p>We talked to the domain experts.</p>
+<p>And step by step, we reconstructed what had happened.</p>
+<p>Looking back, this was probably the first time I experienced something that later became a recurring theme in my work:</p>
+<p>The difficult part was not only building the system.</p>
+<p>The difficult part was making the system understandable.</p>
+<p>At some point, I had the feeling that we needed another way to look at the system.</p>
+<p>Not another document.</p>
+<p>We already had those.</p>
+<p>Not another technical log that only developers would look at.</p>
+<p>We already had those as well.</p>
+<p>What we were missing was a way to see what was actually happening in the system from a business perspective.</p>
+<p>I still remember that this was a bit of a bet on my side.</p>
+<p>I was working as an external consultant. My colleague and I were not employees of the company. The business analysts and domain experts who worked with us every day were.</p>
+<p>They were the people who owned the business knowledge. They were the ones who had the budget and ultimately had to decide whether something was worth investing time into.</p>
+<p>And nobody had asked for a monitoring application.</p>
+<p>There was no requirement saying:</p>
+<p>“We need a better way to understand our customer master data processing.”</p>
+<p>It was just something I observed while working with the team.</p>
+<p>We spent a lot of time trying to understand what the system was doing. Whenever something unexpected happened, we had to connect the different pieces again.</p>
+<p>The data from SAP.</p>
+<p>The mapping logic in our system.</p>
+<p>The business rules around contracts.</p>
+<p>The expectations of the domain experts.</p>
+<p>And I thought: maybe we should make this visible.</p>
+<p>At the time, I did not call it shared memory or anything like that.</p>
+<p>I simply thought it would be useful if we could see what was happening without having to reconstruct it every time.</p>
+<p>So I proposed building a monitoring application.</p>
+<p>Honestly, I was not completely sure how people would react.</p>
+<p>It was the first time I had done something like this. Usually, as a consultant, you are hired to solve a problem that somebody already identified.</p>
+<p>This time, I was suggesting that there was a problem that nobody had explicitly asked us to solve.</p>
+<p>The team trusted me and gave it a chance.</p>
+<p>The first version of the monitoring application was not complicated.</p>
+<p>Actually, the idea was quite simple.</p>
+<p>We wanted to see what happened.</p>
+<p>The SAP system sent incremental updates. Our system received those updates and tried to reconstruct the customer master data in the structure that the company services expected.</p>
+<p>Most of the time, that worked.</p>
+<p>But sometimes it didn’t.</p>
+<p>A relationship could not be mapped.</p>
+<p>A piece of information was missing.</p>
+<p>A combination of values appeared that we had not expected.</p>
+<p>From a purely technical perspective, many of these situations could have been treated as errors.</p>
+<p>The system could have thrown an exception and stopped.</p>
+<p>But that would not have helped us understand what was actually happening.</p>
+<p>The problem was not always that something was broken.</p>
+<p>Sometimes the system simply encountered a situation where our understanding of the business reality was incomplete.</p>
+<p>That difference was important.</p>
+<p>If we treated every unexpected situation as a technical error, we would lose the context.</p>
+<p>We would only know that something failed.</p>
+<p>We would not know why.</p>
+<p>So instead, we recorded these situations.</p>
+<p>We kept the information about what the system had received, what decisions it had made, and where it could not continue based on our existing rules.</p>
+<p>The monitoring application made these situations visible.</p>
+<p>It was not hiding the complexity behind a nice user interface.</p>
+<p>Quite the opposite.</p>
+<p>It showed the raw information that we needed to understand the behavior of the system.</p>
+<p>Almost like looking at logs in Grafana today.</p>
+<p>Not because logs are beautiful.</p>
+<p>But because sometimes you need to see what actually happened.</p>
+<p>What surprised me was not that the monitoring application helped us developers.</p>
+<p>Of course it did.</p>
+<p>Whenever something unexpected happened, we had a much better starting point for our investigations.</p>
+<p>But that was not where the biggest value appeared.</p>
+<p>The business analysts started using it.</p>
+<p>And they started using it without us having to push it.</p>
+<p>They added it to their daily routine. Every morning, they checked whether there were new situations that needed attention.</p>
+<p>I still remember that this was a really interesting transition.</p>
+<p>At the beginning, we looked at the information together. We explained what different situations meant and how the technical details connected to the business processes.</p>
+<p>But it did not take long until they understood how to read the information themselves.</p>
+<p>They learned which situations mattered.</p>
+<p>They learned which cases were expected behavior and which ones indicated a problem.</p>
+<p>And most importantly, they learned how to communicate those problems to the SAP team without needing us developers in between.</p>
+<p>That changed the whole dynamic.</p>
+<p>Before that, developers were often the translators between the technical system and the business.</p>
+<p>A business analyst noticed something strange.</p>
+<p>They asked us what happened.</p>
+<p>We investigated the code and the data.</p>
+<p>Then we explained our findings.</p>
+<p>The monitoring application reduced that dependency.</p>
+<p>The business analysts could look at the same information we were looking at. They could see what the system had received, what it had tried to do and where our assumptions did not match reality.</p>
+<p>The conversations changed because they started from the same place.</p>
+<p>Instead of:</p>
+<p>“Something strange happened. Can you developers find out why?”</p>
+<p>it became more like:</p>
+<p>“We see this update from SAP. This customer relationship could not be reconstructed because this information does not match our expectations.”</p>
+<p>The understanding was no longer hidden inside the people who built the system.</p>
+<p>It became something the whole team could work with.</p>
+<p>At the time, I did not think of the monitoring application as a memory.</p>
+<p>That word would not have occurred to me.</p>
+<p>I simply saw a practical problem and tried to solve it.</p>
+<p>The system had become too complex to understand by looking at one thing.</p>
+<p>The source code showed us the rules we had implemented.</p>
+<p>The database showed us the data that existed.</p>
+<p>The documentation showed us decisions we had captured.</p>
+<p>The conversations showed us the reasoning behind those decisions.</p>
+<p>But whenever we wanted to understand what was happening right now, we had to bring all these pieces together again.</p>
+<p>The monitoring application added another piece to that puzzle.</p>
+<p>It gave the team a place where we could see the system interacting with reality.</p>
+<p>Looking back, that was probably the first time I experienced something that I would later describe as a team’s shared external memory.</p>
+<p>Not because it stored everything the team knew.</p>
+<p>It didn’t.</p>
+<p>The business analysts still needed their experience. The domain experts still had years of knowledge in their heads. The developers still needed to understand the implementation.</p>
+<p>The value was that it gave us a shared reference point.</p>
+<p>When something unexpected happened, we did not have to start with different perspectives and try to align them.</p>
+<p>We could look at the same thing together.</p>
+<p>That changed the conversation.</p>
+<p>And I think this is the important difference between information and understanding.</p>
+<p>A system can contain a huge amount of information.</p>
+<p>A database can contain millions of records.</p>
+<p>A codebase can contain thousands of business rules.</p>
+<p>A documentation system can contain hundreds of pages.</p>
+<p>But none of these automatically creates shared understanding.</p>
+<p>Understanding emerges when people can connect the information to the reality they are trying to understand.</p>
+<p>The monitoring application did not solve all our problems.</p>
+<p>It did not replace conversations.</p>
+<p>It did not replace the knowledge of the domain experts or the experience of the developers.</p>
+<p>But it changed something important.</p>
+<p>For the first time, we had something outside of our heads that helped us understand what the system was doing.</p>
+<p>The team had a place to look when reality did not behave as expected.</p>
+<p>Looking back, that was a small but important shift.</p>
+<p>We were no longer relying only on people remembering what happened.</p>
+<p>We had started creating something that could help us remember together.</p>
+<p>At the time, I did not have a name for what we had created.</p>
+<p>I only knew that it felt different from the documentation I had worked with before.</p>
+<p>The monitoring application was not a description of the system that someone had to remember to update.</p>
+<p>It was connected to the system itself.</p>
 
 
 
@@ -801,13 +994,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../validate/quality-gates.html" class="pagination-link" aria-label="Quality Gates">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Quality Gates</span></span>
+      <a href="../thinking/conversations-to-model.html" class="pagination-link" aria-label="From Conversations to Models">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">From Conversations to Models</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../build/handing-specifications-to-agents.html" class="pagination-link" aria-label="Handing Specifications to Agents">
-        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Handing Specifications to Agents</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../thinking/why-understanding-decays.html" class="pagination-link" aria-label="Why Understanding Decays">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Why Understanding Decays</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

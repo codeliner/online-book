@@ -31,234 +31,256 @@
     ]
   },
   {
-    "objectID": "thinking/living-specification.html",
-    "href": "thinking/living-specification.html",
-    "title": "3  The Living Specification",
+    "objectID": "thinking/conversations-to-model.html",
+    "href": "thinking/conversations-to-model.html",
+    "title": "3  From Conversations to Models",
     "section": "",
-    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will introduce the concept of living specifications, why specifications evolve, how they differ from documentation, and why they matter in a world of humans and AI agents working together.",
+    "text": "The car rental project fundamentally changed how I approached software projects.\nI no longer believed that shared understanding could emerge from requirements documents, no matter how detailed they were. If software engineering was really about creating and maintaining shared understanding, then I had to work directly with the people who understood the business. There was simply no shortcut.\nThe next opportunity came almost immediately.\nI joined a project at a well-known fashion manufacturer. They had started a multi-year SAP migration to replace their home-grown ERP system. If you’ve ever been involved in an ERP migration, you know these projects are expensive. Not just because of the software licenses, but because every decision suddenly becomes strategic. Processes that had evolved over decades have to fit into a standardized system. Every exception costs money. Every customization becomes another long-term commitment.\nAt the same time, another team was modernizing the digital ordering application used by fashion stores across Germany and Europe. Think of it as a B2B online shop, except that “online shop” doesn’t really describe it. It had grown together with the business over many years and supported countless workflows that only made sense in the context of that company.\nMy team was responsible for digital contracts.\nInitially, that sounded like a fairly isolated problem. But the more we looked into it, the more obvious it became that contracts and customer master data couldn’t be separated. A strategic decision was made to put our service between the existing ERP and the future SAP system. We became a kind of customer hub that would shield the rest of the landscape from the migration.\nLooking back, that’s interesting because our biggest challenge wasn’t technical.\nIt was organizational.\nOur team consisted of six people. Two developers, two business analysts and two domain experts from the customer master data department.\nThat composition was no accident.\nThe domain experts understood how customer data was managed today and how it would have to look in the future. The business analysts understood the business processes and documented our decisions. We developers were responsible for turning all of that into software.\nSo we met almost every day.\nToday that doesn’t sound particularly remarkable. Remote collaboration has become normal. Back then it wasn’t. More importantly, our meetings weren’t status updates. We rarely went around the virtual table asking everyone what they had done yesterday.\nWe usually started with whatever blocked us most.\nSomeone from the customer master data team had discovered another special contract that didn’t fit into the new structure.\nOne of the business analysts had found a condition that looked contradictory.\nWe developers had questions about the API we were designing because we suddenly realized that two different customer types looked identical until you considered how contracts were managed.\nLooking back, it’s almost funny how much time we spent asking questions.\nAt the time, I didn’t think about that at all. I certainly didn’t count them. They were simply part of our daily work.\nOn many projects, questions are considered a problem. They indicate that requirements are incomplete or that somebody forgot to document something.\nWe experienced the exact opposite.\nThe questions were doing the work.\nI still remember reading requirements on earlier projects. Every now and then I’d stumble across something that felt odd. Maybe a business term I didn’t understand. Maybe an exception that wasn’t explained. Or simply a sentence where I thought: That can’t be the whole story.\nOf course I could ask.\nBut asking wasn’t free.\nIt usually meant writing an email or creating a ticket. Somebody had to find time to answer. Sometimes the answer created two new questions. Before long you were playing ping-pong with whoever had written the document.\nSo you start making assumptions.\nNot because you think they’re correct, but because they’re good enough to continue working.\nI don’t think anyone does this consciously. It’s just the cheapest option.\nOur daily collaboration felt completely different.\nQuestions didn’t interrupt the work.\nThey were the work.\nIf one of our business analysts wasn’t sure how a particular contract should be represented in the new structure, we discussed it. If one of us developers realized that an API decision suddenly affected contract management, we discussed it. If the domain experts remembered another customer segment with special rules, we discussed it.\nNobody had to think twice before asking.\nLooking back, I think that’s what made the biggest difference.\nWith direct collaboration, the cost of curiosity is almost zero.\nThat’s an interesting observation because it has nothing to do with software. It has everything to do with how humans learn together.\nThe cheaper it is to ask a question, the more questions get asked.\nThe more questions get asked, the more hidden assumptions become visible.\nAnd hidden assumptions are usually where misunderstandings live.\nAt the time I didn’t think about it in those terms. We were simply trying to solve a difficult business problem. It took me years to realize that we weren’t just building software.\nWe were slowly building a shared understanding of the business.\nAnd that shared understanding didn’t emerge because someone had documented everything up front.\nIt emerged because six people kept challenging, refining and extending each other’s mental models every single day.\nThe more we collaborated, the more another problem became obvious.\nConversations are great while you’re having them.\nThe moment they’re over, they start fading away.\nSometimes we ended a meeting convinced that we had found a great solution. Two days later one of us remembered another detail.\n“Didn’t we decide to handle this differently?”\n“No, I think that was only true for new contracts.”\n“Wait, what about franchise stores?”\nNobody was wrong.\nWe simply remembered different parts of the same conversation.\nYou can probably relate to this. We’ve all left a meeting thinking that everyone agreed, only to discover a week later that everyone had agreed on something slightly different.\nThat’s not because people don’t listen.\nIt’s because conversations disappear.\nOur business analysts documented a lot of what we discussed in the company wiki. That certainly helped. Without them we would have lost many important decisions.\nBut over time I noticed something interesting.\nThe wiki answered questions we already knew to ask.\nIt didn’t help us discover the questions we hadn’t thought about yet.\nThat’s a subtle but important difference.\nWhen you read a document, you’re following the author’s train of thought. You can stop, go back, or look something up, but you’re still consuming information that someone else has structured for you.\nOur discussions didn’t work like that.\nWe weren’t trying to explain something that already existed.\nWe were trying to discover it together.\nThat requires a different kind of artifact.\nAt the time I couldn’t have explained it like that. I just felt that writing down meeting minutes wasn’t enough. The really valuable part wasn’t the conversation itself. It was what the conversation produced.\nWe needed something we could build together.\nNot afterwards.\nWhile we were talking.\nAround that time, I learned about Event Storming.\nI was immediately curious because it addressed exactly the problem we were experiencing. We had a team that collaborated closely, but we still struggled with the same fundamental challenge: how do we preserve what we discover together?\nThe first thing that caught my attention was that Event Storming was not about documenting knowledge that already existed.\nIt was about discovering knowledge together.\nThis was a subtle but important difference.\nWhen we had discussions about customer master data or contract structures, everybody brought their own perspective into the room. The domain experts knew the business rules and all the exceptions that had accumulated over the years. The business analysts understood the processes and dependencies. We developers understood the technical implications.\nEverybody knew a different part of the system.\nThe challenge was not that information was missing.\nThe challenge was that the complete picture only existed when we combined all these perspectives.\nEvent Storming gave us a glimpse of a different way of working together.\nInstead of one person explaining something to the rest of the team, everybody became part of creating the model. The discussion was happening around something visible that evolved while we were talking.\nThat changed the dynamic.\nWhen someone raised a question, we didn’t just answer it verbally and move on. We had to decide how this new insight changed our model.\nWhen someone disagreed, the disagreement became visible. We could look at it together and understand why our perspectives were different.\nThis was a very different experience from the meetings I had participated in before.\nA meeting usually has a speaker and an audience. Even when everybody is invited to participate, there are often active and passive participants.\nCollaborative modeling changes that.\nThe model becomes something the entire group creates. Everyone contributes, challenges, moves things around and helps shape the result.\nThe energy of the group starts to build on itself.\nOne person’s question triggers another person’s memory. Another person’s observation reveals a connection that nobody had considered before.\nThe group becomes much more than the sum of the individual people in the room.\nAt that time, I didn’t have the words for it, but I think this was the first time I experienced what true collaborative modeling can create.\nThe model was not the result of the conversation.\nThe model was the conversation.",
     "crumbs": [
       "Part I – Thinking Before Coding",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>The Living Specification</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>From Conversations to Models</span>"
+    ]
+  },
+  {
+    "objectID": "thinking/external-memory.html",
+    "href": "thinking/external-memory.html",
+    "title": "4  A Team’s Shared External Memory",
+    "section": "",
+    "text": "There is a limit to what a team can keep in their heads.\nThis sounds obvious, but I think we underestimate this limit all the time.\nWhen we talk about complex software systems, we often talk about complexity as if it was a property of the technology. The database is complex. The integration is complex. The business rules are complex.\nBut there is another kind of complexity that is much more difficult to see.\nIt is the complexity of understanding.\nI experienced this in the project I told you about in the last chapter.\nWhen we started using Event Storming, something changed.\nNot because the model was a better documentation format.\nThat was not the case.\nThe interesting part was that we had something that represented our current understanding of the system. Something we could point at when we discussed decisions. Something that allowed six people with six different perspectives to create one picture together.\nBut after working this way for a while, another problem became visible.\nUnderstanding the system was only half the challenge.\nThe other half was keeping that understanding connected to reality.\nBecause the moment we started building the system, reality did not stop changing.\nThe challenge became especially visible when we started dealing with customer master data.\nAt first, it looked like a typical migration problem.\nThe company was moving from a home-grown ERP system to SAP. The existing customer master data structure had evolved over many years. The new SAP structure was different. Our system had to build the bridge between these two worlds.\nThe first assumption was that this was mainly a technical problem.\nWe had to transform data from one structure into another. We had to integrate with SAP. We had to build APIs and make sure the systems could communicate.\nBut the longer we worked on it, the more we realized that moving data was not the difficult part.\nThe difficult part was understanding what the data actually meant.\nThe old system contained decisions that had accumulated over many years. The new system had its own concepts and limitations. Between those two worlds were contracts, customer relationships and business rules that were not always visible in any single place.\nOur system had to reconstruct customer master data from a completely new structure that was fragmented across different parts of SAP. SAP could not represent the data in exactly the way the company’s services expected it, so our system had to translate between the two worlds.\nAnd this translation was tricky.\nI don’t remember the exact moment when it happened. There wasn’t one big incident where we suddenly realized: “This is too much.”\nIt was more gradual.\nMore and more details accumulated.\nThe mapping of the old customer master data structure to the new structure. Changes in contracts. Exceptions for specific customers. Special cases that only existed because of decisions made years ago.\nAt some point, it became too much to keep in anyone’s head.\nThe interesting thing was that the knowledge was not missing.\nWe had everything we needed somewhere.\nThe domain experts knew how customer data was actually used inside the company. The business analysts understood the processes and documented many of our decisions. We developers understood the implementation details and the technical constraints.\nEverybody had an important piece of the puzzle.\nThe problem was that nobody had the complete picture alone.\nWe did have documentation.\nThe business analysts were good at capturing decisions and documenting processes. Without them, we would have lost a lot of important knowledge.\nBut after working this way for a while, I noticed a limitation.\nThe documents were snapshots.\nThat sounds obvious when you say it like that, but it took me some time to really understand what that meant.\nA document can describe the understanding we have at a certain point in time. And for many things, that is exactly what we need.\nThe problem is that in a complex system, the understanding itself keeps changing.\nDuring implementation, we constantly discovered new details. A contract rule that looked simple turned out to have another exception. A customer type that looked similar to another one behaved differently when you looked at how contracts were managed. A technical decision revealed that we had made an assumption somewhere that was not completely correct.\nThese discoveries were not failures.\nActually, they were the reason we worked so closely together.\nBut they also meant that the understanding of the system was not something we created once and then documented.\nIt was something that continued to evolve.\nAnd that created a strange situation.\nThe documentation was still valuable. We used it. We needed it.\nBut whenever we wanted to understand the current state of the system, the documents were only one part of the picture.\nWe still had to talk to people.\nWe still had to ask questions.\nWe still had to find the people who remembered why something was implemented in a certain way.\nThe knowledge was there.\nIt just wasn’t in one place.\nThe strange thing was that the places where the knowledge lived were very different.\nSome parts were easy to access.\nSome parts were not.\nThe business analysts had the documentation. They knew the processes and could explain many of the decisions we had made.\nWe developers had the source code.\nAnd the source code contained a lot of knowledge.\nIt contained all the rules we had implemented. It contained the decisions we had made while translating the business requirements into software.\nBut of course, source code is not written for everybody.\nA developer can look at a piece of code and understand why something happens.\nA domain expert usually cannot.\nNot because they are not capable of understanding the logic, but because the representation is completely different from the way they think about the business.\nThe same was true for the database.\nThe data contained the history of what had happened. All the decisions that had been made in the past were somehow reflected in the data.\nBut looking at a relational database does not automatically reveal the business meaning behind it.\nYou need to know which tables belong together.\nYou need to know why certain values exist.\nYou need to know which strange-looking cases are actually valid business scenarios and which ones indicate a problem.\nIn other words, the system knew a lot.\nBut the knowledge was hidden inside representations that were not equally accessible to everyone.\nAnd that created a lot of situations where we had to decode what was happening.\nSomeone would discover something unexpected.\nMaybe a customer was not mapped as we expected.\nMaybe a contract ended up in a strange state.\nMaybe an update from SAP did not lead to the result we thought it would.\nThen we started investigating.\nWe looked into the data.\nWe looked into the code.\nWe talked to the domain experts.\nAnd step by step, we reconstructed what had happened.\nLooking back, this was probably the first time I experienced something that later became a recurring theme in my work:\nThe difficult part was not only building the system.\nThe difficult part was making the system understandable.\nAt some point, I had the feeling that we needed another way to look at the system.\nNot another document.\nWe already had those.\nNot another technical log that only developers would look at.\nWe already had those as well.\nWhat we were missing was a way to see what was actually happening in the system from a business perspective.\nI still remember that this was a bit of a bet on my side.\nI was working as an external consultant. My colleague and I were not employees of the company. The business analysts and domain experts who worked with us every day were.\nThey were the people who owned the business knowledge. They were the ones who had the budget and ultimately had to decide whether something was worth investing time into.\nAnd nobody had asked for a monitoring application.\nThere was no requirement saying:\n“We need a better way to understand our customer master data processing.”\nIt was just something I observed while working with the team.\nWe spent a lot of time trying to understand what the system was doing. Whenever something unexpected happened, we had to connect the different pieces again.\nThe data from SAP.\nThe mapping logic in our system.\nThe business rules around contracts.\nThe expectations of the domain experts.\nAnd I thought: maybe we should make this visible.\nAt the time, I did not call it shared memory or anything like that.\nI simply thought it would be useful if we could see what was happening without having to reconstruct it every time.\nSo I proposed building a monitoring application.\nHonestly, I was not completely sure how people would react.\nIt was the first time I had done something like this. Usually, as a consultant, you are hired to solve a problem that somebody already identified.\nThis time, I was suggesting that there was a problem that nobody had explicitly asked us to solve.\nThe team trusted me and gave it a chance.\nThe first version of the monitoring application was not complicated.\nActually, the idea was quite simple.\nWe wanted to see what happened.\nThe SAP system sent incremental updates. Our system received those updates and tried to reconstruct the customer master data in the structure that the company services expected.\nMost of the time, that worked.\nBut sometimes it didn’t.\nA relationship could not be mapped.\nA piece of information was missing.\nA combination of values appeared that we had not expected.\nFrom a purely technical perspective, many of these situations could have been treated as errors.\nThe system could have thrown an exception and stopped.\nBut that would not have helped us understand what was actually happening.\nThe problem was not always that something was broken.\nSometimes the system simply encountered a situation where our understanding of the business reality was incomplete.\nThat difference was important.\nIf we treated every unexpected situation as a technical error, we would lose the context.\nWe would only know that something failed.\nWe would not know why.\nSo instead, we recorded these situations.\nWe kept the information about what the system had received, what decisions it had made, and where it could not continue based on our existing rules.\nThe monitoring application made these situations visible.\nIt was not hiding the complexity behind a nice user interface.\nQuite the opposite.\nIt showed the raw information that we needed to understand the behavior of the system.\nAlmost like looking at logs in Grafana today.\nNot because logs are beautiful.\nBut because sometimes you need to see what actually happened.\nWhat surprised me was not that the monitoring application helped us developers.\nOf course it did.\nWhenever something unexpected happened, we had a much better starting point for our investigations.\nBut that was not where the biggest value appeared.\nThe business analysts started using it.\nAnd they started using it without us having to push it.\nThey added it to their daily routine. Every morning, they checked whether there were new situations that needed attention.\nI still remember that this was a really interesting transition.\nAt the beginning, we looked at the information together. We explained what different situations meant and how the technical details connected to the business processes.\nBut it did not take long until they understood how to read the information themselves.\nThey learned which situations mattered.\nThey learned which cases were expected behavior and which ones indicated a problem.\nAnd most importantly, they learned how to communicate those problems to the SAP team without needing us developers in between.\nThat changed the whole dynamic.\nBefore that, developers were often the translators between the technical system and the business.\nA business analyst noticed something strange.\nThey asked us what happened.\nWe investigated the code and the data.\nThen we explained our findings.\nThe monitoring application reduced that dependency.\nThe business analysts could look at the same information we were looking at. They could see what the system had received, what it had tried to do and where our assumptions did not match reality.\nThe conversations changed because they started from the same place.\nInstead of:\n“Something strange happened. Can you developers find out why?”\nit became more like:\n“We see this update from SAP. This customer relationship could not be reconstructed because this information does not match our expectations.”\nThe understanding was no longer hidden inside the people who built the system.\nIt became something the whole team could work with.\nAt the time, I did not think of the monitoring application as a memory.\nThat word would not have occurred to me.\nI simply saw a practical problem and tried to solve it.\nThe system had become too complex to understand by looking at one thing.\nThe source code showed us the rules we had implemented.\nThe database showed us the data that existed.\nThe documentation showed us decisions we had captured.\nThe conversations showed us the reasoning behind those decisions.\nBut whenever we wanted to understand what was happening right now, we had to bring all these pieces together again.\nThe monitoring application added another piece to that puzzle.\nIt gave the team a place where we could see the system interacting with reality.\nLooking back, that was probably the first time I experienced something that I would later describe as a team’s shared external memory.\nNot because it stored everything the team knew.\nIt didn’t.\nThe business analysts still needed their experience. The domain experts still had years of knowledge in their heads. The developers still needed to understand the implementation.\nThe value was that it gave us a shared reference point.\nWhen something unexpected happened, we did not have to start with different perspectives and try to align them.\nWe could look at the same thing together.\nThat changed the conversation.\nAnd I think this is the important difference between information and understanding.\nA system can contain a huge amount of information.\nA database can contain millions of records.\nA codebase can contain thousands of business rules.\nA documentation system can contain hundreds of pages.\nBut none of these automatically creates shared understanding.\nUnderstanding emerges when people can connect the information to the reality they are trying to understand.\nThe monitoring application did not solve all our problems.\nIt did not replace conversations.\nIt did not replace the knowledge of the domain experts or the experience of the developers.\nBut it changed something important.\nFor the first time, we had something outside of our heads that helped us understand what the system was doing.\nThe team had a place to look when reality did not behave as expected.\nLooking back, that was a small but important shift.\nWe were no longer relying only on people remembering what happened.\nWe had started creating something that could help us remember together.\nAt the time, I did not have a name for what we had created.\nI only knew that it felt different from the documentation I had worked with before.\nThe monitoring application was not a description of the system that someone had to remember to update.\nIt was connected to the system itself.",
+    "crumbs": [
+      "Part I – Thinking Before Coding",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>A Team's Shared External Memory</span>"
+    ]
+  },
+  {
+    "objectID": "thinking/why-understanding-decays.html",
+    "href": "thinking/why-understanding-decays.html",
+    "title": "5  Why Understanding Decays",
+    "section": "",
+    "text": "There is something strange about understanding.\nCreating it is difficult.\nKeeping it is even more difficult.\nWhen a team finally reaches a shared understanding, it feels like a big achievement.\nAnd it is.\nPeople have talked.\nThey have asked questions.\nThey have challenged assumptions.\nThey have discovered things that nobody knew before.\nAt some point, something changes.\nThe team starts using the same words.\nThey have the same picture in their heads.\nThey can discuss problems without explaining everything from the beginning.\nThe system itself is still complex.\nThe business rules are still complicated.\nThe technical challenges are still there.\nBut the team has found a way to navigate that complexity together.\nThis is the moment where software development becomes much easier.\nThe strange thing is that this moment never lasts forever.\nThe strange thing is that this moment never lasts forever.\nThe business changes.\nNew requirements appear.\nThe team learns more about the system.\nDecisions that seemed obvious at one point turn out to be incomplete.\nThis is normal.\nActually, this is the reason we build software iteratively. We learn while we build. We discover things that we could not have known before we started.\nBut every new discovery changes the understanding of the system.\nAnd that is where the problem begins.\nThe new understanding usually appears somewhere.\nA conversation.\nA ticket.\nA meeting.\nA message in a chat.\nMaybe a decision document.\nMaybe a comment in the code.\nThe team moves forward because the immediate question has been answered.\nBut the place where the old understanding was captured often stays the same.\nI have seen this happen countless times.\nA developer starts implementing a user story and discovers that something is unclear.\nThey ask a question.\nThe question leads to a discussion.\nSomeone from the business explains an edge case that nobody had considered.\nA decision is made.\nThe developer continues working.\nFrom the perspective of the people involved, everything went well.\nThe problem was found.\nThe discussion happened.\nA better understanding emerged.\nBut what happened to the user story?\nUsually, nothing.\nThe original description still says what it said before the discussion.\nThe new understanding exists, but it lives somewhere else.\nThe same thing happens when software reaches production.\nA bug appears.\nThe team investigates.\nThey find the cause.\nThey implement a fix.\nSometimes these moments are the most valuable learning opportunities a team has.\nA production issue reveals something about the system that nobody fully understood before.\nMaybe a business rule was incomplete.\nMaybe an assumption was wrong.\nMaybe a certain combination of data was possible even though nobody expected it.\nThe team knows more afterwards than before.\nBut again, the knowledge often stays where it was created.\nThe ticket is closed.\nThe fix is deployed.\nThe next urgent topic arrives.\nAnd the specification that described the system before the discovery remains unchanged.\nThe interesting thing is that this problem has been known for a long time.\nMany movements in software development have tried to deal with it in different ways.\nThe Agile movement was one of them.\nWhen the Agile Manifesto emphasized working software over comprehensive documentation, I think many people recognized a problem they had experienced themselves.\nNot the existence of documentation.\nThe problem was documentation that became disconnected from the software it was supposed to describe.\nA document can be correct when it is written.\nIt can represent the best understanding a team has at that moment.\nBut software development does not stop there.\nThe system changes.\nThe business changes.\nThe team’s understanding changes.\nAnd the document is expected to somehow keep up with all of this.\nThe interesting thing is that this problem has been known for a long time.\nMany movements in software development have tried to deal with it in different ways.\nThe Agile movement was one of them.\nWhen the Agile Manifesto emphasized working software over comprehensive documentation, I think many people recognized a problem they had experienced themselves.\nNot the existence of documentation.\nThe problem was documentation that became disconnected from the software it was supposed to describe.\nA document can be correct when it is written.\nIt can represent the best understanding a team has at that moment.\nBut software development does not stop there.\nThe system changes.\nThe business changes.\nThe team’s understanding changes.\nAnd the document is expected to somehow keep up with all of this.\nLooking back, I think this is why the discussion around documentation was always a bit misleading.\nThe question was never:\n“Should we write documentation or not?”\nOf course we should.\nThe better question is:\n“How does the knowledge inside the documentation stay connected to reality?”\nBecause without that connection, documentation slowly becomes something we look at to understand the past.\nNot something that helps us understand the present.\nThis pattern became even more interesting to me when I started working with Event Storming.\nEvent Storming solved a problem that I had struggled with for years.\nInstead of trying to capture requirements in documents, we brought people together.\nDevelopers.\nDomain experts.\nBusiness people.\nEverybody who had a different perspective on the system.\nThe model emerged while people were talking.\nA question appeared.\nSomeone added a sticky note.\nA different perspective challenged an assumption.\nThe understanding changed.\nThe model changed with it.\nFor the duration of the workshop, the model was alive.\nBut then the workshop ended.\nThe interesting thing is that experienced Event Storming practitioners were aware of this problem.\nThey knew that the artifacts created during workshops could become outdated quickly.\nThe recommendation I often heard was not to treat the artifact as something that needed to be maintained forever.\nThe workshop had done its job.\nThe team had created a shared understanding of the current situation.\nThat was the valuable outcome.\nIf the understanding changed significantly later, the advice was simple:\nDo another workshop.\nCreate a new shared understanding.\nI understood the reasoning behind this.\nAnd in many situations, it worked well.\nAfter all, the real value of Event Storming was never the sticky notes themselves.\nThe real value was the conversation.\nThe collaboration.\nThe moment where people with different perspectives created a common picture.\nBut something about this approach did not completely satisfy me.\nMaybe it was because I had experienced something different before.\nThe monitoring application from the SAP project had shown me that a representation could be connected to reality.\nIt did not replace conversations.\nBut it helped the team continue understanding what was happening.\nIt became part of the feedback loop.\nI started wondering if we could create something similar for collaborative models.\nCould a model remain useful after the workshop?\nCould the people who created the understanding continue to work with it?\nCould the model itself become part of the ongoing conversation?",
+    "crumbs": [
+      "Part I – Thinking Before Coding",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Why Understanding Decays</span>"
     ]
   },
   {
     "objectID": "storm/introduction.html",
     "href": "storm/introduction.html",
-    "title": "4  Why We Start with Conversations",
+    "title": "6  Why We Start with Conversations",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explain why every good specification begins with a conversation (not a requirements document) and how structured conversations lead to shared understanding.",
     "crumbs": [
       "Part II – Storm",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Why We Start with Conversations</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Why We Start with Conversations</span>"
     ]
   },
   {
     "objectID": "storm/event-storming.html",
     "href": "storm/event-storming.html",
-    "title": "5  Event Storming",
+    "title": "7  Event Storming",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover the purpose, history, and practice of Event Storming. How a room full of orange sticky notes can reveal an entire business domain.",
     "crumbs": [
       "Part II – Storm",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Event Storming</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Event Storming</span>"
     ]
   },
   {
     "objectID": "storm/asking-better-questions.html",
     "href": "storm/asking-better-questions.html",
-    "title": "6  Asking Better Questions",
+    "title": "8  Asking Better Questions",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the role of the facilitator, the art of discovering knowledge through conversation, and why the right questions matter more than the right answers.",
     "crumbs": [
       "Part II – Storm",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Asking Better Questions</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Asking Better Questions</span>"
     ]
   },
   {
     "objectID": "design/from-understanding-to-structure.html",
     "href": "design/from-understanding-to-structure.html",
-    "title": "7  From Understanding to Structure",
+    "title": "9  From Understanding to Structure",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explain how the understanding gained through storming transforms into a structured design and why design is a discipline, not a one-time activity.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>From Understanding to Structure</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>From Understanding to Structure</span>"
     ]
   },
   {
     "objectID": "design/why-event-modeling.html",
     "href": "design/why-event-modeling.html",
-    "title": "8  Why Event Modeling",
+    "title": "10  Why Event Modeling",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will make the case for Event Modeling as a design discipline, not just a diagram, but a way of thinking about software behavior over time.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Why Event Modeling</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why Event Modeling</span>"
     ]
   },
   {
     "objectID": "design/from-events-to-specifications.html",
     "href": "design/from-events-to-specifications.html",
-    "title": "9  From Events to Specifications",
+    "title": "11  From Events to Specifications",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how events become commands, read models, actors, and policies. The building blocks of a complete specification.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>From Events to Specifications</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>From Events to Specifications</span>"
     ]
   },
   {
     "objectID": "design/specifying-user-interfaces.html",
     "href": "design/specifying-user-interfaces.html",
-    "title": "10  Specifying User Interfaces",
+    "title": "12  Specifying User Interfaces",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore Breadboarding, wireframes, user flows, and how UI specifications become part of the living specification.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Specifying User Interfaces</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Specifying User Interfaces</span>"
     ]
   },
   {
     "objectID": "design/organizing-specifications.html",
     "href": "design/organizing-specifications.html",
-    "title": "11  Organizing Specifications",
+    "title": "13  Organizing Specifications",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how to organize specifications in an easy-to-maintain structure, and how this organization provides context for both humans and AI agents.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Organizing Specifications</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Organizing Specifications</span>"
     ]
   },
   {
     "objectID": "validate/given-when-then.html",
     "href": "validate/given-when-then.html",
-    "title": "12  Given-When-Then",
+    "title": "14  Given-When-Then",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover acceptance criteria, behavior specifications, and the power of concrete examples to validate your understanding before writing any code.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Given-When-Then</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Given-When-Then</span>"
     ]
   },
   {
     "objectID": "validate/finding-misconceptions-early.html",
     "href": "validate/finding-misconceptions-early.html",
-    "title": "13  Finding Misconceptions Early",
+    "title": "15  Finding Misconceptions Early",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the real value of modeling, finding what you got wrong before implementation makes it expensive to change.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Finding Misconceptions Early</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Finding Misconceptions Early</span>"
     ]
   },
   {
     "objectID": "validate/quality-gates.html",
     "href": "validate/quality-gates.html",
-    "title": "14  Quality Gates",
+    "title": "16  Quality Gates",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will introduce guardrails for your specification workflow, from simple use cases to business value validation and edge case discovery.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Quality Gates</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Quality Gates</span>"
     ]
   },
   {
     "objectID": "validate/ai-review.html",
     "href": "validate/ai-review.html",
-    "title": "15  AI Review",
+    "title": "17  AI Review",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore how AI agents can critique and improve specifications, not implementation, but the specifications themselves.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>AI Review</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>AI Review</span>"
     ]
   },
   {
     "objectID": "build/handing-specifications-to-agents.html",
     "href": "build/handing-specifications-to-agents.html",
-    "title": "16  Handing Specifications to Agents",
+    "title": "18  Handing Specifications to Agents",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how to provide context, slices, and incremental implementation tasks to AI agents, turning specifications into working software.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Handing Specifications to Agents</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Handing Specifications to Agents</span>"
     ]
   },
   {
     "objectID": "build/human-agent-collaboration.html",
     "href": "build/human-agent-collaboration.html",
-    "title": "17  Human-Agent Collaboration",
+    "title": "19  Human-Agent Collaboration",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the feedback loop between humans and AI agents: reviewing, iterating, and collaborating on implementation.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Human-Agent Collaboration</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Human-Agent Collaboration</span>"
     ]
   },
   {
     "objectID": "build/tracking-progress.html",
     "href": "build/tracking-progress.html",
-    "title": "18  Tracking Progress",
+    "title": "20  Tracking Progress",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will show how prooph board tracks implementation status, making progress visible across the entire specification.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Tracking Progress</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Tracking Progress</span>"
     ]
   },
   {
     "objectID": "build/refactoring-specifications.html",
     "href": "build/refactoring-specifications.html",
-    "title": "19  Refactoring Specifications",
+    "title": "21  Refactoring Specifications",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will address what happens when software changes require specification changes and why both evolving together is a feature, not a problem.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Refactoring Specifications</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Refactoring Specifications</span>"
     ]
   },
   {
     "objectID": "evolve/keeping-specifications-alive.html",
     "href": "evolve/keeping-specifications-alive.html",
-    "title": "20  Keeping Specifications Alive",
+    "title": "22  Keeping Specifications Alive",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will address the challenge of documentation rot and how living specifications avoid it by remaining connected to the evolving product.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Keeping Specifications Alive</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Keeping Specifications Alive</span>"
     ]
   },
   {
     "objectID": "evolve/teams.html",
     "href": "evolve/teams.html",
-    "title": "21  Teams",
+    "title": "23  Teams",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore how Domain-Driven Design, Team Topologies, and communication structures shape the way specifications are owned and evolved across teams.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Teams</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Teams</span>"
     ]
   },
   {
     "objectID": "evolve/product-engineering.html",
     "href": "evolve/product-engineering.html",
-    "title": "22  Product Engineering",
+    "title": "24  Product Engineering",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will look ahead at the future of product engineering and how specifications become the interface between human intent and machine execution.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Product Engineering</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Product Engineering</span>"
     ]
   },
   {
     "objectID": "evolve/final-thoughts.html",
     "href": "evolve/final-thoughts.html",
-    "title": "23  Final Thoughts",
+    "title": "25  Final Thoughts",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. Not a conclusion, more of a reflection on where we’ve been, where we’re going, and why specifications will keep evolving long after this book is finished.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Final Thoughts</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Final Thoughts</span>"
     ]
   },
   {

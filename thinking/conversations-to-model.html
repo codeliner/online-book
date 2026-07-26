@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>17&nbsp; AI Review – The Living Specification</title>
+<title>3&nbsp; From Conversations to Models – The Living Specification</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../build/handing-specifications-to-agents.html" rel="next">
-<link href="../validate/quality-gates.html" rel="prev">
+<link href="../thinking/external-memory.html" rel="next">
+<link href="../thinking/shared-understanding.html" rel="prev">
 <link href="../images/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../validate/given-when-then.html">Part IV – Validate</a></li><li class="breadcrumb-item"><a href="../validate/ai-review.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">AI Review</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../thinking/shared-understanding.html">Part I – Thinking Before Coding</a></li><li class="breadcrumb-item"><a href="../thinking/conversations-to-model.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">From Conversations to Models</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -136,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../thinking/conversations-to-model.html" class="sidebar-item-text sidebar-link">
+  <a href="../thinking/conversations-to-model.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">From Conversations to Models</span></span></a>
   </div>
 </li>
@@ -253,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../validate/ai-review.html" class="sidebar-item-text sidebar-link active">
+  <a href="../validate/ai-review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">AI Review</span></span></a>
   </div>
 </li>
@@ -346,9 +346,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../validate/given-when-then.html">Part IV – Validate</a></li><li class="breadcrumb-item"><a href="../validate/ai-review.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">AI Review</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../thinking/shared-understanding.html">Part I – Thinking Before Coding</a></li><li class="breadcrumb-item"><a href="../thinking/conversations-to-model.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">From Conversations to Models</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">AI Review</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">From Conversations to Models</span></h1>
 </div>
 
 
@@ -365,19 +365,101 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Coming soon
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This chapter is currently being written. It will explore how AI agents can critique and improve specifications, not implementation, but the specifications themselves.</p>
-</div>
-</div>
+<p>The car rental project fundamentally changed how I approached software projects.</p>
+<p>I no longer believed that shared understanding could emerge from requirements documents, no matter how detailed they were. If software engineering was really about creating and maintaining shared understanding, then I had to work directly with the people who understood the business. There was simply no shortcut.</p>
+<p>The next opportunity came almost immediately.</p>
+<p>I joined a project at a well-known fashion manufacturer. They had started a multi-year SAP migration to replace their home-grown ERP system. If you’ve ever been involved in an ERP migration, you know these projects are expensive. Not just because of the software licenses, but because every decision suddenly becomes strategic. Processes that had evolved over decades have to fit into a standardized system. Every exception costs money. Every customization becomes another long-term commitment.</p>
+<p>At the same time, another team was modernizing the digital ordering application used by fashion stores across Germany and Europe. Think of it as a B2B online shop, except that “online shop” doesn’t really describe it. It had grown together with the business over many years and supported countless workflows that only made sense in the context of that company.</p>
+<p>My team was responsible for digital contracts.</p>
+<p>Initially, that sounded like a fairly isolated problem. But the more we looked into it, the more obvious it became that contracts and customer master data couldn’t be separated. A strategic decision was made to put our service between the existing ERP and the future SAP system. We became a kind of customer hub that would shield the rest of the landscape from the migration.</p>
+<p>Looking back, that’s interesting because our biggest challenge wasn’t technical.</p>
+<p>It was organizational.</p>
+<p>Our team consisted of six people. Two developers, two business analysts and two domain experts from the customer master data department.</p>
+<p>That composition was no accident.</p>
+<p>The domain experts understood how customer data was managed today and how it would have to look in the future. The business analysts understood the business processes and documented our decisions. We developers were responsible for turning all of that into software.</p>
+<p>So we met almost every day.</p>
+<p>Today that doesn’t sound particularly remarkable. Remote collaboration has become normal. Back then it wasn’t. More importantly, our meetings weren’t status updates. We rarely went around the virtual table asking everyone what they had done yesterday.</p>
+<p>We usually started with whatever blocked us most.</p>
+<p>Someone from the customer master data team had discovered another special contract that didn’t fit into the new structure.</p>
+<p>One of the business analysts had found a condition that looked contradictory.</p>
+<p>We developers had questions about the API we were designing because we suddenly realized that two different customer types looked identical until you considered how contracts were managed.</p>
+<p>Looking back, it’s almost funny how much time we spent asking questions.</p>
+<p>At the time, I didn’t think about that at all. I certainly didn’t count them. They were simply part of our daily work.</p>
+<p>On many projects, questions are considered a problem. They indicate that requirements are incomplete or that somebody forgot to document something.</p>
+<p>We experienced the exact opposite.</p>
+<p>The questions were doing the work.</p>
+<p>I still remember reading requirements on earlier projects. Every now and then I’d stumble across something that felt odd. Maybe a business term I didn’t understand. Maybe an exception that wasn’t explained. Or simply a sentence where I thought: That can’t be the whole story.</p>
+<p>Of course I could ask.</p>
+<p>But asking wasn’t free.</p>
+<p>It usually meant writing an email or creating a ticket. Somebody had to find time to answer. Sometimes the answer created two new questions. Before long you were playing ping-pong with whoever had written the document.</p>
+<p>So you start making assumptions.</p>
+<p>Not because you think they’re correct, but because they’re good enough to continue working.</p>
+<p>I don’t think anyone does this consciously. It’s just the cheapest option.</p>
+<p>Our daily collaboration felt completely different.</p>
+<p>Questions didn’t interrupt the work.</p>
+<p>They were the work.</p>
+<p>If one of our business analysts wasn’t sure how a particular contract should be represented in the new structure, we discussed it. If one of us developers realized that an API decision suddenly affected contract management, we discussed it. If the domain experts remembered another customer segment with special rules, we discussed it.</p>
+<p>Nobody had to think twice before asking.</p>
+<p>Looking back, I think that’s what made the biggest difference.</p>
+<p>With direct collaboration, the cost of curiosity is almost zero.</p>
+<p>That’s an interesting observation because it has nothing to do with software. It has everything to do with how humans learn together.</p>
+<p>The cheaper it is to ask a question, the more questions get asked.</p>
+<p>The more questions get asked, the more hidden assumptions become visible.</p>
+<p>And hidden assumptions are usually where misunderstandings live.</p>
+<p>At the time I didn’t think about it in those terms. We were simply trying to solve a difficult business problem. It took me years to realize that we weren’t just building software.</p>
+<p>We were slowly building a shared understanding of the business.</p>
+<p>And that shared understanding didn’t emerge because someone had documented everything up front.</p>
+<p>It emerged because six people kept challenging, refining and extending each other’s mental models every single day.</p>
+<p>The more we collaborated, the more another problem became obvious.</p>
+<p>Conversations are great while you’re having them.</p>
+<p>The moment they’re over, they start fading away.</p>
+<p>Sometimes we ended a meeting convinced that we had found a great solution. Two days later one of us remembered another detail.</p>
+<p>“Didn’t we decide to handle this differently?”</p>
+<p>“No, I think that was only true for new contracts.”</p>
+<p>“Wait, what about franchise stores?”</p>
+<p>Nobody was wrong.</p>
+<p>We simply remembered different parts of the same conversation.</p>
+<p>You can probably relate to this. We’ve all left a meeting thinking that everyone agreed, only to discover a week later that everyone had agreed on something slightly different.</p>
+<p>That’s not because people don’t listen.</p>
+<p>It’s because conversations disappear.</p>
+<p>Our business analysts documented a lot of what we discussed in the company wiki. That certainly helped. Without them we would have lost many important decisions.</p>
+<p>But over time I noticed something interesting.</p>
+<p>The wiki answered questions we already knew to ask.</p>
+<p>It didn’t help us discover the questions we hadn’t thought about yet.</p>
+<p>That’s a subtle but important difference.</p>
+<p>When you read a document, you’re following the author’s train of thought. You can stop, go back, or look something up, but you’re still consuming information that someone else has structured for you.</p>
+<p>Our discussions didn’t work like that.</p>
+<p>We weren’t trying to explain something that already existed.</p>
+<p>We were trying to discover it together.</p>
+<p>That requires a different kind of artifact.</p>
+<p>At the time I couldn’t have explained it like that. I just felt that writing down meeting minutes wasn’t enough. The really valuable part wasn’t the conversation itself. It was what the conversation produced.</p>
+<p>We needed something we could build together.</p>
+<p>Not afterwards.</p>
+<p>While we were talking.</p>
+<p>Around that time, I learned about Event Storming.</p>
+<p>I was immediately curious because it addressed exactly the problem we were experiencing. We had a team that collaborated closely, but we still struggled with the same fundamental challenge: how do we preserve what we discover together?</p>
+<p>The first thing that caught my attention was that Event Storming was not about documenting knowledge that already existed.</p>
+<p>It was about discovering knowledge together.</p>
+<p>This was a subtle but important difference.</p>
+<p>When we had discussions about customer master data or contract structures, everybody brought their own perspective into the room. The domain experts knew the business rules and all the exceptions that had accumulated over the years. The business analysts understood the processes and dependencies. We developers understood the technical implications.</p>
+<p>Everybody knew a different part of the system.</p>
+<p>The challenge was not that information was missing.</p>
+<p>The challenge was that the complete picture only existed when we combined all these perspectives.</p>
+<p>Event Storming gave us a glimpse of a different way of working together.</p>
+<p>Instead of one person explaining something to the rest of the team, everybody became part of creating the model. The discussion was happening around something visible that evolved while we were talking.</p>
+<p>That changed the dynamic.</p>
+<p>When someone raised a question, we didn’t just answer it verbally and move on. We had to decide how this new insight changed our model.</p>
+<p>When someone disagreed, the disagreement became visible. We could look at it together and understand why our perspectives were different.</p>
+<p>This was a very different experience from the meetings I had participated in before.</p>
+<p>A meeting usually has a speaker and an audience. Even when everybody is invited to participate, there are often active and passive participants.</p>
+<p>Collaborative modeling changes that.</p>
+<p>The model becomes something the entire group creates. Everyone contributes, challenges, moves things around and helps shape the result.</p>
+<p>The energy of the group starts to build on itself.</p>
+<p>One person’s question triggers another person’s memory. Another person’s observation reveals a connection that nobody had considered before.</p>
+<p>The group becomes much more than the sum of the individual people in the room.</p>
+<p>At that time, I didn’t have the words for it, but I think this was the first time I experienced what true collaborative modeling can create.</p>
+<p>The model was not the result of the conversation.</p>
+<p>The model was the conversation.</p>
 
 
 
@@ -801,13 +883,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../validate/quality-gates.html" class="pagination-link" aria-label="Quality Gates">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Quality Gates</span></span>
+      <a href="../thinking/shared-understanding.html" class="pagination-link" aria-label="Shared Understanding">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Shared Understanding</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../build/handing-specifications-to-agents.html" class="pagination-link" aria-label="Handing Specifications to Agents">
-        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Handing Specifications to Agents</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../thinking/external-memory.html" class="pagination-link" aria-label="A Team's Shared External Memory">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Team’s Shared External Memory</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
