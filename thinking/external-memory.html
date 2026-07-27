@@ -372,48 +372,21 @@ ul.task-list li input[type="checkbox"] {
 <p>It is the complexity of understanding.</p>
 <p>I first became aware of this on the fashion manufacture project I described in the previous chapter.</p>
 <p>When we introduced Event Storming, something changed.</p>
-<p>Not because we had found a better documentation format. That wasn’t the interesting part.</p>
-<p>What mattered was that we suddenly had something that represented our current understanding of the business. Instead of trying to explain ideas in isolation, we could point at the model. Six people with six different perspectives could gradually build a shared picture together.</p>
-<p>For a while, that felt like the solution.</p>
-<p>Then another problem appeared.</p>
-<p>Understanding the system was only half the challenge.</p>
-<p>The other half was keeping that understanding connected to reality.</p>
-<p>Because the moment we started building the system, reality didn’t stop changing.</p>
-<p>The challenge became particularly visible when we started working on customer master data.</p>
-<p>At first, it looked like a fairly typical migration project.</p>
-<p>The company was replacing a home-grown ERP system with SAP. The existing customer master data structure had evolved over many years. SAP organized the same information differently, and our system had to bridge those two worlds.</p>
-<p>Naturally, we approached it as a technical problem.</p>
-<p>We needed to transform data from one structure into another. We had to integrate with SAP. We had to expose APIs and make sure everything communicated reliably.</p>
-<p>But the longer we worked on it, the more we realized that moving data was never the difficult part.</p>
-<p>The difficult part was understanding what the data actually meant.</p>
+<p>We suddenly had something that represented our current understanding of the business. Instead of trying to explain ideas in isolation, we could point at the model. Six people with six different perspectives could gradually build a shared picture together.</p>
+<p>For a while, that felt like the solution. Then another problem appeared. Understanding the system was only half the challenge. The other half was keeping that understanding connected to reality. Because the moment we started building the system, reality didn’t stop changing.</p>
+<p>The challenge became particularly visible when we started working on customer master data. At first, it looked like a fairly typical migration project. The company was replacing a home-grown ERP system with SAP. The existing customer master data structure had evolved over many years. SAP organized the same information differently, and our system had to bridge those two worlds.</p>
+<p>Naturally, we approached it as a technical problem. We needed to transform data from one structure into another. We had to integrate with SAP. We had to expose APIs and make sure everything communicated reliably.</p>
+<p>But the longer we worked on it, the more we realized that moving data was never the difficult part. The difficult part was understanding what the data actually meant.</p>
 <p>The old system contained years of accumulated business decisions. SAP introduced its own concepts and constraints. Between those two worlds lived contracts, customer relationships and business rules that were not fully visible in any single place.</p>
 <p>Our system had to reconstruct customer master data from information that was now fragmented across different parts of SAP. SAP simply couldn’t represent the information exactly as the company’s services expected it, so our software had to translate between the two worlds.</p>
-<p>And that translation turned out to be surprisingly subtle.</p>
-<p>I don’t remember a single moment when we suddenly realized that this had become too much.</p>
-<p>It happened gradually.</p>
-<p>Another mapping rule.</p>
-<p>Another contract exception.</p>
-<p>Another customer with special handling because of a business decision made years ago.</p>
-<p>Piece by piece, the picture became more detailed until nobody could comfortably hold it all in their head anymore.</p>
-<p>The interesting thing was that the knowledge itself wasn’t missing.</p>
+<p>And that translation turned out to be very tricky. I don’t remember a single moment when we suddenly realized that this had become too much. It happened gradually. Another mapping rule. Another contract exception. Another customer with special handling because of a business decision made years ago.</p>
+<p>Piece by piece, the picture became more detailed until nobody could comfortably hold it all in their head anymore. The interesting thing was that the knowledge itself wasn’t missing.</p>
 <p>The domain experts understood how customer data was actually used throughout the company. The business analysts knew the processes and had documented many of our decisions. We developers understood the implementation details and the technical constraints.</p>
-<p>Everybody held an important part of the puzzle.</p>
-<p>The problem was that nobody could see the entire picture alone.</p>
-<p>Looking back, I think this is an important characteristic of every sufficiently complex software system.</p>
-<p>The knowledge isn’t stored in one place.</p>
-<p>It is distributed.</p>
-<p>Some of it lives in documentation.</p>
-<p>Some of it lives in the source code.</p>
-<p>Some of it lives in the database.</p>
-<p>And some of it only exists in the experience of the people who have worked with the system for years.</p>
-<p>Each of those representations is valuable.</p>
+<p>Everybody held an important part of the puzzle. The problem was that nobody could see the entire picture alone.</p>
+<p>Looking back, I think this is an important characteristic of every sufficiently complex software system. The knowledge isn’t stored in one place.I t is distributed. Some of it lives in documentation. Some of it lives in the source code. Some of it lives in the database. And some of it only exists in the experience of the people who have worked with the system for years. Each of those representations is valuable.</p>
 <p>The business analysts documented processes and decisions that would otherwise have been forgotten. The source code captured the rules we had implemented. The database reflected years of business activity. Every representation contained knowledge.</p>
-<p>But each representation only made sense to part of the team.</p>
-<p>Developers could understand the code.</p>
-<p>Business experts could explain the processes.</p>
-<p>The database faithfully stored the history of the business, but it certainly didn’t explain itself.</p>
-<p>Whenever we encountered something unexpected, we had to connect those different perspectives again.</p>
-<p>Someone noticed an unusual customer relationship.</p>
+<p>But each representation only made sense to part of the team. Developers could understand the code. Business experts could explain the processes. The database faithfully stored the history of the business, but it certainly didn’t explain itself.</p>
+<p>Whenever we encountered something unexpected, we had to connect those different perspectives again. Someone noticed an unusual customer relationship.</p>
 <p>We inspected the data.</p>
 <p>We followed the implementation.</p>
 <p>We talked to the business analysts.</p>
