@@ -386,20 +386,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Looking back, I think this is an important characteristic of every sufficiently complex software system. The knowledge isn’t stored in one place.I t is distributed. Some of it lives in documentation. Some of it lives in the source code. Some of it lives in the database. And some of it only exists in the experience of the people who have worked with the system for years. Each of those representations is valuable.</p>
 <p>The business analysts documented processes and decisions that would otherwise have been forgotten. The source code captured the rules we had implemented. The database reflected years of business activity. Every representation contained knowledge.</p>
 <p>But each representation only made sense to part of the team. Developers could understand the code. Business experts could explain the processes. The database faithfully stored the history of the business, but it certainly didn’t explain itself.</p>
-<p>Whenever we encountered something unexpected, we had to connect those different perspectives again. Someone noticed an unusual customer relationship.</p>
-<p>We inspected the data.</p>
-<p>We followed the implementation.</p>
-<p>We talked to the business analysts.</p>
-<p>We asked the domain experts.</p>
-<p>Only then did the whole picture slowly emerge.</p>
-<p>Looking back, this was probably the first time I realized that building the software wasn’t the only difficult problem.</p>
-<p>Making the software understandable was just as important.</p>
-<p>At some point, I started feeling that we needed another way of looking at the system.</p>
-<p>Not another document.</p>
-<p>We already had those.</p>
-<p>Not another technical log that only developers would ever read.</p>
-<p>We already had plenty of those as well.</p>
-<p>What we were missing was a way to observe the system from the perspective of the business.</p>
+<p>Whenever we encountered something unexpected, we had to connect those different perspectives again. Someone noticed an unusual customer relationship. We inspected the data. We followed the implementation. We talked to the business analysts. We asked the domain experts. Only then did the whole picture slowly emerge.</p>
+<p>Looking back, this was probably the first time I realized that building the software wasn’t the only difficult problem. Making the software understandable was just as important.</p>
+<p>At some point, I started feeling that we needed another way of looking at the system. Not another document. We already had those. Not another technical log that only developers would ever read. We already had plenty of those as well. What we were missing was a way to observe the system from the perspective of the business.</p>
 <p>I still remember that suggesting this felt like a bit of a gamble.</p>
 <p>I was working as an external consultant. My colleague and I weren’t employees of the company. The business analysts and domain experts we collaborated with every day were the people who owned the business knowledge and ultimately decided where the budget should be invested.</p>
 <p>Nobody had asked for a monitoring application.</p>
@@ -407,63 +396,16 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>We need a better way to understand our customer master data processing.</p>
 </blockquote>
-<p>It was simply something I had observed while working with the team.</p>
-<p>Every time something unexpected happened, we had to reconstruct the same picture again.</p>
-<p>We looked at the data coming from SAP.</p>
-<p>We examined the mapping logic in our own system.</p>
-<p>We revisited the business rules around contracts.</p>
-<p>We checked our assumptions against what the domain experts expected.</p>
-<p>And I kept thinking: what if we could simply make this visible?</p>
-<p>At the time, I certainly wasn’t thinking about shared memory.</p>
-<p>I just thought it would be useful if we didn’t have to reconstruct the same understanding over and over again.</p>
-<p>So I proposed building a monitoring application.</p>
-<p>Honestly, I wasn’t sure how people would react.</p>
-<p>Usually, consultants are hired to solve problems that the organization has already identified.</p>
-<p>This time, I was suggesting that there was a problem nobody had explicitly described yet.</p>
-<p>Fortunately, the team trusted me enough to give it a try.</p>
-<p>The first version of the monitoring application was remarkably simple.</p>
-<p>Its purpose was simply to show what was happening.</p>
-<p>SAP continuously sent incremental updates. Our system received those updates and reconstructed the customer master data structure expected by the company’s services.</p>
-<p>Most of the time, everything worked exactly as intended.</p>
-<p>Sometimes it didn’t.</p>
-<p>A customer relationship couldn’t be reconstructed.</p>
-<p>Some required information was missing.</p>
-<p>A combination of values appeared that nobody had anticipated.</p>
-<p>From a purely technical perspective, many of those situations could simply have been treated as errors.</p>
-<p>The system could have thrown an exception and stopped.</p>
-<p>But that wasn’t really the problem we were trying to solve.</p>
-<p>The problem wasn’t always that the software was broken.</p>
-<p>Quite often, the software was telling us that our understanding of the business was incomplete.</p>
-<p>That distinction turned out to be incredibly important.</p>
-<p>If we reduced every unexpected situation to a technical failure, we lost the context that would help us understand what had actually happened.</p>
-<p>Instead, we recorded those situations.</p>
-<p>We kept the incoming information, the decisions our system had made and the exact point where our existing assumptions no longer matched reality.</p>
-<p>The monitoring application made those situations visible.</p>
-<p>It didn’t try to hide the complexity behind a polished user interface.</p>
-<p>Quite the opposite.</p>
-<p>It exposed exactly the information we needed to understand the system’s behavior.</p>
-<p>Today I sometimes compare it to looking at logs in Grafana.</p>
-<p>Not because logs are beautiful.</p>
-<p>But because sometimes you simply need to see what actually happened.</p>
-<p>What surprised me wasn’t that the monitoring application helped us developers.</p>
-<p>Of course it did.</p>
-<p>Whenever something unexpected happened, we suddenly had a much better starting point for our investigations.</p>
-<p>The real surprise came from somewhere else.</p>
-<p>The business analysts started using it.</p>
-<p>Nobody asked them to.</p>
-<p>Nobody trained them extensively.</p>
-<p>They simply added it to their daily routine.</p>
-<p>Every morning, they checked whether there were new situations that required attention.</p>
-<p>I still remember watching this transition happen.</p>
-<p>In the beginning, we explored the information together. We explained what different situations meant and how the technical details related to the business processes.</p>
-<p>But it didn’t take long before they no longer needed us.</p>
-<p>They learned how to read the information themselves.</p>
-<p>They understood which situations represented expected behavior and which ones indicated a genuine problem.</p>
-<p>Most importantly, they could now communicate directly with the SAP team without us developers acting as translators.</p>
+<p>It was simply something I had observed while working with the team. Every time something unexpected happened, we had to reconstruct the same picture again. We looked at the data coming from SAP. We examined the mapping logic in our own system. We revisited the business rules around contracts. We checked our assumptions against what the domain experts expected. And I kept thinking: what if we could simply make this visible?</p>
+<p>At the time, I certainly wasn’t thinking about shared memory. I just thought it would be useful if we didn’t have to reconstruct the same understanding over and over again.</p>
+<p>So I proposed building a monitoring application. Honestly, I wasn’t sure how people would react. Usually, external developers are hired to solve problems that the organization has already identified.</p>
+<p>This time, I was suggesting that there was a problem nobody had explicitly described yet. Fortunately, the team trusted me enough to give it a try. The purpose of the monitoring application was simply to show what was happening. SAP continuously sent incremental updates. Our system received those updates and reconstructed the customer master data structure expected by the company’s services. Most of the time, everything worked exactly as intended. Sometimes it didn’t. A customer relationship couldn’t be reconstructed. Some required information was missing. A combination of values appeared that nobody had anticipated. From a purely technical perspective, many of those situations could simply have been treated as errors. The system could have thrown an exception and stopped. But that wasn’t really the problem we were trying to solve. The problem wasn’t always that the software was broken. Quite often, the software was telling us that our understanding of the business was incomplete. That distinction turned out to be incredibly important.</p>
+<p>If we reduced every unexpected situation to a technical failure, we lost the context that would help us understand what had actually happened. Instead, we recorded those situations. We kept the incoming information, the decisions our system had made and the exact point where our existing assumptions no longer matched reality. The monitoring application made those situations visible. It didn’t try to hide the complexity behind a polished user interface. Quite the opposite. It exposed exactly the information we needed to understand the system’s behavior.</p>
+<p>What surprised me wasn’t that the monitoring application helped us developers. Of course it did. Whenever something unexpected happened, we suddenly had a much better starting point for our investigations. The real surprise came from somewhere else. The business analysts started using it. Nobody asked them to. Nobody trained them extensively. They simply added it to their daily routine. Every morning, they checked whether there were new situations that required attention.</p>
+<p>I still remember watching this transition happen. In the beginning, we explored the information together. We explained what different situations meant and how the technical details related to the business processes. But it didn’t take long before they no longer needed us. They learned how to read the information themselves. They understood which situations represented expected behavior and which ones indicated a genuine problem. Most importantly, they could now communicate directly with the SAP team without us developers acting as translators.</p>
 <p>That changed the dynamic of the entire project.</p>
 <p>Previously, the business analysts would notice something unusual and ask us what had happened. We investigated the code, inspected the data and translated our findings back into business language.</p>
-<p>Now everybody started from the same place.</p>
-<p>Instead of asking,</p>
+<p>Now everybody started from the same place. Instead of asking,</p>
 <blockquote class="blockquote">
 <p>Something strange happened. Can you developers figure out why?</p>
 </blockquote>
@@ -471,16 +413,10 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>We can see this update from SAP. This customer relationship couldn’t be reconstructed because this information doesn’t match our current assumptions.</p>
 </blockquote>
-<p>The understanding was no longer hidden inside the people who had built the software.</p>
-<p>It became something the whole team could work with.</p>
-<p>At the time, I didn’t have a name for what we had created.</p>
-<p>I only knew that it felt fundamentally different from the documentation I had worked with before.</p>
-<p>Documentation described the system.</p>
-<p>The monitoring application participated in understanding it.</p>
-<p>It stayed connected to reality because reality itself continuously updated it.</p>
+<p>The understanding was no longer hidden inside the people who had built the software. It became something the whole team could work with. At the time, I didn’t have a name for what we had created. I only knew that it felt fundamentally different from the documentation I had worked with before.</p>
+<p>Documentation described the system. The monitoring application participated in understanding it. It stayed connected to reality because reality itself continuously updated it.</p>
 <p>Looking back, I think this was the first time I encountered something that acted like a team’s shared external memory.</p>
-<p>Not a replacement for conversations.</p>
-<p>A place where conversations could begin from the same shared reality.</p>
+<p>Not a replacement for conversations. A place where conversations could begin from the same shared reality.</p>
 
 
 

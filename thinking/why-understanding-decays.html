@@ -377,57 +377,29 @@ ul.task-list li input[type="checkbox"] {
 <p>At first I found that surprising. Looking back, it should have been obvious.</p>
 <p>Software development is a learning process.</p>
 <p>We build software iteratively because we know that we will discover things we couldn’t possibly know on day one. New business requirements appear. Existing processes change. Production reveals situations nobody anticipated. Sometimes we simply ask a better question than we asked a month earlier.</p>
-<p>Every one of those discoveries changes our understanding of the system.</p>
-<p>And that is exactly where the real problem begins.</p>
-<p>The new understanding appears naturally where the discovery happens.</p>
-<p>Maybe somebody asks a question during refinement.</p>
-<p>Maybe two developers discuss an edge case while implementing a feature.</p>
-<p>Maybe customer support reports an unexpected production issue.</p>
-<p>Maybe somebody writes down a decision in a ticket or explains it in a Slack conversation.</p>
-<p>The immediate problem gets solved. Everybody involved leaves with a better understanding than they had before.</p>
+<p>Every one of those discoveries changes our understanding of the system. And that is exactly where the real problem begins.</p>
+<p>The new understanding appears naturally where the discovery happens. Maybe somebody asks a question during refinement. Maybe two developers discuss an edge case while implementing a feature. Maybe customer support reports an unexpected production issue. Maybe somebody writes down a decision in a ticket or explains it in a Slack conversation. The immediate problem gets solved. Everybody involved leaves with a better understanding than they had before.</p>
 <p>But what happens to everything that described the system before that conversation?</p>
 <p>Usually… nothing.</p>
 <p>I’ve seen this countless times.</p>
 <p>A developer starts implementing a user story and notices that something doesn’t quite add up. The acceptance criteria sound reasonable until you compare them with how the business actually operates. Somebody from the business joins the discussion. An edge case appears that nobody had considered before. The team talks it through, agrees on a solution and the implementation continues.</p>
 <p>From the perspective of everyone involved, it was a productive conversation. The misunderstanding was resolved. The team learned something.</p>
 <p>But if you open the original user story a week later, it often still says exactly what it said before the discussion started.</p>
-<p>The shared understanding improved.</p>
-<p>The specification didn’t.</p>
+<p>The shared understanding improved. The specification didn’t.</p>
 <p>Production incidents often teach the same lesson.</p>
 <p>A bug is reported. The team investigates. Eventually somebody discovers that the software behaved exactly as it was designed to behave, but the design itself was based on an incorrect assumption. Or perhaps a business rule was incomplete. Or a combination of data appeared that nobody believed was even possible.</p>
 <p>Those moments are incredibly valuable because they reveal something the team genuinely didn’t understand before.</p>
 <p>After the fix has been deployed, the team knows more about the system than it did yesterday.</p>
-<p>But where does that new knowledge live?</p>
-<p>Quite often, it lives inside the ticket that has just been closed.</p>
-<p>Or inside the memory of the people who investigated the incident.</p>
-<p>Meanwhile, the specification that described the system before the discovery still describes yesterday’s understanding.</p>
+<p>But where does that new knowledge live? Quite often, it lives inside the ticket that has just been closed. Or inside the memory of the people who investigated the incident. Meanwhile, the specification that described the system before the discovery still describes yesterday’s understanding.</p>
 <p>Over time, this happens again and again.</p>
-<p>Every conversation improves the team’s understanding.</p>
-<p>Every discovery changes the mental model.</p>
-<p>But the artifacts that are supposed to represent that understanding gradually drift away from reality.</p>
-<p>Looking back, I think this explains why the discussion around documentation has always felt slightly misleading to me.</p>
-<p>People often asked whether documentation was worth writing at all.</p>
-<p>I don’t think that was ever the interesting question.</p>
-<p>Of course teams should capture knowledge. The problem was never documentation itself.</p>
-<p>The problem was that documentation had no natural place inside the team’s learning process.</p>
-<p>A document can be perfectly accurate on the day it is written. It may represent the best understanding the team has ever had.</p>
-<p>But software doesn’t stand still.</p>
-<p>The business changes.</p>
-<p>The software changes.</p>
-<p>And, most importantly, the team’s understanding changes.</p>
-<p>The document is somehow expected to keep up with all of that, even though nothing in the team’s daily work naturally brings it back into the conversation.</p>
-<p>Without realizing it, the document slowly turns into a historical record. It tells us what we believed at one point in time rather than what we understand today.</p>
-<p>That realization became even more interesting when I started working with Event Storming.</p>
-<p>One of the reasons Event Storming felt so refreshing was that it didn’t begin with documentation. It began with conversation.</p>
-<p>Developers, domain experts and business people stood in front of the same wall and explored the business together. Questions immediately changed the model. A new sticky note appeared. Somebody challenged an assumption. The understanding evolved, and the model evolved with it.</p>
-<p>For the duration of the workshop, the model was alive because it participated in the conversation.</p>
-<p>The interesting thing is that experienced Event Storming practitioners were well aware that this state wouldn’t last.</p>
-<p>In fact, the advice I heard most often was not to treat the workshop artifact as documentation that needed to stay up to date forever. The workshop had already achieved its purpose. Shared understanding had emerged.</p>
-<p>If the understanding changed significantly a few months later, the recommendation was simple: run another workshop.</p>
-<p>At the time, that made perfect sense to me.</p>
-<p>After all, the sticky notes were never the real outcome.</p>
-<p>The conversation was.</p>
-<p>But over the years, I couldn’t shake one question.</p>
+<p>Every conversation improves the team’s understanding. Every discovery changes the mental model. But the artifacts that are supposed to represent that understanding gradually drift away from reality.</p>
+<p>Looking back, I think this explains why the discussion around documentation has always felt slightly misleading to me. People often asked whether documentation was worth writing at all.</p>
+<p>I don’t think that was ever the interesting question. Of course teams should capture knowledge. The problem was never documentation itself. The problem was that documentation had no natural place inside the team’s learning process. A document can be perfectly accurate on the day it is written. It may represent the best understanding the team has ever had.</p>
+<p>But software doesn’t stand still. The business changes. The software changes. And, most importantly, the team’s understanding changes.</p>
+<p>The document is somehow expected to keep up with all of that, even though nothing in the team’s daily work naturally brings it back into the conversation. Without realizing it, the document slowly turns into a historical record. It tells us what we believed at one point in time rather than what we understand today.</p>
+<p>That realization became even more interesting when I started working with Event Storming. One of the reasons Event Storming felt so refreshing was that it didn’t begin with documentation. It began with conversation. Developers, domain experts and business people stood in front of the same wall and explored the business together. Questions immediately changed the model. A new sticky note appeared. Somebody challenged an assumption. The understanding evolved, and the model evolved with it. For the duration of the workshop, the model was alive because it participated in the conversation.</p>
+<p>The interesting thing is that experienced Event Storming practitioners were well aware that this state wouldn’t last. In fact, the advice I heard most often was not to treat the workshop artifact as documentation that needed to stay up to date forever. The workshop had already achieved its purpose. Shared understanding had emerged. If the understanding changed significantly a few months later, the recommendation was simple: run another workshop.</p>
+<p>At the time, that made perfect sense to me. After all, the sticky notes were never the real outcome. The conversation was. But over the years, I couldn’t shake one question.</p>
 <p>Back on the SAP project, our monitoring application had shown me that a representation didn’t have to become obsolete immediately. It could stay connected to reality. It became part of the team’s feedback loop. It didn’t replace conversations, but it gave those conversations a place to continue.</p>
 <p>I started wondering whether collaborative models could do the same.</p>
 <p>Could a model remain useful after the workshop?</p>
