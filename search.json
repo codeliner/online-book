@@ -64,223 +64,234 @@
     ]
   },
   {
+    "objectID": "thinking/living-specification.html",
+    "href": "thinking/living-specification.html",
+    "title": "6  Living Specification",
+    "section": "",
+    "text": "The four chapters you’ve just read might have looked like separate observations.\nThey weren’t.\nThey were all different ways of looking at the same question.\nWe started by asking why software engineering is so difficult.\nAt first, I thought I was dealing with a technical problem.\nAfter all, we were replacing a large COBOL system. There were decades of accumulated complexity. Integrations. Legacy code. Countless business rules.\nBut the longer I worked on the project, the less convinced I became that technology was the real challenge.\nAgain and again, I realized that the difficult part wasn’t changing the software. It was understanding the business well enough to make the right decisions.\nThat realization quietly connected everything else.\nOn the car rental project, we struggled because we were trying to replace a business we didn’t fully understand yet.\nLater, on the SAP migration for the fashion manufacturer, I experienced something different. Event Storming showed me how quickly shared understanding could emerge when the right people explore the business together. For the first time, I saw the power of having a model that everyone could gather around. Instead of trying to explain the system from memory, we could point at the wall, ask questions and improve the model together.\nBut once the workshop was over, something else caught my attention. The customer monitoring application we built during the project stayed useful because it remained connected to reality. It continuously reflected what was actually happening in the business. People looked at it every day. They discussed it. They made decisions based on it. Long after the workshop had ended, it was still part of the team’s conversations.\nThat observation stayed with me. If an operational model could remain valuable because it evolved together with the business, could a collaborative model do the same?\nLooking back, all these observations came together around 2018.\nBy then I had worked on the car rental project. I had experienced Event Storming on the SAP migration. I had seen how powerful collaborative modeling could be, but I had also seen how quickly the workshop artifacts became outdated.\nAt the same time, I started wondering whether the Event Storming conversation really had to end when everybody left the room.\nThat wasn’t a particularly popular question.\nLong before the pandemic, the common opinion in the Event Storming community was that the workshop itself was the important part. Alberto Brandolini, who created Event Storming, once answered the question “What is the best tool for remote Event Storming?” with a simple reply:\n“A plane ticket.”\nI understood exactly what he meant.\nEvent Storming is about people standing in front of the same wall. Conversations happen naturally. Somebody reaches for a sticky note. Another person moves it. Questions appear almost faster than anyone can answer them. There is an energy in the room that is difficult to recreate remotely.\nI wasn’t trying to replace that.\nBut I couldn’t stop thinking about something else.\nWhy should the collaboration end once the workshop was over?\nThat question had been bothering me ever since the SAP project.\nThe customer monitoring application had shown me that an artifact could remain useful if it stayed connected to reality. Event Storming had shown me how collaborative models helped teams build shared understanding. I kept wondering whether those two observations could somehow be combined.\nWhat if the collaborative model itself could remain part of the team’s daily work? Instead of becoming a photograph of one successful workshop, it could continue evolving every time the team learned something new.\nThat question eventually led me to start experimenting with Remote Event Storming.\nAt the time, I wasn’t trying to build a product. I was exploring an idea.\nIf collaborative modeling helps create shared understanding, could it also help maintain it?\nThose experiments eventually led to prooph board. Over the following years, I worked with teams that didn’t use the board only for workshops anymore. They used it between workshops. During refinement. During implementation. During production incidents. The model slowly became a place where conversations continued instead of restarting.\nI didn’t have a name for that idea back then.\nToday I do.\n\nI call it a Living Specification.",
+    "crumbs": [
+      "Part I – Thinking Before Coding",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Living Specification</span>"
+    ]
+  },
+  {
     "objectID": "storm/introduction.html",
     "href": "storm/introduction.html",
-    "title": "6  Why We Start with Conversations",
+    "title": "7  Why We Start with Conversations",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explain why every good specification begins with a conversation (not a requirements document) and how structured conversations lead to shared understanding.",
     "crumbs": [
       "Part II – Storm",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Why We Start with Conversations</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Why We Start with Conversations</span>"
     ]
   },
   {
     "objectID": "storm/event-storming.html",
     "href": "storm/event-storming.html",
-    "title": "7  Event Storming",
+    "title": "8  Event Storming",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover the purpose, history, and practice of Event Storming. How a room full of orange sticky notes can reveal an entire business domain.",
     "crumbs": [
       "Part II – Storm",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Event Storming</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Event Storming</span>"
     ]
   },
   {
     "objectID": "storm/asking-better-questions.html",
     "href": "storm/asking-better-questions.html",
-    "title": "8  Asking Better Questions",
+    "title": "9  Asking Better Questions",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the role of the facilitator, the art of discovering knowledge through conversation, and why the right questions matter more than the right answers.",
     "crumbs": [
       "Part II – Storm",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Asking Better Questions</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Asking Better Questions</span>"
     ]
   },
   {
     "objectID": "design/from-understanding-to-structure.html",
     "href": "design/from-understanding-to-structure.html",
-    "title": "9  From Understanding to Structure",
+    "title": "10  From Understanding to Structure",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explain how the understanding gained through storming transforms into a structured design and why design is a discipline, not a one-time activity.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>From Understanding to Structure</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>From Understanding to Structure</span>"
     ]
   },
   {
     "objectID": "design/why-event-modeling.html",
     "href": "design/why-event-modeling.html",
-    "title": "10  Why Event Modeling",
+    "title": "11  Why Event Modeling",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will make the case for Event Modeling as a design discipline, not just a diagram, but a way of thinking about software behavior over time.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why Event Modeling</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Why Event Modeling</span>"
     ]
   },
   {
     "objectID": "design/from-events-to-specifications.html",
     "href": "design/from-events-to-specifications.html",
-    "title": "11  From Events to Specifications",
+    "title": "12  From Events to Specifications",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how events become commands, read models, actors, and policies. The building blocks of a complete specification.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>From Events to Specifications</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>From Events to Specifications</span>"
     ]
   },
   {
     "objectID": "design/specifying-user-interfaces.html",
     "href": "design/specifying-user-interfaces.html",
-    "title": "12  Specifying User Interfaces",
+    "title": "13  Specifying User Interfaces",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore Breadboarding, wireframes, user flows, and how UI specifications become part of the living specification.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Specifying User Interfaces</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Specifying User Interfaces</span>"
     ]
   },
   {
     "objectID": "design/organizing-specifications.html",
     "href": "design/organizing-specifications.html",
-    "title": "13  Organizing Specifications",
+    "title": "14  Organizing Specifications",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how to organize specifications in an easy-to-maintain structure, and how this organization provides context for both humans and AI agents.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Organizing Specifications</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Organizing Specifications</span>"
     ]
   },
   {
     "objectID": "validate/given-when-then.html",
     "href": "validate/given-when-then.html",
-    "title": "14  Given-When-Then",
+    "title": "15  Given-When-Then",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover acceptance criteria, behavior specifications, and the power of concrete examples to validate your understanding before writing any code.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Given-When-Then</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Given-When-Then</span>"
     ]
   },
   {
     "objectID": "validate/finding-misconceptions-early.html",
     "href": "validate/finding-misconceptions-early.html",
-    "title": "15  Finding Misconceptions Early",
+    "title": "16  Finding Misconceptions Early",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the real value of modeling, finding what you got wrong before implementation makes it expensive to change.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Finding Misconceptions Early</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Finding Misconceptions Early</span>"
     ]
   },
   {
     "objectID": "validate/quality-gates.html",
     "href": "validate/quality-gates.html",
-    "title": "16  Quality Gates",
+    "title": "17  Quality Gates",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will introduce guardrails for your specification workflow, from simple use cases to business value validation and edge case discovery.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Quality Gates</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Quality Gates</span>"
     ]
   },
   {
     "objectID": "validate/ai-review.html",
     "href": "validate/ai-review.html",
-    "title": "17  AI Review",
+    "title": "18  AI Review",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore how AI agents can critique and improve specifications, not implementation, but the specifications themselves.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>AI Review</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>AI Review</span>"
     ]
   },
   {
     "objectID": "build/handing-specifications-to-agents.html",
     "href": "build/handing-specifications-to-agents.html",
-    "title": "18  Handing Specifications to Agents",
+    "title": "19  Handing Specifications to Agents",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how to provide context, slices, and incremental implementation tasks to AI agents, turning specifications into working software.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Handing Specifications to Agents</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Handing Specifications to Agents</span>"
     ]
   },
   {
     "objectID": "build/human-agent-collaboration.html",
     "href": "build/human-agent-collaboration.html",
-    "title": "19  Human-Agent Collaboration",
+    "title": "20  Human-Agent Collaboration",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the feedback loop between humans and AI agents: reviewing, iterating, and collaborating on implementation.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Human-Agent Collaboration</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Human-Agent Collaboration</span>"
     ]
   },
   {
     "objectID": "build/tracking-progress.html",
     "href": "build/tracking-progress.html",
-    "title": "20  Tracking Progress",
+    "title": "21  Tracking Progress",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will show how prooph board tracks implementation status, making progress visible across the entire specification.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Tracking Progress</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Tracking Progress</span>"
     ]
   },
   {
     "objectID": "build/refactoring-specifications.html",
     "href": "build/refactoring-specifications.html",
-    "title": "21  Refactoring Specifications",
+    "title": "22  Refactoring Specifications",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will address what happens when software changes require specification changes and why both evolving together is a feature, not a problem.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Refactoring Specifications</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Refactoring Specifications</span>"
     ]
   },
   {
     "objectID": "evolve/keeping-specifications-alive.html",
     "href": "evolve/keeping-specifications-alive.html",
-    "title": "22  Keeping Specifications Alive",
+    "title": "23  Keeping Specifications Alive",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will address the challenge of documentation rot and how living specifications avoid it by remaining connected to the evolving product.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Keeping Specifications Alive</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Keeping Specifications Alive</span>"
     ]
   },
   {
     "objectID": "evolve/teams.html",
     "href": "evolve/teams.html",
-    "title": "23  Teams",
+    "title": "24  Teams",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore how Domain-Driven Design, Team Topologies, and communication structures shape the way specifications are owned and evolved across teams.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Teams</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Teams</span>"
     ]
   },
   {
     "objectID": "evolve/product-engineering.html",
     "href": "evolve/product-engineering.html",
-    "title": "24  Product Engineering",
+    "title": "25  Product Engineering",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will look ahead at the future of product engineering and how specifications become the interface between human intent and machine execution.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Product Engineering</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Product Engineering</span>"
     ]
   },
   {
     "objectID": "evolve/final-thoughts.html",
     "href": "evolve/final-thoughts.html",
-    "title": "25  Final Thoughts",
+    "title": "26  Final Thoughts",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. Not a conclusion, more of a reflection on where we’ve been, where we’re going, and why specifications will keep evolving long after this book is finished.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Final Thoughts</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Final Thoughts</span>"
     ]
   },
   {

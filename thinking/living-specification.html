@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>15&nbsp; Given-When-Then – The Living Specification</title>
+<title>6&nbsp; Living Specification – The Living Specification</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../validate/finding-misconceptions-early.html" rel="next">
-<link href="../design/organizing-specifications.html" rel="prev">
+<link href="../storm/introduction.html" rel="next">
+<link href="../thinking/why-understanding-decays.html" rel="prev">
 <link href="../images/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../validate/given-when-then.html">Part IV – Validate</a></li><li class="breadcrumb-item"><a href="../validate/given-when-then.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Given-When-Then</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../thinking/shared-understanding.html">Part I – Thinking Before Coding</a></li><li class="breadcrumb-item"><a href="../thinking/living-specification.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Living Specification</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -154,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../thinking/living-specification.html" class="sidebar-item-text sidebar-link">
+  <a href="../thinking/living-specification.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Living Specification</span></span></a>
   </div>
 </li>
@@ -241,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../validate/given-when-then.html" class="sidebar-item-text sidebar-link active">
+  <a href="../validate/given-when-then.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Given-When-Then</span></span></a>
   </div>
 </li>
@@ -352,9 +352,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../validate/given-when-then.html">Part IV – Validate</a></li><li class="breadcrumb-item"><a href="../validate/given-when-then.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Given-When-Then</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../thinking/shared-understanding.html">Part I – Thinking Before Coding</a></li><li class="breadcrumb-item"><a href="../thinking/living-specification.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Living Specification</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Given-When-Then</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Living Specification</span></h1>
 </div>
 
 
@@ -371,19 +371,42 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Coming soon
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This chapter is currently being written. It will cover acceptance criteria, behavior specifications, and the power of concrete examples to validate your understanding before writing any code.</p>
-</div>
-</div>
+<p>The four chapters you’ve just read might have looked like separate observations.</p>
+<p>They weren’t.</p>
+<p>They were all different ways of looking at the same question.</p>
+<p>We started by asking why software engineering is so difficult.</p>
+<p>At first, I thought I was dealing with a technical problem.</p>
+<p>After all, we were replacing a large COBOL system. There were decades of accumulated complexity. Integrations. Legacy code. Countless business rules.</p>
+<p>But the longer I worked on the project, the less convinced I became that technology was the real challenge.</p>
+<p>Again and again, I realized that the difficult part wasn’t changing the software. It was understanding the business well enough to make the right decisions.</p>
+<p>That realization quietly connected everything else.</p>
+<p>On the car rental project, we struggled because we were trying to replace a business we didn’t fully understand yet.</p>
+<p>Later, on the SAP migration for the fashion manufacturer, I experienced something different. Event Storming showed me how quickly shared understanding could emerge when the right people explore the business together. For the first time, I saw the power of having a model that everyone could gather around. Instead of trying to explain the system from memory, we could point at the wall, ask questions and improve the model together.</p>
+<p>But once the workshop was over, something else caught my attention. The customer monitoring application we built during the project stayed useful because it remained connected to reality. It continuously reflected what was actually happening in the business. People looked at it every day. They discussed it. They made decisions based on it. Long after the workshop had ended, it was still part of the team’s conversations.</p>
+<p>That observation stayed with me. If an operational model could remain valuable because it evolved together with the business, could a collaborative model do the same?</p>
+<p>Looking back, all these observations came together around 2018.</p>
+<p>By then I had worked on the car rental project. I had experienced Event Storming on the SAP migration. I had seen how powerful collaborative modeling could be, but I had also seen how quickly the workshop artifacts became outdated.</p>
+<p>At the same time, I started wondering whether the Event Storming conversation really had to end when everybody left the room.</p>
+<p>That wasn’t a particularly popular question.</p>
+<p>Long before the pandemic, the common opinion in the Event Storming community was that the workshop itself was the important part. Alberto Brandolini, who created Event Storming, once answered the question “What is the best tool for remote Event Storming?” with a simple reply:</p>
+<p>“A plane ticket.”</p>
+<p>I understood exactly what he meant.</p>
+<p>Event Storming is about people standing in front of the same wall. Conversations happen naturally. Somebody reaches for a sticky note. Another person moves it. Questions appear almost faster than anyone can answer them. There is an energy in the room that is difficult to recreate remotely.</p>
+<p>I wasn’t trying to replace that.</p>
+<p>But I couldn’t stop thinking about something else.</p>
+<p>Why should the collaboration end once the workshop was over?</p>
+<p>That question had been bothering me ever since the SAP project.</p>
+<p>The customer monitoring application had shown me that an artifact could remain useful if it stayed connected to reality. Event Storming had shown me how collaborative models helped teams build shared understanding. I kept wondering whether those two observations could somehow be combined.</p>
+<p>What if the collaborative model itself could remain part of the team’s daily work? Instead of becoming a photograph of one successful workshop, it could continue evolving every time the team learned something new.</p>
+<p>That question eventually led me to start experimenting with Remote Event Storming.</p>
+<p>At the time, I wasn’t trying to build a product. I was exploring an idea.</p>
+<p>If collaborative modeling helps create shared understanding, could it also help maintain it?</p>
+<p>Those experiments eventually led to prooph board. Over the following years, I worked with teams that didn’t use the board only for workshops anymore. They used it between workshops. During refinement. During implementation. During production incidents. The model slowly became a place where conversations continued instead of restarting.</p>
+<p>I didn’t have a name for that idea back then.</p>
+<p>Today I do.</p>
+<blockquote class="blockquote">
+<p>I call it a <strong>Living Specification</strong>.</p>
+</blockquote>
 
 
 
@@ -807,13 +830,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../design/organizing-specifications.html" class="pagination-link" aria-label="Organizing Specifications">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Organizing Specifications</span></span>
+      <a href="../thinking/why-understanding-decays.html" class="pagination-link" aria-label="Why Understanding Decays">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Why Understanding Decays</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../validate/finding-misconceptions-early.html" class="pagination-link" aria-label="Finding Misconceptions Early">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Finding Misconceptions Early</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../storm/introduction.html" class="pagination-link" aria-label="Why We Start with Conversations">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Why We Start with Conversations</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
