@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; Asking Better Questions – The Living Specification</title>
+<title>9&nbsp; Discovering the Big Picture – The Living Specification</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,7 +51,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../design/from-understanding-to-structure.html" rel="next">
-<link href="../storm/event-storming.html" rel="prev">
+<link href="../storm/the-kick-off.html" rel="prev">
 <link href="../images/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../storm/an-idea-a-little-crazy.html">Part II – Storm</a></li><li class="breadcrumb-item"><a href="../storm/asking-better-questions.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Asking Better Questions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../storm/an-idea-a-little-crazy.html">Part II – Storm</a></li><li class="breadcrumb-item"><a href="../storm/discovering-the-big-picture.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Discovering the Big Picture</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -183,14 +203,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../storm/event-storming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Event Storming</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../storm/asking-better-questions.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Asking Better Questions</span></span></a>
+  <a href="../storm/discovering-the-big-picture.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Discovering the Big Picture</span></span></a>
   </div>
 </li>
       </ul>
@@ -207,31 +221,31 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/from-understanding-to-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/why-event-modeling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Why Event Modeling</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Why Event Modeling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/from-events-to-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">From Events to Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">From Events to Specifications</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/specifying-user-interfaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Specifying User Interfaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Specifying User Interfaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/organizing-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Organizing Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Organizing Specifications</span></span></a>
   </div>
 </li>
       </ul>
@@ -248,25 +262,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/given-when-then.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Given-When-Then</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Given-When-Then</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/finding-misconceptions-early.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Finding Misconceptions Early</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Finding Misconceptions Early</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/quality-gates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Quality Gates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Quality Gates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/ai-review.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">AI Review</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">AI Review</span></span></a>
   </div>
 </li>
       </ul>
@@ -283,25 +297,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/handing-specifications-to-agents.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Handing Specifications to Agents</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Handing Specifications to Agents</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/human-agent-collaboration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Human-Agent Collaboration</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Human-Agent Collaboration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/tracking-progress.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tracking Progress</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tracking Progress</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/refactoring-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Refactoring Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Refactoring Specifications</span></span></a>
   </div>
 </li>
       </ul>
@@ -318,25 +332,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/keeping-specifications-alive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Keeping Specifications Alive</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Keeping Specifications Alive</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/teams.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Teams</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Teams</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/product-engineering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Product Engineering</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Product Engineering</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/final-thoughts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Final Thoughts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Final Thoughts</span></span></a>
   </div>
 </li>
       </ul>
@@ -352,15 +366,26 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started"><span class="header-section-number">9.1</span> Getting started</a></li>
+  <li><a href="#finding-the-flow" id="toc-finding-the-flow" class="nav-link" data-scroll-target="#finding-the-flow"><span class="header-section-number">9.2</span> Finding the flow</a></li>
+  <li><a href="#when-the-wall-starts-talking-back" id="toc-when-the-wall-starts-talking-back" class="nav-link" data-scroll-target="#when-the-wall-starts-talking-back"><span class="header-section-number">9.3</span> When the wall starts talking back</a></li>
+  <li><a href="#the-room-comes-alive" id="toc-the-room-comes-alive" class="nav-link" data-scroll-target="#the-room-comes-alive"><span class="header-section-number">9.4</span> The room comes alive</a></li>
+  <li><a href="#walking-the-story" id="toc-walking-the-story" class="nav-link" data-scroll-target="#walking-the-story"><span class="header-section-number">9.5</span> Walking the story</a></li>
+  <li><a href="#three-hours-well-spent" id="toc-three-hours-well-spent" class="nav-link" data-scroll-target="#three-hours-well-spent"><span class="header-section-number">9.6</span> Three hours well spent</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../storm/an-idea-a-little-crazy.html">Part II – Storm</a></li><li class="breadcrumb-item"><a href="../storm/asking-better-questions.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Asking Better Questions</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../storm/an-idea-a-little-crazy.html">Part II – Storm</a></li><li class="breadcrumb-item"><a href="../storm/discovering-the-big-picture.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Discovering the Big Picture</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Asking Better Questions</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Discovering the Big Picture</span></h1>
 </div>
 
 
@@ -377,21 +402,219 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/part2/ch08-discovering-the-big-picture.png" class="img-fluid figure-img"></p>
+<figcaption>Event Storming the animal shelter domain</figcaption>
+</figure>
 </div>
-<div class="callout-title-container flex-fill">
-Coming soon
+<p>The team is ready for its first Event Storming workshop. They’ve read a little about the method <span class="citation" data-cites="brandolini2021">(<a href="../references.html#ref-brandolini2021" role="doc-biblioref">Brandolini 2021</a>)</span> and spent some time with Caramelo’s story to familiarize themselves with the animal shelter domain. They know they’ll meet Sarah Thompson, the shelter director, and that she’ll help them understand how things work in the shelter.</p>
+<p>But reading about Event Storming and actually doing it are two different things.</p>
+<p>Leon takes responsibility for facilitating the workshop. As the Product Owner, he’s the natural choice. He’s the one who brought the project to life, connected the team with the shelter, and organized the experiment. Kim offers to support him. She has conducted user interviews before and feels comfortable talking to people about their work, asking questions, and trying to understand their experiences.</p>
+<p>The plan for the day is straightforward. They start with a big picture Event Storming session to get an overview of the entire shelter domain. In the afternoon, they zoom in on Animal Intake. Leon thinks this is a good way to get everyone familiar with the method and the domain before exploring the first specific area in detail.</p>
+<p>Sarah arrives at the company office. She knows the shelter’s daily operations inside out, but she hasn’t worked with this particular group before. She’s curious to see what they come up with.</p>
+<p>The group enters the meeting room. There are no chairs around the table. In fact, there is hardly a table left in the room. The furniture is pushed against the walls, leaving plenty of space in front of the large whiteboard.</p>
+<p>One of the basic rules of Event Storming: everyone stays on their feet. Sitting down makes it all too easy to slip into passive meeting mode. And once one person sits, others tend to follow.</p>
+<p>Leon looks at the large, empty wall. He has prepared a short introduction, but he doesn’t want to spend too much time explaining a method nobody has experienced yet. They need to get started.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Okay, let’s get started. Since this is our first Event Storming session, I suggest we begin with the big picture. We want to get an overview of what happens in the shelter. Not just when an animal arrives, but everything that happens during its time with you.”</p>
+</blockquote>
 </div>
+<p>He looks around the room.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Before we start asking Sarah a hundred questions, I’d like everyone to contribute what they already know or can imagine. We’ll start by writing down events. An event is a fact that has happened and is relevant to the business or the user.”</p>
+</blockquote>
 </div>
-<div class="callout-body-container callout-body">
-<p>This chapter is currently being written. It will explore the role of the facilitator, the art of discovering knowledge through conversation, and why the right questions matter more than the right answers.</p>
+<p>Leon picks up an orange sticky note and a marker.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“One event per sticky note. Try to write it in past tense, like ‘Animal Arrived At Shelter’. Don’t worry about the order yet. Duplicates are fine. Just write down everything that comes to mind and put it on the wall. We’ll make sense of it together afterwards.”</p>
+</blockquote>
 </div>
+<p>That’s it. No elaborate explanation of colors, symbols, or modeling conventions. Just one simple idea: write down things that happened.</p>
+<p>Leon has read about plenty of other concepts, too. Commands, actors, policies, aggregates, and all sorts of things that can be introduced during an Event Storming or Modeling session. But one piece of advice from the introductions he read sticks with him: <strong>don’t introduce concepts before the group needs them</strong>.</p>
+<p>For now, orange sticky notes are enough.</p>
+<section id="getting-started" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">9.1</span> Getting started</h2>
+<p>The first few minutes are a little awkward.</p>
+<p>Everyone looks at the wall, then at the sticky notes, then at each other. It isn’t that they have nothing to say. They’re simply not used to working this way. Usually, someone prepares a document or a diagram before a meeting. Here, they’re supposed to put their thoughts on the wall without knowing where they’ll end up.</p>
+<p>Leon decides to make the first move.</p>
+<p>He writes <em>Animal Arrived At Shelter</em> on an orange sticky note and puts it on the wall. Then he adds another one: <em>Medical Treatment Done</em>.</p>
+<p>Chris follows. He writes down <em>Microchip Scanned</em> and adds it to the growing collection.</p>
+<p>Kim and Mina start writing, too. They remember several things from Caramelo’s story and try to translate them into events. Sarah watches for a moment, apparently waiting to see what the team is doing. Then she picks up a marker herself and joins in.</p>
+<p>Nobody is particularly concerned about the exact wording. Some notes describe broad activities, others are more specific. A few things appear twice. That’s perfectly fine.</p>
+<p>After about fifteen minutes, the wall is covered with orange sticky notes. There’s no order to them, and nobody has tried to create one. But there’s already enough material to start a conversation.</p>
+<p>Leon steps back and looks at the wall.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Okay, that’s a great start. Now let’s see if we can put some order into this.”</p>
+</blockquote>
 </div>
+</section>
+<section id="finding-the-flow" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="finding-the-flow"><span class="header-section-number">9.2</span> Finding the flow</h2>
+<p>The next step is to arrange the events from left to right, creating an imaginary timeline.</p>
+<p>What happens first? What happens next? Which events belong before or after others?</p>
+<p>It sounds simple enough, but as soon as they start moving the stickies around, discussions emerge.</p>
+<p>Some events are easy to place. An animal has to arrive before it can be examined. That much is obvious. Other notes are less clear. Does something happen immediately after arrival, or can it happen later? Are two notes describing separate activities or different aspects of the same situation?</p>
+<p>Kim is particularly interested in these discussions.</p>
+<p>At first, she expects Event Storming to be a rather technical modeling exercise. But as she listens to Sarah explaining the reasons behind certain activities, she recognizes something familiar.</p>
+<p>This isn’t so different from a user interview.</p>
+<p>She’s used to asking people how they work, what happens when they encounter a particular situation, and what they do next. The difference is that now everyone can see the answers taking shape on the wall.</p>
+<p>Instead of keeping her thoughts to herself, Kim starts asking more specific questions.</p>
+<div class="quote-kim">
+<blockquote class="blockquote">
+<p>“Sarah, when an animal arrives, what do you usually do first? Is there something that happens for every animal, regardless of its condition?”</p>
+</blockquote>
+</div>
+<p>Sarah explains the initial steps. The others listen, occasionally adding a note or moving something that’s already on the wall.</p>
+<p>Kim is getting into it.</p>
+<div class="quote-kim">
+<blockquote class="blockquote">
+<p>“So, does that happen before the medical examination? Or is it part of the examination itself?”</p>
+</blockquote>
+</div>
+<p>Sarah explains that they scan the microchip as soon as an animal arrives.</p>
+<p>Mina looks at the notes on the wall.</p>
+<div class="quote-mina">
+<blockquote class="blockquote">
+<p>“Wait a minute. I thought the microchip was scanned during the medical check.”</p>
+</blockquote>
+</div>
+<p>Sarah clarifies that scanning the chip is part of the intake process. It doesn’t require a veterinarian. They want to identify the animal as early as possible, ideally finding out whether it has an owner who can be contacted.</p>
+<p>Mina looks at Chris’s sticky note.</p>
+<div class="quote-mina">
+<blockquote class="blockquote">
+<p>“Then this one belongs much earlier in the timeline.”</p>
+</blockquote>
+</div>
+<p>She moves <em>Microchip Scanned</em> towards the beginning.</p>
+<p>It’s a small correction, but it changes how the team understands the process.</p>
+<p>When they read Caramelo’s story, the microchip is scanned during the medical assessment. They simply assume that’s how things work. It seems reasonable enough. After all, checking a microchip sounds like something a veterinarian would do.</p>
+<p>But Caramelo’s story isn’t a description of the shelter’s actual operations. It’s an introduction to the domain, and the team is now discovering that some of the details they take for granted don’t match reality.</p>
+<p>Nobody deliberately makes a wrong decision. They’ve filled a gap in their understanding with an assumption they haven’t even noticed making.</p>
+<p>Now the assumption is visible, and Sarah corrects it.</p>
+<p>The team continues arranging the notes.</p>
+</section>
+<section id="when-the-wall-starts-talking-back" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="when-the-wall-starts-talking-back"><span class="header-section-number">9.3</span> When the wall starts talking back</h2>
+<p>The conversation becomes more animated as the timeline develops.</p>
+<p>Kim is now asking questions almost continuously. Chris contributes observations and occasionally suggests another event. Mina, who often keeps herself a little more in the background during group discussions, is increasingly involved.</p>
+<p>Sarah is no longer simply answering questions. She’s pointing at notes, correcting the sequence, and adding things the team hasn’t thought of.</p>
+<p>At one point, she explains what happens when the microchip scan identifies a registered owner.</p>
+<p>That opens up an entirely new branch of the story.</p>
+<p>Until now, the team has mostly been thinking about the animal’s journey through the shelter. But finding an owner introduces another process that can unfold alongside the animal’s care.</p>
+<p>They start asking questions.</p>
+<p>What happens when the registry returns an owner? How do they contact that person? What if the contact details are outdated? What if nobody answers?</p>
+<p>The conversation quickly becomes more detailed than the team anticipates.</p>
+<p>Chris is particularly interested in understanding how long they keep trying to reach the owner. There are several possibilities, and each seems to lead to another question.</p>
+<p>Leon listens for a while. He doesn’t want to interrupt a useful discussion, but he also knows they’re supposed to be creating a big picture of the shelter domain, not solving every operational detail of Animal Intake right now.</p>
+<p>He looks at the wall, then picks up a pink sticky note.</p>
+<p>He turns it by forty-five degrees and writes a short question on it.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Let’s park this one for a moment. I’ve read about a useful technique for exactly this situation. These are called Hot Spots. We use them to mark questions or topics that need further clarification.”</p>
+</blockquote>
+</div>
+<p>He places the pink note next to the branch they’ve just discovered.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“We don’t have to resolve everything right now. Let’s keep the question visible, continue with the bigger picture, and come back to it when we zoom into Animal Intake this afternoon.”</p>
+</blockquote>
+</div>
+<p>The group accepts the idea immediately.</p>
+<p>They’ve encountered something they can’t answer yet, but there’s no need to lose track of it or spend the next twenty minutes trying to resolve it.</p>
+<p>The Hot Spot gives the question a place on the wall without forcing them to answer it immediately.</p>
+<p>As the workshop continues, more questions appear. Some are about missing information. Others highlight things that seem problematic or potentially inefficient in the process. The pink notes begin to accumulate around the orange ones.</p>
+<p>Leon did not introduce a legend of every possible type of sticky note at the beginning. Whenever the group encounters a situation that calls for another concept, he introduces it.</p>
+<p>The legend on the wall grows with the workshop.</p>
+<p>And so does the team’s understanding of the shelter.</p>
+</section>
+<section id="the-room-comes-alive" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="the-room-comes-alive"><span class="header-section-number">9.4</span> The room comes alive</h2>
+<p>I have participated in many Event Storming sessions, and there’s a moment that I particularly enjoy.</p>
+<p>It doesn’t happen at a predictable time. Sometimes it takes half an hour, sometimes longer. But at some point, the group becomes fully engaged.</p>
+<p>People stop worrying about whether they’re doing the exercise correctly. They start discussing the actual business. Someone notices a missing step. Another person challenges an assumption. Sticky notes are moved around, questions are asked, and new connections emerge.</p>
+<p>At this point, you can feel the energy in the room. It’s almost magical.</p>
+<p>That’s what’s happening here.</p>
+<p>Kim has found her rhythm. She’s asking questions that help Sarah explain the shelter’s work in more detail. Mina is actively contributing, too. She started the morning a little reserved, but the more they talk about the animals and what happens to them, the more interested she becomes.</p>
+<p>She’s not just thinking about a software interface or a technical implementation. She genuinely wants to understand what happens to the animals.</p>
+<p>Chris brings his usual enthusiasm into the conversation. Every new discovery seems to give him another idea or question. Occasionally, Leon has to bring the discussion back to the bigger picture, but Chris doesn’t seem to take that personally.</p>
+<p>Sarah, too, is becoming more involved. She came prepared to explain how the shelter works. Now she’s collaborating with the team to build a picture of it.</p>
+<p>The wall is no longer just a collection of sticky notes. It’s becoming a shared story.</p>
+<p>And the team is beginning to see how much they didn’t know.</p>
+</section>
+<section id="walking-the-story" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="walking-the-story"><span class="header-section-number">9.5</span> Walking the story</h2>
+<p>After three hours, Leon decides it’s time to close the session.</p>
+<p>There are still plenty of questions, and the wall is far from complete. But they’ve made good progress. They’ve explored the broad landscape of the shelter, discovered several branches in the process, and collected a number of questions for later clarification.</p>
+<p>Leon suggests one final exercise.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Before we stop, I’d like someone to walk us through the story we’ve created. Start at the beginning and follow the events on the wall, one by one. Tell us what happens, as if you’re explaining the shelter’s work to someone who has never seen it before.”</p>
+</blockquote>
+</div>
+<p>He looks around the room.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Mina, would you like to give it a try?”</p>
+</blockquote>
+</div>
+<p>Mina looks a little surprised, but nods.</p>
+<p>She steps towards the wall and begins at the left-hand side.</p>
+<div class="quote-mina">
+<blockquote class="blockquote">
+<p>“Okay. So, an animal arrives at the shelter. The first thing they do is scan the microchip to see whether the animal can be identified. If they find a registered owner, they try to contact that person…”</p>
+</blockquote>
+</div>
+<p>She continues along the timeline, explaining the events and following the branches the team created.</p>
+<p>Every now and then, she stops to check whether she understands something correctly. Sarah confirms some details and clarifies others.</p>
+<p>Then Mina pauses at the alternative Intake branch.</p>
+<div class="quote-mina">
+<blockquote class="blockquote">
+<p>“Wait. What happens to the animal while you’re trying to contact the owner?”</p>
+</blockquote>
+</div>
+<p>She looks at Sarah.</p>
+<p>The question hasn’t been answered during the earlier discussion. They’ve focused on what happens when an owner can be identified, but they haven’t really explored what happens to the animal in parallel.</p>
+<p>Leon picks up another pink sticky note.</p>
+<p>Another Hot Spot.</p>
+<p>The group briefly discusses the question, but decides to leave it for the afternoon. They don’t need to resolve every detail now. The important thing is that they’ve noticed the gap.</p>
+<p>Mina continues.</p>
+<p>There are a few more interruptions, a couple of corrections, and another question that ends up on the wall. That’s exactly what Leon hoped will happen.</p>
+<p>When she finally reaches the end of the story, they step back and look at the result.</p>
+<p>It isn’t a complete description of everything that happens in the shelter. Not even close.</p>
+<p>But it’s a surprisingly coherent picture of a domain that most of them knew almost nothing about just a few hours earlier.</p>
+</section>
+<section id="three-hours-well-spent" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="three-hours-well-spent"><span class="header-section-number">9.6</span> Three hours well spent</h2>
+<p>Sarah looks at the wall for a moment.</p>
+<p>She knows there are countless other things they can discuss. The shelter’s work is full of exceptions, special situations, and details that the team hasn’t even touched yet.</p>
+<p>Still, she’s impressed.</p>
+<p>The team managed to capture a good overview of the shelter’s operations in just three hours. More importantly, the questions they’ve asked show her that they’re genuinely interested in understanding how things work.</p>
+<p>She has enjoyed the session.</p>
+<p>The team, too, seems energized. They started the morning with some orange sticky notes and a little uncertainty about what to do with them. Now they have a wall full of events, several branches, and a growing collection of Hot Spots.</p>
+<p>Leon is pleased. He was a little unsure how the workshop will unfold at first, but the format turns out to be much more natural than he expected. He didn’t need to explain a complicated method or had to control every conversation. His job was mostly to keep an eye on the bigger picture and help the group move forward.</p>
+<p>Kim is still thinking about how familiar the whole experience feels. She expected to contribute through her designs and user journey expertise. Instead, she finds herself asking questions and helping Sarah tell the story. It feels surprisingly close to user research, only with everyone involved in making sense of the answers.</p>
+<p>Mina is happy, too. She discovered that she can contribute much more than she initially thought. And the subject matter makes a difference. She genuinely cares about what happens to the animals.</p>
+<p>Chris is already looking forward to exploring what they can do with all this information.</p>
+<p>Sarah thanks the team and says she’s looking forward to the afternoon. There’s still a lot to discuss, but the morning was both fun and productive.</p>
+<p>They agree to meet again after lunch.</p>
+<p>After three hours on their feet, the team leaves the room for a well-deserved break. They enjoy lunch together, chatting about all sorts of things. But sooner or later, the conversation finds its way back to the workshop.</p>
+<p>They talk about the microchip discovery, the different branches of the story, and the questions they’ve parked for later.</p>
+<p>Three hours earlier, none of them knew quite what to expect.</p>
+<p>Now they’re looking forward to doing it again.</p>
+<p>Only this time, they’ll zoom in.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-brandolini2021" class="csl-entry" role="listitem">
+Brandolini, Alberto. 2021. <em>Introducing EventStorming</em>. leanpup.com.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -813,13 +1036,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../storm/event-storming.html" class="pagination-link" aria-label="Event Storming">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Event Storming</span></span>
+      <a href="../storm/the-kick-off.html" class="pagination-link" aria-label="The Kick-off">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Kick-off</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../design/from-understanding-to-structure.html" class="pagination-link" aria-label="From Understanding to Structure">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

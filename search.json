@@ -97,212 +97,267 @@
     ]
   },
   {
-    "objectID": "storm/event-storming.html",
-    "href": "storm/event-storming.html",
-    "title": "9  Event Storming",
+    "objectID": "storm/discovering-the-big-picture.html",
+    "href": "storm/discovering-the-big-picture.html",
+    "title": "9  Discovering the Big Picture",
     "section": "",
-    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover the purpose, history, and practice of Event Storming. How a room full of orange sticky notes can reveal an entire business domain.",
+    "text": "9.1 Getting started\nThe team is ready for its first Event Storming workshop. They’ve read a little about the method (Brandolini 2021) and spent some time with Caramelo’s story to familiarize themselves with the animal shelter domain. They know they’ll meet Sarah Thompson, the shelter director, and that she’ll help them understand how things work in the shelter.\nBut reading about Event Storming and actually doing it are two different things.\nLeon takes responsibility for facilitating the workshop. As the Product Owner, he’s the natural choice. He’s the one who brought the project to life, connected the team with the shelter, and organized the experiment. Kim offers to support him. She has conducted user interviews before and feels comfortable talking to people about their work, asking questions, and trying to understand their experiences.\nThe plan for the day is straightforward. They start with a big picture Event Storming session to get an overview of the entire shelter domain. In the afternoon, they zoom in on Animal Intake. Leon thinks this is a good way to get everyone familiar with the method and the domain before exploring the first specific area in detail.\nSarah arrives at the company office. She knows the shelter’s daily operations inside out, but she hasn’t worked with this particular group before. She’s curious to see what they come up with.\nThe group enters the meeting room. There are no chairs around the table. In fact, there is hardly a table left in the room. The furniture is pushed against the walls, leaving plenty of space in front of the large whiteboard.\nOne of the basic rules of Event Storming: everyone stays on their feet. Sitting down makes it all too easy to slip into passive meeting mode. And once one person sits, others tend to follow.\nLeon looks at the large, empty wall. He has prepared a short introduction, but he doesn’t want to spend too much time explaining a method nobody has experienced yet. They need to get started.\nHe looks around the room.\nLeon picks up an orange sticky note and a marker.\nThat’s it. No elaborate explanation of colors, symbols, or modeling conventions. Just one simple idea: write down things that happened.\nLeon has read about plenty of other concepts, too. Commands, actors, policies, aggregates, and all sorts of things that can be introduced during an Event Storming or Modeling session. But one piece of advice from the introductions he read sticks with him: don’t introduce concepts before the group needs them.\nFor now, orange sticky notes are enough.\nThe first few minutes are a little awkward.\nEveryone looks at the wall, then at the sticky notes, then at each other. It isn’t that they have nothing to say. They’re simply not used to working this way. Usually, someone prepares a document or a diagram before a meeting. Here, they’re supposed to put their thoughts on the wall without knowing where they’ll end up.\nLeon decides to make the first move.\nHe writes Animal Arrived At Shelter on an orange sticky note and puts it on the wall. Then he adds another one: Medical Treatment Done.\nChris follows. He writes down Microchip Scanned and adds it to the growing collection.\nKim and Mina start writing, too. They remember several things from Caramelo’s story and try to translate them into events. Sarah watches for a moment, apparently waiting to see what the team is doing. Then she picks up a marker herself and joins in.\nNobody is particularly concerned about the exact wording. Some notes describe broad activities, others are more specific. A few things appear twice. That’s perfectly fine.\nAfter about fifteen minutes, the wall is covered with orange sticky notes. There’s no order to them, and nobody has tried to create one. But there’s already enough material to start a conversation.\nLeon steps back and looks at the wall.",
     "crumbs": [
       "Part II – Storm",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Event Storming</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Discovering the Big Picture</span>"
     ]
   },
   {
-    "objectID": "storm/asking-better-questions.html",
-    "href": "storm/asking-better-questions.html",
-    "title": "10  Asking Better Questions",
+    "objectID": "storm/discovering-the-big-picture.html#getting-started",
+    "href": "storm/discovering-the-big-picture.html#getting-started",
+    "title": "9  Discovering the Big Picture",
     "section": "",
-    "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the role of the facilitator, the art of discovering knowledge through conversation, and why the right questions matter more than the right answers.",
+    "text": "“Okay, that’s a great start. Now let’s see if we can put some order into this.”",
     "crumbs": [
       "Part II – Storm",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Asking Better Questions</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Discovering the Big Picture</span>"
+    ]
+  },
+  {
+    "objectID": "storm/discovering-the-big-picture.html#finding-the-flow",
+    "href": "storm/discovering-the-big-picture.html#finding-the-flow",
+    "title": "9  Discovering the Big Picture",
+    "section": "9.2 Finding the flow",
+    "text": "9.2 Finding the flow\nThe next step is to arrange the events from left to right, creating an imaginary timeline.\nWhat happens first? What happens next? Which events belong before or after others?\nIt sounds simple enough, but as soon as they start moving the stickies around, discussions emerge.\nSome events are easy to place. An animal has to arrive before it can be examined. That much is obvious. Other notes are less clear. Does something happen immediately after arrival, or can it happen later? Are two notes describing separate activities or different aspects of the same situation?\nKim is particularly interested in these discussions.\nAt first, she expects Event Storming to be a rather technical modeling exercise. But as she listens to Sarah explaining the reasons behind certain activities, she recognizes something familiar.\nThis isn’t so different from a user interview.\nShe’s used to asking people how they work, what happens when they encounter a particular situation, and what they do next. The difference is that now everyone can see the answers taking shape on the wall.\nInstead of keeping her thoughts to herself, Kim starts asking more specific questions.\n\n\n“Sarah, when an animal arrives, what do you usually do first? Is there something that happens for every animal, regardless of its condition?”\n\n\nSarah explains the initial steps. The others listen, occasionally adding a note or moving something that’s already on the wall.\nKim is getting into it.\n\n\n“So, does that happen before the medical examination? Or is it part of the examination itself?”\n\n\nSarah explains that they scan the microchip as soon as an animal arrives.\nMina looks at the notes on the wall.\n\n\n“Wait a minute. I thought the microchip was scanned during the medical check.”\n\n\nSarah clarifies that scanning the chip is part of the intake process. It doesn’t require a veterinarian. They want to identify the animal as early as possible, ideally finding out whether it has an owner who can be contacted.\nMina looks at Chris’s sticky note.\n\n\n“Then this one belongs much earlier in the timeline.”\n\n\nShe moves Microchip Scanned towards the beginning.\nIt’s a small correction, but it changes how the team understands the process.\nWhen they read Caramelo’s story, the microchip is scanned during the medical assessment. They simply assume that’s how things work. It seems reasonable enough. After all, checking a microchip sounds like something a veterinarian would do.\nBut Caramelo’s story isn’t a description of the shelter’s actual operations. It’s an introduction to the domain, and the team is now discovering that some of the details they take for granted don’t match reality.\nNobody deliberately makes a wrong decision. They’ve filled a gap in their understanding with an assumption they haven’t even noticed making.\nNow the assumption is visible, and Sarah corrects it.\nThe team continues arranging the notes.",
+    "crumbs": [
+      "Part II – Storm",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Discovering the Big Picture</span>"
+    ]
+  },
+  {
+    "objectID": "storm/discovering-the-big-picture.html#when-the-wall-starts-talking-back",
+    "href": "storm/discovering-the-big-picture.html#when-the-wall-starts-talking-back",
+    "title": "9  Discovering the Big Picture",
+    "section": "9.3 When the wall starts talking back",
+    "text": "9.3 When the wall starts talking back\nThe conversation becomes more animated as the timeline develops.\nKim is now asking questions almost continuously. Chris contributes observations and occasionally suggests another event. Mina, who often keeps herself a little more in the background during group discussions, is increasingly involved.\nSarah is no longer simply answering questions. She’s pointing at notes, correcting the sequence, and adding things the team hasn’t thought of.\nAt one point, she explains what happens when the microchip scan identifies a registered owner.\nThat opens up an entirely new branch of the story.\nUntil now, the team has mostly been thinking about the animal’s journey through the shelter. But finding an owner introduces another process that can unfold alongside the animal’s care.\nThey start asking questions.\nWhat happens when the registry returns an owner? How do they contact that person? What if the contact details are outdated? What if nobody answers?\nThe conversation quickly becomes more detailed than the team anticipates.\nChris is particularly interested in understanding how long they keep trying to reach the owner. There are several possibilities, and each seems to lead to another question.\nLeon listens for a while. He doesn’t want to interrupt a useful discussion, but he also knows they’re supposed to be creating a big picture of the shelter domain, not solving every operational detail of Animal Intake right now.\nHe looks at the wall, then picks up a pink sticky note.\nHe turns it by forty-five degrees and writes a short question on it.\n\n\n“Let’s park this one for a moment. I’ve read about a useful technique for exactly this situation. These are called Hot Spots. We use them to mark questions or topics that need further clarification.”\n\n\nHe places the pink note next to the branch they’ve just discovered.\n\n\n“We don’t have to resolve everything right now. Let’s keep the question visible, continue with the bigger picture, and come back to it when we zoom into Animal Intake this afternoon.”\n\n\nThe group accepts the idea immediately.\nThey’ve encountered something they can’t answer yet, but there’s no need to lose track of it or spend the next twenty minutes trying to resolve it.\nThe Hot Spot gives the question a place on the wall without forcing them to answer it immediately.\nAs the workshop continues, more questions appear. Some are about missing information. Others highlight things that seem problematic or potentially inefficient in the process. The pink notes begin to accumulate around the orange ones.\nLeon did not introduce a legend of every possible type of sticky note at the beginning. Whenever the group encounters a situation that calls for another concept, he introduces it.\nThe legend on the wall grows with the workshop.\nAnd so does the team’s understanding of the shelter.",
+    "crumbs": [
+      "Part II – Storm",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Discovering the Big Picture</span>"
+    ]
+  },
+  {
+    "objectID": "storm/discovering-the-big-picture.html#the-room-comes-alive",
+    "href": "storm/discovering-the-big-picture.html#the-room-comes-alive",
+    "title": "9  Discovering the Big Picture",
+    "section": "9.4 The room comes alive",
+    "text": "9.4 The room comes alive\nI have participated in many Event Storming sessions, and there’s a moment that I particularly enjoy.\nIt doesn’t happen at a predictable time. Sometimes it takes half an hour, sometimes longer. But at some point, the group becomes fully engaged.\nPeople stop worrying about whether they’re doing the exercise correctly. They start discussing the actual business. Someone notices a missing step. Another person challenges an assumption. Sticky notes are moved around, questions are asked, and new connections emerge.\nAt this point, you can feel the energy in the room. It’s almost magical.\nThat’s what’s happening here.\nKim has found her rhythm. She’s asking questions that help Sarah explain the shelter’s work in more detail. Mina is actively contributing, too. She started the morning a little reserved, but the more they talk about the animals and what happens to them, the more interested she becomes.\nShe’s not just thinking about a software interface or a technical implementation. She genuinely wants to understand what happens to the animals.\nChris brings his usual enthusiasm into the conversation. Every new discovery seems to give him another idea or question. Occasionally, Leon has to bring the discussion back to the bigger picture, but Chris doesn’t seem to take that personally.\nSarah, too, is becoming more involved. She came prepared to explain how the shelter works. Now she’s collaborating with the team to build a picture of it.\nThe wall is no longer just a collection of sticky notes. It’s becoming a shared story.\nAnd the team is beginning to see how much they didn’t know.",
+    "crumbs": [
+      "Part II – Storm",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Discovering the Big Picture</span>"
+    ]
+  },
+  {
+    "objectID": "storm/discovering-the-big-picture.html#walking-the-story",
+    "href": "storm/discovering-the-big-picture.html#walking-the-story",
+    "title": "9  Discovering the Big Picture",
+    "section": "9.5 Walking the story",
+    "text": "9.5 Walking the story\nAfter three hours, Leon decides it’s time to close the session.\nThere are still plenty of questions, and the wall is far from complete. But they’ve made good progress. They’ve explored the broad landscape of the shelter, discovered several branches in the process, and collected a number of questions for later clarification.\nLeon suggests one final exercise.\n\n\n“Before we stop, I’d like someone to walk us through the story we’ve created. Start at the beginning and follow the events on the wall, one by one. Tell us what happens, as if you’re explaining the shelter’s work to someone who has never seen it before.”\n\n\nHe looks around the room.\n\n\n“Mina, would you like to give it a try?”\n\n\nMina looks a little surprised, but nods.\nShe steps towards the wall and begins at the left-hand side.\n\n\n“Okay. So, an animal arrives at the shelter. The first thing they do is scan the microchip to see whether the animal can be identified. If they find a registered owner, they try to contact that person…”\n\n\nShe continues along the timeline, explaining the events and following the branches the team created.\nEvery now and then, she stops to check whether she understands something correctly. Sarah confirms some details and clarifies others.\nThen Mina pauses at the alternative Intake branch.\n\n\n“Wait. What happens to the animal while you’re trying to contact the owner?”\n\n\nShe looks at Sarah.\nThe question hasn’t been answered during the earlier discussion. They’ve focused on what happens when an owner can be identified, but they haven’t really explored what happens to the animal in parallel.\nLeon picks up another pink sticky note.\nAnother Hot Spot.\nThe group briefly discusses the question, but decides to leave it for the afternoon. They don’t need to resolve every detail now. The important thing is that they’ve noticed the gap.\nMina continues.\nThere are a few more interruptions, a couple of corrections, and another question that ends up on the wall. That’s exactly what Leon hoped will happen.\nWhen she finally reaches the end of the story, they step back and look at the result.\nIt isn’t a complete description of everything that happens in the shelter. Not even close.\nBut it’s a surprisingly coherent picture of a domain that most of them knew almost nothing about just a few hours earlier.",
+    "crumbs": [
+      "Part II – Storm",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Discovering the Big Picture</span>"
+    ]
+  },
+  {
+    "objectID": "storm/discovering-the-big-picture.html#three-hours-well-spent",
+    "href": "storm/discovering-the-big-picture.html#three-hours-well-spent",
+    "title": "9  Discovering the Big Picture",
+    "section": "9.6 Three hours well spent",
+    "text": "9.6 Three hours well spent\nSarah looks at the wall for a moment.\nShe knows there are countless other things they can discuss. The shelter’s work is full of exceptions, special situations, and details that the team hasn’t even touched yet.\nStill, she’s impressed.\nThe team managed to capture a good overview of the shelter’s operations in just three hours. More importantly, the questions they’ve asked show her that they’re genuinely interested in understanding how things work.\nShe has enjoyed the session.\nThe team, too, seems energized. They started the morning with some orange sticky notes and a little uncertainty about what to do with them. Now they have a wall full of events, several branches, and a growing collection of Hot Spots.\nLeon is pleased. He was a little unsure how the workshop will unfold at first, but the format turns out to be much more natural than he expected. He didn’t need to explain a complicated method or had to control every conversation. His job was mostly to keep an eye on the bigger picture and help the group move forward.\nKim is still thinking about how familiar the whole experience feels. She expected to contribute through her designs and user journey expertise. Instead, she finds herself asking questions and helping Sarah tell the story. It feels surprisingly close to user research, only with everyone involved in making sense of the answers.\nMina is happy, too. She discovered that she can contribute much more than she initially thought. And the subject matter makes a difference. She genuinely cares about what happens to the animals.\nChris is already looking forward to exploring what they can do with all this information.\nSarah thanks the team and says she’s looking forward to the afternoon. There’s still a lot to discuss, but the morning was both fun and productive.\nThey agree to meet again after lunch.\nAfter three hours on their feet, the team leaves the room for a well-deserved break. They enjoy lunch together, chatting about all sorts of things. But sooner or later, the conversation finds its way back to the workshop.\nThey talk about the microchip discovery, the different branches of the story, and the questions they’ve parked for later.\nThree hours earlier, none of them knew quite what to expect.\nNow they’re looking forward to doing it again.\nOnly this time, they’ll zoom in.\n\n\n\n\nBrandolini, Alberto. 2021. Introducing EventStorming. leanpup.com.",
+    "crumbs": [
+      "Part II – Storm",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Discovering the Big Picture</span>"
     ]
   },
   {
     "objectID": "design/from-understanding-to-structure.html",
     "href": "design/from-understanding-to-structure.html",
-    "title": "11  From Understanding to Structure",
+    "title": "10  From Understanding to Structure",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explain how the understanding gained through storming transforms into a structured design and why design is a discipline, not a one-time activity.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>From Understanding to Structure</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>From Understanding to Structure</span>"
     ]
   },
   {
     "objectID": "design/why-event-modeling.html",
     "href": "design/why-event-modeling.html",
-    "title": "12  Why Event Modeling",
+    "title": "11  Why Event Modeling",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will make the case for Event Modeling as a design discipline, not just a diagram, but a way of thinking about software behavior over time.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Why Event Modeling</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Why Event Modeling</span>"
     ]
   },
   {
     "objectID": "design/from-events-to-specifications.html",
     "href": "design/from-events-to-specifications.html",
-    "title": "13  From Events to Specifications",
+    "title": "12  From Events to Specifications",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how events become commands, read models, actors, and policies. The building blocks of a complete specification.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>From Events to Specifications</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>From Events to Specifications</span>"
     ]
   },
   {
     "objectID": "design/specifying-user-interfaces.html",
     "href": "design/specifying-user-interfaces.html",
-    "title": "14  Specifying User Interfaces",
+    "title": "13  Specifying User Interfaces",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore Breadboarding, wireframes, user flows, and how UI specifications become part of the living specification.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Specifying User Interfaces</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Specifying User Interfaces</span>"
     ]
   },
   {
     "objectID": "design/organizing-specifications.html",
     "href": "design/organizing-specifications.html",
-    "title": "15  Organizing Specifications",
+    "title": "14  Organizing Specifications",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how to organize specifications in an easy-to-maintain structure, and how this organization provides context for both humans and AI agents.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Organizing Specifications</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Organizing Specifications</span>"
     ]
   },
   {
     "objectID": "validate/given-when-then.html",
     "href": "validate/given-when-then.html",
-    "title": "16  Given-When-Then",
+    "title": "15  Given-When-Then",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover acceptance criteria, behavior specifications, and the power of concrete examples to validate your understanding before writing any code.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Given-When-Then</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Given-When-Then</span>"
     ]
   },
   {
     "objectID": "validate/finding-misconceptions-early.html",
     "href": "validate/finding-misconceptions-early.html",
-    "title": "17  Finding Misconceptions Early",
+    "title": "16  Finding Misconceptions Early",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the real value of modeling, finding what you got wrong before implementation makes it expensive to change.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finding Misconceptions Early</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Finding Misconceptions Early</span>"
     ]
   },
   {
     "objectID": "validate/quality-gates.html",
     "href": "validate/quality-gates.html",
-    "title": "18  Quality Gates",
+    "title": "17  Quality Gates",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will introduce guardrails for your specification workflow, from simple use cases to business value validation and edge case discovery.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Quality Gates</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Quality Gates</span>"
     ]
   },
   {
     "objectID": "validate/ai-review.html",
     "href": "validate/ai-review.html",
-    "title": "19  AI Review",
+    "title": "18  AI Review",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore how AI agents can critique and improve specifications, not implementation, but the specifications themselves.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>AI Review</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>AI Review</span>"
     ]
   },
   {
     "objectID": "build/handing-specifications-to-agents.html",
     "href": "build/handing-specifications-to-agents.html",
-    "title": "20  Handing Specifications to Agents",
+    "title": "19  Handing Specifications to Agents",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how to provide context, slices, and incremental implementation tasks to AI agents, turning specifications into working software.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Handing Specifications to Agents</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Handing Specifications to Agents</span>"
     ]
   },
   {
     "objectID": "build/human-agent-collaboration.html",
     "href": "build/human-agent-collaboration.html",
-    "title": "21  Human-Agent Collaboration",
+    "title": "20  Human-Agent Collaboration",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the feedback loop between humans and AI agents: reviewing, iterating, and collaborating on implementation.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Human-Agent Collaboration</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Human-Agent Collaboration</span>"
     ]
   },
   {
     "objectID": "build/tracking-progress.html",
     "href": "build/tracking-progress.html",
-    "title": "22  Tracking Progress",
+    "title": "21  Tracking Progress",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will show how prooph board tracks implementation status, making progress visible across the entire specification.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Tracking Progress</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Tracking Progress</span>"
     ]
   },
   {
     "objectID": "build/refactoring-specifications.html",
     "href": "build/refactoring-specifications.html",
-    "title": "23  Refactoring Specifications",
+    "title": "22  Refactoring Specifications",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will address what happens when software changes require specification changes and why both evolving together is a feature, not a problem.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Refactoring Specifications</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Refactoring Specifications</span>"
     ]
   },
   {
     "objectID": "evolve/keeping-specifications-alive.html",
     "href": "evolve/keeping-specifications-alive.html",
-    "title": "24  Keeping Specifications Alive",
+    "title": "23  Keeping Specifications Alive",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will address the challenge of documentation rot and how living specifications avoid it by remaining connected to the evolving product.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Keeping Specifications Alive</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Keeping Specifications Alive</span>"
     ]
   },
   {
     "objectID": "evolve/teams.html",
     "href": "evolve/teams.html",
-    "title": "25  Teams",
+    "title": "24  Teams",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore how Domain-Driven Design, Team Topologies, and communication structures shape the way specifications are owned and evolved across teams.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Teams</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Teams</span>"
     ]
   },
   {
     "objectID": "evolve/product-engineering.html",
     "href": "evolve/product-engineering.html",
-    "title": "26  Product Engineering",
+    "title": "25  Product Engineering",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will look ahead at the future of product engineering and how specifications become the interface between human intent and machine execution.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Product Engineering</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Product Engineering</span>"
     ]
   },
   {
     "objectID": "evolve/final-thoughts.html",
     "href": "evolve/final-thoughts.html",
-    "title": "27  Final Thoughts",
+    "title": "26  Final Thoughts",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. Not a conclusion, more of a reflection on where we’ve been, where we’re going, and why specifications will keep evolving long after this book is finished.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Final Thoughts</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Final Thoughts</span>"
     ]
   },
   {
@@ -310,7 +365,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Evans, Eric. 2003. Domain-Driven Design: Tackling Complexity in the\nHeart of Software. Addison-Wesley Professional.",
+    "text": "Brandolini, Alberto. 2021. Introducing EventStorming.\nleanpup.com.\n\n\nEvans, Eric. 2003. Domain-Driven Design: Tackling Complexity in the\nHeart of Software. Addison-Wesley Professional.",
     "crumbs": [
       "References"
     ]
