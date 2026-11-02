@@ -174,190 +174,201 @@
     ]
   },
   {
+    "objectID": "storm/from-events-to-screens.html",
+    "href": "storm/from-events-to-screens.html",
+    "title": "10  From Events To Screens",
+    "section": "",
+    "text": "Kim drawing a Fat Marker Sketch\n\n\nWhen the team returns from lunch, the wall still looks the same as they left it. The orange event notes stretch across it, with a few pink Hot Spots interrupting the timeline. Three hours of discussion have produced a somewhat coherent picture of the shelter’s work. At least, that’s how it feels.\nLeon waits until everyone has settled around the wall. Well, settled might be the wrong word. Nobody is sitting. The chairs and tables are still pushed against the walls, and the team is getting used to spending the day on its feet.\n\n\n“All right. This morning we focused on understanding what happens in the shelter. We have a timeline now, and I think we have a much better picture of the domain than we had this morning.”\n\n\nHe pauses and looks at Sarah.\n\n\n“For the afternoon, I’d like us to look at things from another perspective. Instead of following what happens, let’s think about how people would interact with the software. What do they need to see? What information do they work with? And how does that relate to the events on our wall?”\n\n\nLeon explains that they want to map the user journey and the screens that support it. They will start with Animal Intake, their focus for the afternoon, rather than trying to design the entire application.\nKim steps closer to the wall. She has been listening, but now she seems to be in her element.\n\n\n“I suggest we start with some really rough sketches. We don’t need proper UI designs. Just the main areas of a screen, some labels, maybe a few boxes. Big shapes, thick markers. That’s why they’re called Fat Marker Sketches.”\n\n\nShe picks up a broad marker and holds it up.\n\n\n“The idea is to make the structure visible without getting distracted by details. We can discuss what belongs on a screen before anyone starts worrying about colors, spacing, or whether a button has the right border radius.”\n\n\nMina smiles. She knows exactly how easily a discussion about a button can consume half an hour.\nBut before they start sketching screens for the shelter, Kim suggests a small exercise.\n\n\n“Let’s try something first. Everyone gets a sheet of paper. Draw how to make toast. Don’t discuss it with anyone. Just draw the steps as you imagine them.”\n\n\nChris looks at her.\n\n\n“Toast? As in bread and toaster?”\n\n\n\n\n“Exactly. Nothing complicated. You have five minutes.”\n\n\nThere is a brief silence, followed by the sound of markers moving across paper.\nLeon draws a sequence of boxes connected by arrows. Get bread. Put bread in toaster. Toast bread. Take toast out. Add butter. Chris starts with a picture of a toaster and bread, then adds a hand reaching for the lever. Mina draws a neat sequence, including a step for choosing the desired browning level. Kim’s sketch includes a person, a toaster, a plate, and a small decision about whether the bread is already toasted enough.\nSarah is just as busy with her marker. Her drawing starts with a slice of bread and a toaster, but she adds a few steps the others haven’t thought about. She draws a cupboard where she gets the bread, then a plate, and finally a jar of jam. Apparently, toast at Sarah’s place involves a little more than butter.\nWhen they put the sheets next to each other, the differences are immediately visible.\n\n\n“Wait. Leon, you don’t even have a plate.”\n\n\n\n\n“I didn’t think the plate was part of making toast.”\n\n\n\n\n“But where do you put it after taking it out of the toaster?”\n\n\n\n\n“In my hand, presumably.”\n\n\nChris laughs and points at Mina’s sketch.\n\n\n“And she has a browning-level decision. I just push the lever down and hope for the best.”\n\n\nKim looks at the five sketches side by side. They all understand what making toast means. They probably make toast regularly. Yet they have drawn different processes, included different steps, and made different assumptions about what matters.\n\n\n“That’s the point. We all heard the same task, but we didn’t imagine exactly the same thing. Some things were obvious to one person and not to another. And we only noticed because we put the sketches next to each other.”\n\n\nLeon looks back at the wall of orange notes.\n\n\n“So perhaps we shouldn’t assume that we all imagine the same thing when we say Animal Intake.”\n\n\n\n\n“Exactly. And that’s why I wanted everyone to sketch first. We can compare what we have and talk about the differences. We don’t need to agree on a design before we’ve understood what people actually need.”\n\n\nThe exercise takes barely ten minutes, but it changes the atmosphere. The team has a shared reference for the next step, and nobody feels the need to produce a beautiful design. In fact, the rougher the sketches, the easier it is to talk about them.\nKim takes a large sheet of paper and draws a rough rectangle. She adds a few larger areas inside it, using the broad marker to make the structure visible.\n\n\n“This is all we’re after. A sketch that helps us talk. We can add details later.”\n\n\nThey turn to the Animal Intake timeline. The orange events are still arranged in the order they established in the morning. Now they begin to think about the screens a shelter employee might use along the way.\nThe first idea is an Occupancy Board. It gives staff an overview of the animals currently in the shelter and helps them see where things stand. Kim draws a broad screen with several distinct areas. Chris suggests making the animals easy to distinguish at a glance. Mina asks what information someone needs when looking at the board during a busy day. Sarah contributes examples from the shelter’s daily routines, explaining what staff usually want to know when checking the current situation.\nThey do not try to settle every detail. The purpose is to make the screen tangible enough that they can discuss it.\nNext comes the Animal Registration Form. Kim sketches a rough form with a few obvious sections. Leon looks at the orange notes around the arrival and registration events and asks which parts of the process the form should support. Sarah helps them distinguish information that staff collect when an animal arrives from information they may only learn later.\nThe sketches begin to accumulate. Each large white sheet represents a screen or a meaningful part of the user journey. The team places them above the corresponding events on the timeline, keeping the sequence they established in the morning.\nAs the discussion progresses, the wall starts to change. It is no longer just a timeline of things that happen. There are now screens above it, connected to the events they help bring about.\nKim steps back to look at the growing arrangement.\n\n\n“I think we’re getting somewhere. But the screens are still just boxes. We need to understand what information each one displays and what information people enter.”\n\n\nLeon nods. That’s the next step. For every screen, they want to identify the properties that need to be visible. And where the user enters information, they also want to capture the data collected by the interface.\nThey introduce two more colors of sticky notes. Green for the properties displayed on a screen, blue for the data collected through the UI. These go below the corresponding screen, with the orange events remaining underneath. The arrangement gives them a vertical slice: the screen, the information it displays or collects, and the event associated with it.\nAt first, this sounds straightforward. They have the screens. They know the events. Surely, filling in the information between them is mostly a matter of listing fields.\nBut the first few questions already suggest otherwise.\nThe first screen they tackle in more detail is the Occupancy Board.\nAt a glance, it seems simple enough. A board showing the animals currently staying at the shelter, perhaps grouped by their location. The team starts listing the information someone might need when looking at it: the animal’s name, species, perhaps a photo, its current location, and some indication of its status.\nChris suggests that they could make the board interactive. A staff member could select an animal and move it to another kennel. Mina immediately asks what happens if the destination kennel is already occupied.\nThat question sends them back to Sarah.\nSarah explains that the shelter has different kinds of accommodation for different animals. You cannot simply put any animal into any available space. The team starts asking how staff know which kennels are suitable, how they know whether a kennel is available, and how they keep track of animals that are expected to move out.\nThey add more green sticky notes beneath the Occupancy Board. But the more information they list, the less the screen looks like a self-contained feature.\nSomeone asks whether the board should also show kennels that are currently occupied but expected to become available soon. That leads to another question: how does the shelter know when a kennel will become free? Is there a planned departure date? What happens when an animal is moved to foster care? And who is responsible for updating the information?\nThe discussion moves away from the screen itself. They are no longer talking only about what a user should see. They are trying to understand how the shelter manages its accommodation.\nLeon looks at the growing collection of notes beneath the sketch. The Occupancy Board still looks like one screen, but the information behind it seems to require quite a bit more than a handful of fields.\n\n\n“Hang on. I thought we were designing an overview screen. Now we’re discussing how the shelter manages its kennels.”\n\n\n\n\n“Because the screen needs that information. We can’t decide what to show without understanding where it comes from.”\n\n\nMina studies the notes.\n\n\n“And we can’t make the board useful if the information isn’t maintained somewhere. If a kennel becomes available, someone needs to record that. If an animal is expected to leave next week, we need to know that too.”\n\n\nChris is already thinking about possible interactions.\n\n\n“We could have a separate kennel management screen. Maybe a calendar view for reservations, and then …”\n\n\nLeon raises a hand, smiling.\n\n\n“Let’s not design the whole application just yet. First, let’s understand what Sarah and the shelter staff actually need.”\n\n\nSarah continues explaining how they work today. Some of the information is recorded in a spreadsheet on a shared drive, some is kept in people’s heads, and some depends on staff knowing the current situation. The team realizes that the Occupancy Board is only the visible part of a much larger capability.\nThey add a few more notes and mark questions they cannot answer yet. The original sketch has not become useless. Quite the opposite. It has helped them discover what they need to understand before they can design it properly.\nAnd this is where the afternoon starts to feel different from the morning.\nDuring the Big Picture Event Storming, the team moved quickly. Events gave them a way to explore a broad domain without having to understand every detail. They could follow the story, add what happened, and keep moving. Three hours later, they had a timeline that felt complete.\nNow they are looking at one screen and discovering how much sits behind it.\nThe Occupancy Board is a good example because nobody questioned its existence in the morning. Everyone could imagine a board showing the animals in the shelter. It sounded so obvious that there was no reason to stop and investigate it.\nBut the moment they ask what information it needs, the picture changes. Kennels have types and capacities. They can be occupied, become available, or be reserved for an animal expected to arrive. Animals move between locations, and staff need to know not only where an animal is now but where it might be next week.\nWhat looked like a screen is turning into a domain of its own: shelter accommodation management.\nThe team has not designed that module, and they certainly have not agreed on all its rules. They have simply discovered that the apparently simple Occupancy Board depends on a much larger understanding of how the shelter manages its space.\nLeon looks at the wall again. The morning’s timeline is still there, but now the space above it is filling with screens and the space below those screens with information. The model is getting wider and deeper at the same time.\nThe iceberg is becoming visible. And they have only started with one screen.\nHe slowly starts to realize what Event Modeling is about, and how it might indeed be the missing ingredient for Agentic Engineering.",
+    "crumbs": [
+      "Part II – Storm",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>From Events To Screens</span>"
+    ]
+  },
+  {
     "objectID": "design/from-understanding-to-structure.html",
     "href": "design/from-understanding-to-structure.html",
-    "title": "10  From Understanding to Structure",
+    "title": "11  From Understanding to Structure",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explain how the understanding gained through storming transforms into a structured design and why design is a discipline, not a one-time activity.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>From Understanding to Structure</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>From Understanding to Structure</span>"
     ]
   },
   {
     "objectID": "design/why-event-modeling.html",
     "href": "design/why-event-modeling.html",
-    "title": "11  Why Event Modeling",
+    "title": "12  Why Event Modeling",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will make the case for Event Modeling as a design discipline, not just a diagram, but a way of thinking about software behavior over time.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Why Event Modeling</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Why Event Modeling</span>"
     ]
   },
   {
     "objectID": "design/from-events-to-specifications.html",
     "href": "design/from-events-to-specifications.html",
-    "title": "12  From Events to Specifications",
+    "title": "13  From Events to Specifications",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how events become commands, read models, actors, and policies. The building blocks of a complete specification.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>From Events to Specifications</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>From Events to Specifications</span>"
     ]
   },
   {
     "objectID": "design/specifying-user-interfaces.html",
     "href": "design/specifying-user-interfaces.html",
-    "title": "13  Specifying User Interfaces",
+    "title": "14  Specifying User Interfaces",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore Breadboarding, wireframes, user flows, and how UI specifications become part of the living specification.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Specifying User Interfaces</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Specifying User Interfaces</span>"
     ]
   },
   {
     "objectID": "design/organizing-specifications.html",
     "href": "design/organizing-specifications.html",
-    "title": "14  Organizing Specifications",
+    "title": "15  Organizing Specifications",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how to organize specifications in an easy-to-maintain structure, and how this organization provides context for both humans and AI agents.",
     "crumbs": [
       "Part III – Design",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Organizing Specifications</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Organizing Specifications</span>"
     ]
   },
   {
     "objectID": "validate/given-when-then.html",
     "href": "validate/given-when-then.html",
-    "title": "15  Given-When-Then",
+    "title": "16  Given-When-Then",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover acceptance criteria, behavior specifications, and the power of concrete examples to validate your understanding before writing any code.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Given-When-Then</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Given-When-Then</span>"
     ]
   },
   {
     "objectID": "validate/finding-misconceptions-early.html",
     "href": "validate/finding-misconceptions-early.html",
-    "title": "16  Finding Misconceptions Early",
+    "title": "17  Finding Misconceptions Early",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the real value of modeling, finding what you got wrong before implementation makes it expensive to change.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Finding Misconceptions Early</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Finding Misconceptions Early</span>"
     ]
   },
   {
     "objectID": "validate/quality-gates.html",
     "href": "validate/quality-gates.html",
-    "title": "17  Quality Gates",
+    "title": "18  Quality Gates",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will introduce guardrails for your specification workflow, from simple use cases to business value validation and edge case discovery.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Quality Gates</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Quality Gates</span>"
     ]
   },
   {
     "objectID": "validate/ai-review.html",
     "href": "validate/ai-review.html",
-    "title": "18  AI Review",
+    "title": "19  AI Review",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore how AI agents can critique and improve specifications, not implementation, but the specifications themselves.",
     "crumbs": [
       "Part IV – Validate",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>AI Review</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>AI Review</span>"
     ]
   },
   {
     "objectID": "build/handing-specifications-to-agents.html",
     "href": "build/handing-specifications-to-agents.html",
-    "title": "19  Handing Specifications to Agents",
+    "title": "20  Handing Specifications to Agents",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will cover how to provide context, slices, and incremental implementation tasks to AI agents, turning specifications into working software.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Handing Specifications to Agents</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Handing Specifications to Agents</span>"
     ]
   },
   {
     "objectID": "build/human-agent-collaboration.html",
     "href": "build/human-agent-collaboration.html",
-    "title": "20  Human-Agent Collaboration",
+    "title": "21  Human-Agent Collaboration",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore the feedback loop between humans and AI agents: reviewing, iterating, and collaborating on implementation.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Human-Agent Collaboration</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Human-Agent Collaboration</span>"
     ]
   },
   {
     "objectID": "build/tracking-progress.html",
     "href": "build/tracking-progress.html",
-    "title": "21  Tracking Progress",
+    "title": "22  Tracking Progress",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will show how prooph board tracks implementation status, making progress visible across the entire specification.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Tracking Progress</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Tracking Progress</span>"
     ]
   },
   {
     "objectID": "build/refactoring-specifications.html",
     "href": "build/refactoring-specifications.html",
-    "title": "22  Refactoring Specifications",
+    "title": "23  Refactoring Specifications",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will address what happens when software changes require specification changes and why both evolving together is a feature, not a problem.",
     "crumbs": [
       "Part V – Build",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Refactoring Specifications</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Refactoring Specifications</span>"
     ]
   },
   {
     "objectID": "evolve/keeping-specifications-alive.html",
     "href": "evolve/keeping-specifications-alive.html",
-    "title": "23  Keeping Specifications Alive",
+    "title": "24  Keeping Specifications Alive",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will address the challenge of documentation rot and how living specifications avoid it by remaining connected to the evolving product.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Keeping Specifications Alive</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Keeping Specifications Alive</span>"
     ]
   },
   {
     "objectID": "evolve/teams.html",
     "href": "evolve/teams.html",
-    "title": "24  Teams",
+    "title": "25  Teams",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will explore how Domain-Driven Design, Team Topologies, and communication structures shape the way specifications are owned and evolved across teams.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Teams</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Teams</span>"
     ]
   },
   {
     "objectID": "evolve/product-engineering.html",
     "href": "evolve/product-engineering.html",
-    "title": "25  Product Engineering",
+    "title": "26  Product Engineering",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. It will look ahead at the future of product engineering and how specifications become the interface between human intent and machine execution.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Product Engineering</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Product Engineering</span>"
     ]
   },
   {
     "objectID": "evolve/final-thoughts.html",
     "href": "evolve/final-thoughts.html",
-    "title": "26  Final Thoughts",
+    "title": "27  Final Thoughts",
     "section": "",
     "text": "Coming soon\n\n\n\nThis chapter is currently being written. Not a conclusion, more of a reflection on where we’ve been, where we’re going, and why specifications will keep evolving long after this book is finished.",
     "crumbs": [
       "Part VI – Evolve",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Final Thoughts</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Final Thoughts</span>"
     ]
   },
   {
