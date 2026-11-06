@@ -69,6 +69,110 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>
+/* Thin, subtle scrollbar for the left navigation sidebar */
+#quarto-sidebar {
+  scrollbar-width: thin;                      /* Firefox */
+  scrollbar-color: hsl(220, 10%, 80%) transparent;
+}
+#quarto-sidebar::-webkit-scrollbar {          /* Chrome/Safari/Edge */
+  width: 6px;
+}
+#quarto-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+#quarto-sidebar::-webkit-scrollbar-thumb {
+  background-color: hsl(220, 10%, 80%);
+  border-radius: 3px;
+}
+#quarto-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(220, 10%, 65%);
+}
+
+/* Remove the right border on the right-hand ToC panel (it conflicts
+   with the newsletter box border). Left nav sidebar keeps its border. */
+#quarto-margin-sidebar.sidebar {
+  border-right: none;
+}
+
+#quarto-margin-sidebar .newsletter-divider {
+  margin: 32px 0 24px 0;
+  border: 0;
+  border-top: 1px solid hsl(220, 10%, 85%);
+}
+
+#quarto-margin-sidebar .newsletter-cta {
+  margin: 0 0 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+#quarto-margin-sidebar .newsletter-cta .cta-title {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#quarto-margin-sidebar .newsletter-cta .libutton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  width: 200px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #0A66C2;
+  font-family: "SF Pro Text", Helvetica, sans-serif;
+  margin: 10px auto;
+}
+
+#quarto-margin-sidebar .newsletter-cta .cta-subtitle {
+  font-size: 0.75em;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Secondary info: Animal Shelter Reference Model (minimal design) */
+#quarto-margin-sidebar .reference-model-cta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0 20px 0;
+  text-decoration: none !important;
+  color: inherit;
+}
+#quarto-margin-sidebar .reference-model-icon {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+#quarto-margin-sidebar .reference-model-text {
+  display: block;
+}
+#quarto-margin-sidebar .reference-model-title {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #444;
+}
+#quarto-margin-sidebar .reference-model-cta:hover .reference-model-title {
+  color: #0A66C2;
+}
+#quarto-margin-sidebar .reference-model-desc {
+  display: block;
+  font-size: 0.7em;
+  line-height: 1.4;
+  color: #888;
+  margin-top: 3px;
+}
+</style>
 
 
 </head>
@@ -193,6 +297,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">From Events To Screens</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../storm/after-the-storm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">After The Storm</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -207,31 +317,31 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/from-understanding-to-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/why-event-modeling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Why Event Modeling</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Why Event Modeling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/from-events-to-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">From Events to Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">From Events to Specifications</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/specifying-user-interfaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Specifying User Interfaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Specifying User Interfaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/organizing-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Organizing Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Organizing Specifications</span></span></a>
   </div>
 </li>
       </ul>
@@ -248,25 +358,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/given-when-then.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Given-When-Then</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Given-When-Then</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/finding-misconceptions-early.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Finding Misconceptions Early</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Finding Misconceptions Early</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/quality-gates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Quality Gates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Quality Gates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/ai-review.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">AI Review</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AI Review</span></span></a>
   </div>
 </li>
       </ul>
@@ -283,25 +393,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/handing-specifications-to-agents.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Handing Specifications to Agents</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Handing Specifications to Agents</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/human-agent-collaboration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Human-Agent Collaboration</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Human-Agent Collaboration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/tracking-progress.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tracking Progress</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tracking Progress</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/refactoring-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Refactoring Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Refactoring Specifications</span></span></a>
   </div>
 </li>
       </ul>
@@ -318,25 +428,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/keeping-specifications-alive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Keeping Specifications Alive</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Keeping Specifications Alive</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/teams.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Teams</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Teams</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/product-engineering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Product Engineering</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Product Engineering</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/final-thoughts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Final Thoughts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Final Thoughts</span></span></a>
   </div>
 </li>
       </ul>
@@ -352,8 +462,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#a-team-built-around-questions" id="toc-a-team-built-around-questions" class="nav-link active" data-scroll-target="#a-team-built-around-questions"><span class="header-section-number">3.1</span> A team built around questions</a></li>
+  <li><a href="#the-cost-of-curiosity" id="toc-the-cost-of-curiosity" class="nav-link" data-scroll-target="#the-cost-of-curiosity"><span class="header-section-number">3.2</span> The cost of curiosity</a></li>
+  <li><a href="#when-conversations-fade-away" id="toc-when-conversations-fade-away" class="nav-link" data-scroll-target="#when-conversations-fade-away"><span class="header-section-number">3.3</span> When conversations fade away</a></li>
+  <li><a href="#discovering-knowledge-together" id="toc-discovering-knowledge-together" class="nav-link" data-scroll-target="#discovering-knowledge-together"><span class="header-section-number">3.4</span> Discovering knowledge together</a></li>
+  <li><a href="#when-the-model-becomes-the-conversation" id="toc-when-the-model-becomes-the-conversation" class="nav-link" data-scroll-target="#when-the-model-becomes-the-conversation"><span class="header-section-number">3.5</span> When the model becomes the conversation</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -386,6 +506,8 @@ ul.task-list li input[type="checkbox"] {
 <p>The car rental project fundamentally changed how I approached software projects.</p>
 <p>I no longer believed that shared understanding could emerge from requirements documents, no matter how detailed they were. If software engineering was really about creating and maintaining shared understanding, then I had to work directly with the people who understood the business. There was simply no shortcut.</p>
 <p>The next opportunity came almost immediately.</p>
+<section id="a-team-built-around-questions" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="a-team-built-around-questions"><span class="header-section-number">3.1</span> A team built around questions</h2>
 <p>I joined a project at a well-known fashion manufacturer. They had started a multi-year SAP migration to replace their home-grown ERP system. If you’ve ever been involved in an ERP migration, you know these projects are expensive. Not just because of the software licenses, but because every decision suddenly becomes strategic. Processes that had evolved over decades have to fit into a standardized system. Every exception costs money. Every customization becomes another long-term commitment.</p>
 <p>My team was responsible for digital contracts.</p>
 <p>Initially, that sounded like a fairly isolated problem. But the more we looked into it, the more obvious it became that contracts and customer master data couldn’t be separated. A strategic decision was made to put our service between the existing ERP and the future SAP system. We became a kind of customer hub that would shield the rest of the landscape from the migration.</p>
@@ -400,6 +522,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Looking back, it’s almost funny how much time we spent asking questions.</p>
 <p>On many projects, questions are considered a problem. They indicate that requirements are incomplete or that somebody forgot to document something.</p>
 <p>We experienced the exact opposite. The questions were doing the work.</p>
+</section>
+<section id="the-cost-of-curiosity" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="the-cost-of-curiosity"><span class="header-section-number">3.2</span> The cost of curiosity</h2>
 <p>I still remember reading requirements on earlier projects. Every now and then I’d stumble across something that felt odd. Maybe a business term I didn’t understand. Maybe an exception that wasn’t explained. Or simply a sentence where I thought: That can’t be the whole story.</p>
 <p>Of course I could ask. But asking wasn’t free. It usually meant writing an email or creating a ticket. Somebody had to find time to answer. Sometimes the answer created two new questions. Before long you were playing ping-pong with whoever had written the document.</p>
 <p>So you start making assumptions. And I don’t think anyone does this consciously. It’s just the cheapest option.</p>
@@ -413,6 +538,9 @@ ul.task-list li input[type="checkbox"] {
 <p>The cheaper it is to ask a question, the more questions get asked. The more questions get asked, the more hidden assumptions become visible. And hidden assumptions are usually where misunderstandings live.</p>
 <p>At the time I didn’t think about it in those terms. We were simply trying to solve a difficult business problem. It took me years to realize that we weren’t just building software. We were slowly building a shared understanding of the business. And that shared understanding didn’t emerge because someone had documented everything up front. It emerged because six people kept challenging, refining and extending each other’s mental models every single day.</p>
 <p>The more we collaborated, the more another problem became obvious. Conversations are great while you’re having them. The moment they’re over, they start fading away.</p>
+</section>
+<section id="when-conversations-fade-away" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="when-conversations-fade-away"><span class="header-section-number">3.3</span> When conversations fade away</h2>
 <p>Sometimes we ended a meeting convinced that we had found a great solution. Two days later one of us remembered another detail.</p>
 <p>“Didn’t we decide to handle this differently?”</p>
 <p>“No, I think that was only true for new contracts.”</p>
@@ -427,6 +555,9 @@ ul.task-list li input[type="checkbox"] {
 <p>At the time I couldn’t have explained it like that. I just felt that writing down meeting minutes wasn’t enough. The really valuable part wasn’t the conversation itself. It was what the conversation produced.</p>
 <p>We needed something we could build together. Not afterwards. While we were talking.</p>
 <p>Around that time, I learned about Event Storming.</p>
+</section>
+<section id="discovering-knowledge-together" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="discovering-knowledge-together"><span class="header-section-number">3.4</span> Discovering knowledge together</h2>
 <p>I was immediately curious because it addressed exactly the problem we were experiencing. We had a team that collaborated closely, but we still struggled with the same fundamental challenge: how do we preserve what we discover together?</p>
 <p>The first thing that caught my attention was that Event Storming was not about documenting knowledge that already existed. It was about discovering knowledge together.</p>
 <p>This was an important difference.</p>
@@ -438,6 +569,9 @@ ul.task-list li input[type="checkbox"] {
 <p>When someone raised a question, we didn’t just answer it verbally and move on. We had to decide how this new insight changed our model.</p>
 <p>When someone disagreed, the disagreement became visible. We could look at it together and understand why our perspectives were different.</p>
 <p>This was a very different experience from the meetings I had participated in before.</p>
+</section>
+<section id="when-the-model-becomes-the-conversation" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="when-the-model-becomes-the-conversation"><span class="header-section-number">3.5</span> When the model becomes the conversation</h2>
 <p>A meeting usually has a speaker and an audience. Even when everybody is invited to participate, there are often active and passive participants.</p>
 <p>Collaborative modeling changes that.</p>
 <p>The model becomes something the entire group creates. Everyone contributes, challenges, moves things around and helps shape the result.</p>
@@ -449,8 +583,41 @@ ul.task-list li input[type="checkbox"] {
 <p>The model was the conversation.</p>
 
 
+</section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const marginSidebar = document.querySelector('#quarto-margin-sidebar');
+  if (marginSidebar && !document.querySelector('.newsletter-cta')) {
+    // Derive the correct relative path to /images based on page depth.
+    // Root pages use "images/...", subpages use "../images/..." etc.
+    const favicon = document.querySelector('link[rel="icon"], link[rel="shortcut icon"]');
+    let imgBase = 'images/';
+    if (favicon) {
+      const href = favicon.getAttribute('href') || '';
+      imgBase = href.replace(/favicon\.[a-z]+$/i, '');
+    }
+    const iconSrc = imgBase + 'prooph-board-icon.png';
+
+    marginSidebar.insertAdjacentHTML('beforeend', `
+      <hr class="newsletter-divider">
+      <div class="newsletter-cta">
+        <p class="cta-title">Stay updated</p>
+        <a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7519337649959034880" target="_blank">Subscribe on LinkedIn</a>
+        <p class="cta-subtitle">More than chapter updates: get the thinking behind the book, making-of notes, and bonus insights.</p>
+      </div>
+      <a class="reference-model-cta" href="https://flow.prooph-board.com/workspaces/6a1e495d-a382-425c-a440-0503b2dea707/577e6648-bc16-4cf9-85a0-359ba95b0f39" target="_blank">
+        <img class="reference-model-icon" src="${iconSrc}" alt="prooph board" width="24" height="24">
+        <span class="reference-model-text">
+          <span class="reference-model-title">Animal Shelter Reference Model</span>
+          <span class="reference-model-desc">Explore the model the Shelter Flow team designs and uses as specification for Agentic Engineering, on prooph board. Free account required.</span>
+        </span>
+      </a>
+    `);
+  }
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

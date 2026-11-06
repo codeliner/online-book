@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>11&nbsp; After The Storm – The Living Specification</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../design/from-understanding-to-structure.html" rel="next">
+<link href="../storm/from-events-to-screens.html" rel="prev">
+<link href="../images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f98dc43e679eeb8440fe519c44f4150.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1924dcf40ccedea596d5db8558594c5f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+/* Thin, subtle scrollbar for the left navigation sidebar */
+#quarto-sidebar {
+  scrollbar-width: thin;                      /* Firefox */
+  scrollbar-color: hsl(220, 10%, 80%) transparent;
+}
+#quarto-sidebar::-webkit-scrollbar {          /* Chrome/Safari/Edge */
+  width: 6px;
+}
+#quarto-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+#quarto-sidebar::-webkit-scrollbar-thumb {
+  background-color: hsl(220, 10%, 80%);
+  border-radius: 3px;
+}
+#quarto-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(220, 10%, 65%);
+}
+
+/* Remove the right border on the right-hand ToC panel (it conflicts
+   with the newsletter box border). Left nav sidebar keeps its border. */
+#quarto-margin-sidebar.sidebar {
+  border-right: none;
+}
+
+#quarto-margin-sidebar .newsletter-divider {
+  margin: 32px 0 24px 0;
+  border: 0;
+  border-top: 1px solid hsl(220, 10%, 85%);
+}
+
+#quarto-margin-sidebar .newsletter-cta {
+  margin: 0 0 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+#quarto-margin-sidebar .newsletter-cta .cta-title {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#quarto-margin-sidebar .newsletter-cta .libutton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  width: 200px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #0A66C2;
+  font-family: "SF Pro Text", Helvetica, sans-serif;
+  margin: 10px auto;
+}
+
+#quarto-margin-sidebar .newsletter-cta .cta-subtitle {
+  font-size: 0.75em;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Secondary info: Animal Shelter Reference Model (minimal design) */
+#quarto-margin-sidebar .reference-model-cta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0 20px 0;
+  text-decoration: none !important;
+  color: inherit;
+}
+#quarto-margin-sidebar .reference-model-icon {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+#quarto-margin-sidebar .reference-model-text {
+  display: block;
+}
+#quarto-margin-sidebar .reference-model-title {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #444;
+}
+#quarto-margin-sidebar .reference-model-cta:hover .reference-model-title {
+  color: #0A66C2;
+}
+#quarto-margin-sidebar .reference-model-desc {
+  display: block;
+  font-size: 0.7em;
+  line-height: 1.4;
+  color: #888;
+  margin-top: 3px;
+}
+</style>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../storm/an-idea-a-little-crazy.html">Part II – Storm</a></li><li class="breadcrumb-item"><a href="../storm/after-the-storm.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">After The Storm</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">The Living Specification</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Why I wrote this book</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I – Thinking Before Coding</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../thinking/shared-understanding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Shared Understanding</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../thinking/conversations-to-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">From Conversations to Models</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../thinking/external-memory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Team’s Shared External Memory</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../thinking/why-understanding-decays.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Why Understanding Decays</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../thinking/living-specification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Living Specification</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II – Storm</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../storm/an-idea-a-little-crazy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">An Idea a Little Crazy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../storm/the-kick-off.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The Kick-off</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../storm/discovering-the-big-picture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Discovering the Big Picture</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../storm/from-events-to-screens.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">From Events To Screens</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../storm/after-the-storm.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">After The Storm</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III – Design</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../design/from-understanding-to-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../design/why-event-modeling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Why Event Modeling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../design/from-events-to-specifications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">From Events to Specifications</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../design/specifying-user-interfaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Specifying User Interfaces</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../design/organizing-specifications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Organizing Specifications</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV – Validate</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../validate/given-when-then.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Given-When-Then</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../validate/finding-misconceptions-early.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Finding Misconceptions Early</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../validate/quality-gates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Quality Gates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../validate/ai-review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AI Review</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part V – Build</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../build/handing-specifications-to-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Handing Specifications to Agents</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../build/human-agent-collaboration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Human-Agent Collaboration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../build/tracking-progress.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tracking Progress</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../build/refactoring-specifications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Refactoring Specifications</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part VI – Evolve</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../evolve/keeping-specifications-alive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Keeping Specifications Alive</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../evolve/teams.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Teams</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../evolve/product-engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Product Engineering</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../evolve/final-thoughts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Final Thoughts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#reporting-back-to-claire" id="toc-reporting-back-to-claire" class="nav-link active" data-scroll-target="#reporting-back-to-claire"><span class="header-section-number">11.1</span> Reporting back to Claire</a></li>
+  <li><a href="#one-screen-many-assumptions" id="toc-one-screen-many-assumptions" class="nav-link" data-scroll-target="#one-screen-many-assumptions"><span class="header-section-number">11.2</span> One screen, many assumptions</a></li>
+  <li><a href="#from-workshop-to-working-software" id="toc-from-workshop-to-working-software" class="nav-link" data-scroll-target="#from-workshop-to-working-software"><span class="header-section-number">11.3</span> From workshop to working software</a></li>
+  <li><a href="#asking-for-help" id="toc-asking-for-help" class="nav-link" data-scroll-target="#asking-for-help"><span class="header-section-number">11.4</span> Asking for help</a></li>
+  <li><a href="#time-to-start-designing" id="toc-time-to-start-designing" class="nav-link" data-scroll-target="#time-to-start-designing"><span class="header-section-number">11.5</span> Time to start designing</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../storm/an-idea-a-little-crazy.html">Part II – Storm</a></li><li class="breadcrumb-item"><a href="../storm/after-the-storm.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">After The Storm</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">After The Storm</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/part2/ch10-after-the-storm.png" class="img-fluid figure-img"></p>
+<figcaption>Leon booking a training session</figcaption>
+</figure>
+</div>
+<p>Leon sits at his desk, looking at the <a href="https://flow.prooph-board.com/workspaces/6a1e495d-a382-425c-a440-0503b2dea707/8a7b9b08-a163-4321-ad2c-74ab99ac4150">photos</a><sup>1</sup> from yesterday’s workshop. The wall is crowded with events, questions, sketches, and small clusters of notes. Some parts look orderly. Others are a mess. He zooms in on a section, reads a note, then zooms out again.</p>
+<p>He is trying to put his thoughts into a form that makes sense. Not a workshop report. Claire doesn’t need a list of everything the team did during the day. She wants to know whether the experiment is moving in the right direction, and Leon wants to understand that himself.</p>
+<p>The morning started slowly. Nobody in the team has done Event Storming together before, and the first few minutes felt a little awkward. But once the events began to accumulate, people started connecting things. Questions lead to more questions. Sarah, the shelter director, became part of the discovery rather than someone who simply answers what the team asks.</p>
+<p>That is one of the things Leon keeps thinking about. The team didn’t just collect information from Sarah. They explored the domain with her. And sometimes they discovered that what they think they know is wrong. The microchip is a good example. Caramelo’s story gave them the impression that the chip is checked during the medical examination. Sarah explained that they scan it immediately when an animal arrives. A small correction, perhaps, but it changes the sequence the team had in mind.</p>
+<p>In the afternoon, Kim took the group from the events to screens and user journeys. Leon expected the change of perspective to be useful, but he didn’t expect it to reveal another part of the domain they haven’t considered. The Occupancy Board did exactly that. What initially looked like a screen for displaying animals turned into a discussion about kennels, animal locations, availability, and the information shelter staff need to decide where an animal can stay.</p>
+<p>The day leaves Leon with a strange combination of excitement and uncertainty. They made more progress than he expected, but the more they discovered, the more he saw how much they still don’t know.</p>
+<p>He closes the photos and heads to Claire’s office.</p>
+<section id="reporting-back-to-claire" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="reporting-back-to-claire"><span class="header-section-number">11.1</span> Reporting back to Claire</h2>
+<p>Claire looks up when he enters.</p>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“So, how was the storm?”</p>
+</blockquote>
+</div>
+<p>Leon smiles.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Better than I expected. And more interesting than I expected, too.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“That’s a promising start. What makes you say that?”</p>
+</blockquote>
+</div>
+<p>Leon takes a seat. He has a few points in mind, but he doesn’t want to turn the conversation into a presentation.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“The engagement, mainly. I wasn’t sure how the team would react. None of us has worked this way together before. The first part was a little slow, but once we got going, everyone contributed. And Sarah was not just answering questions. She started exploring the process with us.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“What is different about that compared with your usual requirements workshops?”</p>
+</blockquote>
+</div>
+<p>Leon thinks for a moment.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Usually, we arrive with a pretty good idea of what we want to ask. We collect the answers, Kim documents the requirements, and then we work out what needs to be built. Yesterday, we didn’t really know what we are looking for yet. We started with a simple question about what happens when an animal arrives, and the next question often came from something someone else noticed.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“And that works?”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Surprisingly well. We uncovered things we didn’t know, and we didn’t have to pretend that we have an answer. We marked the questions and kept going. Otherwise, we could have spent half the morning discussing one detail.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“You mean the Hot Spots?”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Exactly. It gave us a way to keep track of the open questions without losing the bigger picture.”</p>
+</blockquote>
+</div>
+<p>Claire leans back.</p>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“You sound impressed by the technique. But what about the result? Do you understand the animal intake process better now?”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Definitely. We have a much better overview than I expected after just one morning. And we have it together. That’s probably the part that surprises me most.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“Together?”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Yes. Sarah knows the shelter’s work, of course. But she doesn’t necessarily think about it in the same way we do. And we don’t all look at it from the same angle either. Kim noticed things about the user journey. Mina spoted gaps in the process. Chris asked questions about what happens behind the scenes. I think we got a more complete picture because everyone was looking at the same thing.”</p>
+</blockquote>
+</div>
+<p>He pauses, searching for the right words.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“I also noticed that people became more involved as the board grew. Mina, for example. She was quite reserved at the beginning, but later she actively joined the discussion. During the final walkthrough, she spoted a question we haven’t addressed. It feels like the model gives everyone something concrete to react to.”</p>
+</blockquote>
+</div>
+<p>Claire nods, but doesn’t immediately respond.</p>
+</section>
+<section id="one-screen-many-assumptions" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="one-screen-many-assumptions"><span class="header-section-number">11.2</span> One screen, many assumptions</h2>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“And the afternoon?”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“That was interesting in a different way. Kim took us through the user journey using sketches. I think she enjoyed that part.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“I can imagine.”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“She has a good eye for how people use a system. But we also discovered that we don’t always imagine the same interaction when we look at a screen.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“So even a simple screen can mean different things to different people.”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Apparently. And the Occupancy Board took us somewhere we didn’t expect. We started talking about where animals stay, how kennels are assigned, and what the staff need to know before they can make a decision. It opened up another part of the domain.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“Does that mean you missed something in the morning?”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“I wouldn’t say we missed it. We simply didn’t see it until we looked at the process from the perspective of the screens. The events give us one view. The user journey gives us another.”</p>
+</blockquote>
+</div>
+<p>Claire looks at him for a moment.</p>
+</section>
+<section id="from-workshop-to-working-software" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="from-workshop-to-working-software"><span class="header-section-number">11.3</span> From workshop to working software</h2>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“That sounds useful. But I want to be careful here. A productive workshop is not necessarily a better way of building software. What do you think changes when you move from this result to implementation?”</p>
+</blockquote>
+</div>
+<p>Leon expected the question. It is also the question he has been asking himself since the workshop.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“I don’t know yet. We have a better understanding of the domain, and I think that gives us a better starting point for the specification. But we haven’t built anything. We haven’t worked with an agent on the basis of this model. So I can’t tell you whether it will make implementation more reliable.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“Good. I would be worried if you could already tell me that.”</p>
+</blockquote>
+</div>
+<p>Leon laughs.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“I know. But I do see a connection. If we want AI agents to implement software, we need to give them more than a collection of tickets and a few screens. Yesterday gave me the feeling that we can make our understanding more explicit before we ask an agent to do anything.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“And the model is supposed to become the specification?”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“That’s the idea. At least, that’s what I want to explore. But right now, we have a board full of discoveries. We need to work out how to turn that into something we can actually use.”</p>
+</blockquote>
+</div>
+<p>Claire glances at the notes on her desk.</p>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“What do you think the team needs next?”</p>
+</blockquote>
+</div>
+<p>Leon shifts in his chair. This is the part he has been preparing for.</p>
+</section>
+<section id="asking-for-help" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="asking-for-help"><span class="header-section-number">11.4</span> Asking for help</h2>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“I think we need some help getting started with Event Modeling in prooph board.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“Why? Didn’t you just spend a day modeling the process?”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“We explored it together, yes. But we haven’t developed an Event Model before. I don’t want us to spend the next week figuring out the tool and the conventions by trial and error. We need a first step that builds on what we already discovered.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“And who do you have in mind?”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Alex.”</p>
+</blockquote>
+</div>
+<p>Claire raises her eyebrows slightly.</p>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“The prooph board Alex?”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“That’s the one. We’ve been in touch for a while. He offered us additional free seats if we make Shelter Flow open source. I think this is a good opportunity to ask him for a hands-on session.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“What kind of session?”</p>
+</blockquote>
+</div>
+<p>Leon opens his laptop and turns it slightly towards Claire. He has a few notes on the screen. They are not a detailed agenda, but enough to show that he has thought about the proposal.</p>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“A remote working session, half a day. We start with the results from yesterday, not with a generic example. Alex guides us step by step through developing what we discovered into an Event Model in prooph board. The team learns by doing, using Shelter Flow itself.”</p>
+</blockquote>
+</div>
+<p>Claire reads the notes.</p>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“What do you expect to have at the end?”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“A first part of our model, and a better understanding of how to continue. I don’t expect Alex to model the whole product for us. He can show us how to approach it, explain the decisions behind the modeling, and help us avoid some obvious mistakes. The domain decisions remain ours. Sarah and the team know the shelter’s work. Alex can help us express what we discovered in the model.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“And after the session?”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“We continue ourselves. I would like the team to become comfortable enough with the approach that we can develop the model as we learn more about the product.”</p>
+</blockquote>
+</div>
+<p>Claire looks back at the notes.</p>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“Half a day is reasonable. But I don’t want this to become another training session where everyone leaves with a nice collection of slides and then goes back to working as before.”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Neither do I. That’s why I want to work on our own model. We should have something useful at the end, not just a theoretical understanding of the tool.”</p>
+</blockquote>
+</div>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“Then make sure Alex understands that. And make sure the team doesn’t treat his way of doing things as a recipe they have to follow. I want them to understand why they make modeling decisions, not just which buttons to click.”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Agreed. I’ll ask him to help us shape the session around the workshop results. I have only sketched the agenda so far.”</p>
+</blockquote>
+</div>
+<p>Claire closes the laptop and looks at Leon.</p>
+<div class="quote-claire">
+<blockquote class="blockquote">
+<p>“All right. Go ahead and arrange it. Keep it within the experiment’s budget, of course. And I want to hear what the team takes away from it, not just whether they like the tool.”</p>
+</blockquote>
+</div>
+<div class="quote-leon">
+<blockquote class="blockquote">
+<p>“Fair enough.”</p>
+</blockquote>
+</div>
+<p>Leon stands up. He feels a little more confident than when he entered the office. The workshop doesn’t prove that their new approach works, but it gives him something concrete to build on. And now they have a next step.</p>
+</section>
+<section id="time-to-start-designing" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="time-to-start-designing"><span class="header-section-number">11.5</span> Time to start designing</h2>
+<p>Back at his desk, he opens his messages and finds Alex’s conversation. He starts typing, briefly considers how much context to include, then decides that the workshop results are the best place to begin.</p>
+<p>He proposes a half-day remote working session with the team. They want to take what they have discovered about animal intake and develop it into their first Event Model. He asks Alex to help them shape the agenda and guide them through the process, using their own findings rather than a prepared example.</p>
+<p>Leon sends the message and looks once more at the workshop photos.</p>
+<p>The storm has passed. It is time to start designing.</p>
+<hr>
+<ol type="1">
+<li>Link to <a href="https://flow.prooph-board.com/workspaces/6a1e495d-a382-425c-a440-0503b2dea707/8a7b9b08-a163-4321-ad2c-74ab99ac4150">Big Picture Event Storming on prooph board</a>. Login required.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const marginSidebar = document.querySelector('#quarto-margin-sidebar');
+  if (marginSidebar && !document.querySelector('.newsletter-cta')) {
+    // Derive the correct relative path to /images based on page depth.
+    // Root pages use "images/...", subpages use "../images/..." etc.
+    const favicon = document.querySelector('link[rel="icon"], link[rel="shortcut icon"]');
+    let imgBase = 'images/';
+    if (favicon) {
+      const href = favicon.getAttribute('href') || '';
+      imgBase = href.replace(/favicon\.[a-z]+$/i, '');
+    }
+    const iconSrc = imgBase + 'prooph-board-icon.png';
+
+    marginSidebar.insertAdjacentHTML('beforeend', `
+      <hr class="newsletter-divider">
+      <div class="newsletter-cta">
+        <p class="cta-title">Stay updated</p>
+        <a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7519337649959034880" target="_blank">Subscribe on LinkedIn</a>
+        <p class="cta-subtitle">More than chapter updates: get the thinking behind the book, making-of notes, and bonus insights.</p>
+      </div>
+      <a class="reference-model-cta" href="https://flow.prooph-board.com/workspaces/6a1e495d-a382-425c-a440-0503b2dea707/577e6648-bc16-4cf9-85a0-359ba95b0f39" target="_blank">
+        <img class="reference-model-icon" src="${iconSrc}" alt="prooph board" width="24" height="24">
+        <span class="reference-model-text">
+          <span class="reference-model-title">Animal Shelter Reference Model</span>
+          <span class="reference-model-desc">Explore the model the Shelter Flow team designs and uses as specification for Agentic Engineering, on prooph board. Free account required.</span>
+        </span>
+      </a>
+    `);
+  }
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../storm/from-events-to-screens.html" class="pagination-link" aria-label="From Events To Screens">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">From Events To Screens</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../design/from-understanding-to-structure.html" class="pagination-link" aria-label="From Understanding to Structure">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

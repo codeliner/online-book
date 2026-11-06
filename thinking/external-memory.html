@@ -69,6 +69,110 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>
+/* Thin, subtle scrollbar for the left navigation sidebar */
+#quarto-sidebar {
+  scrollbar-width: thin;                      /* Firefox */
+  scrollbar-color: hsl(220, 10%, 80%) transparent;
+}
+#quarto-sidebar::-webkit-scrollbar {          /* Chrome/Safari/Edge */
+  width: 6px;
+}
+#quarto-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+#quarto-sidebar::-webkit-scrollbar-thumb {
+  background-color: hsl(220, 10%, 80%);
+  border-radius: 3px;
+}
+#quarto-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(220, 10%, 65%);
+}
+
+/* Remove the right border on the right-hand ToC panel (it conflicts
+   with the newsletter box border). Left nav sidebar keeps its border. */
+#quarto-margin-sidebar.sidebar {
+  border-right: none;
+}
+
+#quarto-margin-sidebar .newsletter-divider {
+  margin: 32px 0 24px 0;
+  border: 0;
+  border-top: 1px solid hsl(220, 10%, 85%);
+}
+
+#quarto-margin-sidebar .newsletter-cta {
+  margin: 0 0 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+#quarto-margin-sidebar .newsletter-cta .cta-title {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#quarto-margin-sidebar .newsletter-cta .libutton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  width: 200px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #0A66C2;
+  font-family: "SF Pro Text", Helvetica, sans-serif;
+  margin: 10px auto;
+}
+
+#quarto-margin-sidebar .newsletter-cta .cta-subtitle {
+  font-size: 0.75em;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Secondary info: Animal Shelter Reference Model (minimal design) */
+#quarto-margin-sidebar .reference-model-cta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0 20px 0;
+  text-decoration: none !important;
+  color: inherit;
+}
+#quarto-margin-sidebar .reference-model-icon {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+#quarto-margin-sidebar .reference-model-text {
+  display: block;
+}
+#quarto-margin-sidebar .reference-model-title {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #444;
+}
+#quarto-margin-sidebar .reference-model-cta:hover .reference-model-title {
+  color: #0A66C2;
+}
+#quarto-margin-sidebar .reference-model-desc {
+  display: block;
+  font-size: 0.7em;
+  line-height: 1.4;
+  color: #888;
+  margin-top: 3px;
+}
+</style>
 
 
 </head>
@@ -193,6 +297,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">From Events To Screens</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../storm/after-the-storm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">After The Storm</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -207,31 +317,31 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/from-understanding-to-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/why-event-modeling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Why Event Modeling</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Why Event Modeling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/from-events-to-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">From Events to Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">From Events to Specifications</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/specifying-user-interfaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Specifying User Interfaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Specifying User Interfaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/organizing-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Organizing Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Organizing Specifications</span></span></a>
   </div>
 </li>
       </ul>
@@ -248,25 +358,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/given-when-then.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Given-When-Then</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Given-When-Then</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/finding-misconceptions-early.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Finding Misconceptions Early</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Finding Misconceptions Early</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/quality-gates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Quality Gates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Quality Gates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/ai-review.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">AI Review</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AI Review</span></span></a>
   </div>
 </li>
       </ul>
@@ -283,25 +393,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/handing-specifications-to-agents.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Handing Specifications to Agents</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Handing Specifications to Agents</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/human-agent-collaboration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Human-Agent Collaboration</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Human-Agent Collaboration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/tracking-progress.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tracking Progress</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tracking Progress</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/refactoring-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Refactoring Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Refactoring Specifications</span></span></a>
   </div>
 </li>
       </ul>
@@ -318,25 +428,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/keeping-specifications-alive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Keeping Specifications Alive</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Keeping Specifications Alive</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/teams.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Teams</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Teams</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/product-engineering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Product Engineering</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Product Engineering</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/final-thoughts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Final Thoughts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Final Thoughts</span></span></a>
   </div>
 </li>
       </ul>
@@ -352,8 +462,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#when-the-picture-grew-too-big-to-hold" id="toc-when-the-picture-grew-too-big-to-hold" class="nav-link active" data-scroll-target="#when-the-picture-grew-too-big-to-hold"><span class="header-section-number">4.1</span> When the picture grew too big to hold</a></li>
+  <li><a href="#knowledge-scattered-across-the-system" id="toc-knowledge-scattered-across-the-system" class="nav-link" data-scroll-target="#knowledge-scattered-across-the-system"><span class="header-section-number">4.2</span> Knowledge scattered across the system</a></li>
+  <li><a href="#making-the-invisible-visible" id="toc-making-the-invisible-visible" class="nav-link" data-scroll-target="#making-the-invisible-visible"><span class="header-section-number">4.3</span> Making the invisible visible</a></li>
+  <li><a href="#when-the-whole-team-started-reading-it" id="toc-when-the-whole-team-started-reading-it" class="nav-link" data-scroll-target="#when-the-whole-team-started-reading-it"><span class="header-section-number">4.4</span> When the whole team started reading it</a></li>
+  <li><a href="#a-shared-external-memory" id="toc-a-shared-external-memory" class="nav-link" data-scroll-target="#a-shared-external-memory"><span class="header-section-number">4.5</span> A shared external memory</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -388,6 +508,8 @@ ul.task-list li input[type="checkbox"] {
 <p>When we talk about complex software systems, we usually think of complexity as a property of the technology. The database is complex. The integrations are complex. The business rules are complex.</p>
 <p>But over the years, I realized there is another kind of complexity that is much harder to see.</p>
 <p>It is the complexity of understanding.</p>
+<section id="when-the-picture-grew-too-big-to-hold" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="when-the-picture-grew-too-big-to-hold"><span class="header-section-number">4.1</span> When the picture grew too big to hold</h2>
 <p>I first became aware of this on the fashion manufacture project I described in the previous chapter.</p>
 <p>When we introduced Event Storming, something changed.</p>
 <p>We suddenly had something that represented our current understanding of the business. Instead of trying to explain ideas in isolation, we could point at the model. Six people with six different perspectives could gradually build a shared picture together.</p>
@@ -402,11 +524,17 @@ ul.task-list li input[type="checkbox"] {
 <p>The domain experts understood how customer data was actually used throughout the company. The business analysts knew the processes and had documented many of our decisions. We developers understood the implementation details and the technical constraints.</p>
 <p>Everybody held an important part of the puzzle. The problem was that nobody could see the entire picture alone.</p>
 <p>Looking back, I think this is an important characteristic of every sufficiently complex software system. The knowledge isn’t stored in one place. It is distributed. Some of it lives in documentation. Some of it lives in the source code. Some of it lives in the database. And some of it only exists in the experience of the people who have worked with the system for years. Each of those representations is valuable.</p>
+</section>
+<section id="knowledge-scattered-across-the-system" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="knowledge-scattered-across-the-system"><span class="header-section-number">4.2</span> Knowledge scattered across the system</h2>
 <p>The business analysts documented processes and decisions that would otherwise have been forgotten. The source code captured the rules we had implemented. The database reflected years of business activity. Every representation contained knowledge.</p>
 <p>But each representation only made sense to part of the team. Developers could understand the code. Business experts could explain the processes. The database faithfully stored the history of the business, but it certainly didn’t explain itself.</p>
 <p>Whenever we encountered something unexpected, we had to connect those different perspectives again. Someone noticed an unusual customer relationship. We inspected the data. We followed the implementation. We talked to the business analysts. We asked the domain experts. Only then did the whole picture slowly emerge.</p>
 <p>Looking back, this was probably the first time I realized that building the software wasn’t the only difficult problem. Making the software understandable was just as important.</p>
 <p>At some point, I started feeling that we needed another way of looking at the system. Not another document. We already had those. Not another technical log that only developers would ever read. We already had plenty of those as well. What we were missing was a way to observe the system from the perspective of the business.</p>
+</section>
+<section id="making-the-invisible-visible" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="making-the-invisible-visible"><span class="header-section-number">4.3</span> Making the invisible visible</h2>
 <p>I still remember that suggesting this felt like a bit of a gamble.</p>
 <p>I was working as an external consultant. My colleague and I weren’t employees of the company. The business analysts and domain experts we collaborated with every day were the people who owned the business knowledge and ultimately decided where the budget should be invested.</p>
 <p>Nobody had asked for a monitoring application.</p>
@@ -419,6 +547,9 @@ ul.task-list li input[type="checkbox"] {
 <p>So I proposed building a monitoring application. Honestly, I wasn’t sure how people would react. Usually, external developers are hired to solve problems that the organization has already identified.</p>
 <p>This time, I was suggesting that there was a problem nobody had explicitly described yet. Fortunately, the team trusted me enough to give it a try. The purpose of the monitoring application was simply to show what was happening. SAP continuously sent incremental updates. Our system received those updates and reconstructed the customer master data structure expected by the company’s services. Most of the time, everything worked exactly as intended. Sometimes it didn’t. A customer relationship couldn’t be reconstructed. Some required information was missing. A combination of values appeared that nobody had anticipated. From a purely technical perspective, many of those situations could simply have been treated as errors. The system could have thrown an exception and stopped. But that wasn’t really the problem we were trying to solve. The problem wasn’t always that the software was broken. Quite often, the software was telling us that our understanding of the business was incomplete. That distinction turned out to be incredibly important.</p>
 <p>If we reduced every unexpected situation to a technical failure, we lost the context that would help us understand what had actually happened. Instead, we recorded those situations. We kept the incoming information, the decisions our system had made and the exact point where our existing assumptions no longer matched reality. The monitoring application made those situations visible. It didn’t try to hide the complexity behind a polished user interface. Quite the opposite. It exposed exactly the information we needed to understand the system’s behavior.</p>
+</section>
+<section id="when-the-whole-team-started-reading-it" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="when-the-whole-team-started-reading-it"><span class="header-section-number">4.4</span> When the whole team started reading it</h2>
 <p>What surprised me wasn’t that the monitoring application helped us developers. Of course it did. Whenever something unexpected happened, we suddenly had a much better starting point for our investigations. The real surprise came from somewhere else. The business analysts started using it. Nobody asked them to. Nobody trained them extensively. They simply added it to their daily routine. Every morning, they checked whether there were new situations that required attention.</p>
 <p>I still remember watching this transition happen. In the beginning, we explored the information together. We explained what different situations meant and how the technical details related to the business processes. But it didn’t take long before they no longer needed us. They learned how to read the information themselves. They understood which situations represented expected behavior and which ones indicated a genuine problem. Most importantly, they could now communicate directly with the SAP team without us developers acting as translators.</p>
 <p>That changed the dynamic of the entire project.</p>
@@ -432,13 +563,49 @@ ul.task-list li input[type="checkbox"] {
 <p>We can see this update from SAP. This customer relationship couldn’t be reconstructed because this information doesn’t match our current assumptions.</p>
 </blockquote>
 <p>The understanding was no longer hidden inside the people who had built the software. It became something the whole team could work with. At the time, I didn’t have a name for what we had created. I only knew that it felt fundamentally different from the documentation I had worked with before.</p>
+</section>
+<section id="a-shared-external-memory" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="a-shared-external-memory"><span class="header-section-number">4.5</span> A shared external memory</h2>
 <p>Documentation described the system. The monitoring application participated in understanding it. It stayed connected to reality because reality itself continuously updated it.</p>
 <p>Looking back, I think this was the first time I encountered something that acted like a team’s shared external memory.</p>
 <p>Not a replacement for conversations. A place where conversations could begin from the same shared reality.</p>
 
 
+</section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const marginSidebar = document.querySelector('#quarto-margin-sidebar');
+  if (marginSidebar && !document.querySelector('.newsletter-cta')) {
+    // Derive the correct relative path to /images based on page depth.
+    // Root pages use "images/...", subpages use "../images/..." etc.
+    const favicon = document.querySelector('link[rel="icon"], link[rel="shortcut icon"]');
+    let imgBase = 'images/';
+    if (favicon) {
+      const href = favicon.getAttribute('href') || '';
+      imgBase = href.replace(/favicon\.[a-z]+$/i, '');
+    }
+    const iconSrc = imgBase + 'prooph-board-icon.png';
+
+    marginSidebar.insertAdjacentHTML('beforeend', `
+      <hr class="newsletter-divider">
+      <div class="newsletter-cta">
+        <p class="cta-title">Stay updated</p>
+        <a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7519337649959034880" target="_blank">Subscribe on LinkedIn</a>
+        <p class="cta-subtitle">More than chapter updates: get the thinking behind the book, making-of notes, and bonus insights.</p>
+      </div>
+      <a class="reference-model-cta" href="https://flow.prooph-board.com/workspaces/6a1e495d-a382-425c-a440-0503b2dea707/577e6648-bc16-4cf9-85a0-359ba95b0f39" target="_blank">
+        <img class="reference-model-icon" src="${iconSrc}" alt="prooph board" width="24" height="24">
+        <span class="reference-model-text">
+          <span class="reference-model-title">Animal Shelter Reference Model</span>
+          <span class="reference-model-desc">Explore the model the Shelter Flow team designs and uses as specification for Agentic Engineering, on prooph board. Free account required.</span>
+        </span>
+      </a>
+    `);
+  }
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

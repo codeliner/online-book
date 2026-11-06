@@ -89,6 +89,110 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<style>
+/* Thin, subtle scrollbar for the left navigation sidebar */
+#quarto-sidebar {
+  scrollbar-width: thin;                      /* Firefox */
+  scrollbar-color: hsl(220, 10%, 80%) transparent;
+}
+#quarto-sidebar::-webkit-scrollbar {          /* Chrome/Safari/Edge */
+  width: 6px;
+}
+#quarto-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+#quarto-sidebar::-webkit-scrollbar-thumb {
+  background-color: hsl(220, 10%, 80%);
+  border-radius: 3px;
+}
+#quarto-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(220, 10%, 65%);
+}
+
+/* Remove the right border on the right-hand ToC panel (it conflicts
+   with the newsletter box border). Left nav sidebar keeps its border. */
+#quarto-margin-sidebar.sidebar {
+  border-right: none;
+}
+
+#quarto-margin-sidebar .newsletter-divider {
+  margin: 32px 0 24px 0;
+  border: 0;
+  border-top: 1px solid hsl(220, 10%, 85%);
+}
+
+#quarto-margin-sidebar .newsletter-cta {
+  margin: 0 0 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+#quarto-margin-sidebar .newsletter-cta .cta-title {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#quarto-margin-sidebar .newsletter-cta .libutton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  width: 200px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #0A66C2;
+  font-family: "SF Pro Text", Helvetica, sans-serif;
+  margin: 10px auto;
+}
+
+#quarto-margin-sidebar .newsletter-cta .cta-subtitle {
+  font-size: 0.75em;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Secondary info: Animal Shelter Reference Model (minimal design) */
+#quarto-margin-sidebar .reference-model-cta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0 20px 0;
+  text-decoration: none !important;
+  color: inherit;
+}
+#quarto-margin-sidebar .reference-model-icon {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+#quarto-margin-sidebar .reference-model-text {
+  display: block;
+}
+#quarto-margin-sidebar .reference-model-title {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #444;
+}
+#quarto-margin-sidebar .reference-model-cta:hover .reference-model-title {
+  color: #0A66C2;
+}
+#quarto-margin-sidebar .reference-model-desc {
+  display: block;
+  font-size: 0.7em;
+  line-height: 1.4;
+  color: #888;
+  margin-top: 3px;
+}
+</style>
 
 
 </head>
@@ -213,6 +317,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">From Events To Screens</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../storm/after-the-storm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">After The Storm</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -227,31 +337,31 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/from-understanding-to-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/why-event-modeling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Why Event Modeling</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Why Event Modeling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/from-events-to-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">From Events to Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">From Events to Specifications</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/specifying-user-interfaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Specifying User Interfaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Specifying User Interfaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/organizing-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Organizing Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Organizing Specifications</span></span></a>
   </div>
 </li>
       </ul>
@@ -268,25 +378,25 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/given-when-then.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Given-When-Then</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Given-When-Then</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/finding-misconceptions-early.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Finding Misconceptions Early</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Finding Misconceptions Early</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/quality-gates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Quality Gates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Quality Gates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/ai-review.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">AI Review</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AI Review</span></span></a>
   </div>
 </li>
       </ul>
@@ -303,25 +413,25 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/handing-specifications-to-agents.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Handing Specifications to Agents</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Handing Specifications to Agents</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/human-agent-collaboration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Human-Agent Collaboration</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Human-Agent Collaboration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/tracking-progress.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tracking Progress</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tracking Progress</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/refactoring-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Refactoring Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Refactoring Specifications</span></span></a>
   </div>
 </li>
       </ul>
@@ -338,25 +448,25 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/keeping-specifications-alive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Keeping Specifications Alive</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Keeping Specifications Alive</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/teams.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Teams</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Teams</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/product-engineering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Product Engineering</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Product Engineering</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/final-thoughts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Final Thoughts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Final Thoughts</span></span></a>
   </div>
 </li>
       </ul>
@@ -372,8 +482,18 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#a-room-full-of-excel-sheets" id="toc-a-room-full-of-excel-sheets" class="nav-link active" data-scroll-target="#a-room-full-of-excel-sheets"><span class="header-section-number">2.1</span> A room full of Excel sheets</a></li>
+  <li><a href="#what-a-word-really-means" id="toc-what-a-word-really-means" class="nav-link" data-scroll-target="#what-a-word-really-means"><span class="header-section-number">2.2</span> What a word really means</a></li>
+  <li><a href="#documents-that-enabled-conversations" id="toc-documents-that-enabled-conversations" class="nav-link" data-scroll-target="#documents-that-enabled-conversations"><span class="header-section-number">2.3</span> Documents that enabled conversations</a></li>
+  <li><a href="#building-understanding-before-software" id="toc-building-understanding-before-software" class="nav-link" data-scroll-target="#building-understanding-before-software"><span class="header-section-number">2.4</span> Building understanding before software</a></li>
+  <li><a href="#the-discipline-of-shared-understanding" id="toc-the-discipline-of-shared-understanding" class="nav-link" data-scroll-target="#the-discipline-of-shared-understanding"><span class="header-section-number">2.5</span> The discipline of shared understanding</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -409,6 +529,8 @@ div.csl-indent {
 <p>One of the team’s biggest challenges was matching newly delivered vehicles to the yearly orders made by the purchasing department.</p>
 <p>You might think that this should be a solved problem. Purchase orders cars. Manufacturers deliver cars. Someone confirms that everything arrived and puts the vehicles into service.</p>
 <p>That’s not how the business worked.</p>
+<section id="a-room-full-of-excel-sheets" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="a-room-full-of-excel-sheets"><span class="header-section-number">2.1</span> A room full of Excel sheets</h2>
 <p>Purchase didn’t negotiate contracts for individual vehicles. They negotiated yearly contracts for vehicle models with different manufacturers. Every month, trucks arrived with new vehicles, often with different equipment or model variants than originally expected. As long as the delivered vehicles fulfilled the contract, the manufacturer had done nothing wrong.</p>
 <p>Infleet had a completely different problem.</p>
 <p>Their work only started once those physical vehicles arrived at one of the rental locations. Someone had to figure out which delivered vehicle belonged to which ordered model pool. There was no electronic contract linking one to the other. Most of that work happened manually.</p>
@@ -426,6 +548,9 @@ div.csl-indent {
 <p>Looking back, that’s probably the biggest thing I took away from those two years.</p>
 <p>Since then, direct collaboration with domain experts has become non-negotiable for me. Every project I’ve joined afterwards started with the same question: How do we get the right people into the same conversation? Because once that works, many of the technical decisions suddenly become much easier.</p>
 <p>It also changed the way I approached conversations with domain experts.</p>
+</section>
+<section id="what-a-word-really-means" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="what-a-word-really-means"><span class="header-section-number">2.2</span> What a word really means</h2>
 <p>When I joined the project, I assumed that understanding the business meant learning the business terminology. It didn’t take long to realize that things were a little more complicated than that.</p>
 <p>Take the word <em>vehicle</em>.</p>
 <p>It sounds like a perfectly reasonable business term. In fact, I think most developers would happily create a <code>Vehicle</code> class, a <code>Vehicle</code> table and probably a <code>VehicleService</code> without thinking twice about it.</p>
@@ -445,6 +570,9 @@ div.csl-indent {
 <p>Only then did the conversations start making sense.</p>
 <p>Reading about concepts like Ubiquitous Language or Bounded Contexts is one thing. Sitting in a meeting where two departments unknowingly use the same word for different concepts is something completely different. That’s when those concepts stop being theory.</p>
 <p>There was another observation that stayed with me long after the project had finished.</p>
+</section>
+<section id="documents-that-enabled-conversations" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="documents-that-enabled-conversations"><span class="header-section-number">2.3</span> Documents that enabled conversations</h2>
 <p>One of my colleagues spent almost two years reading COBOL code.</p>
 <p>His job was to understand what the existing system actually did and document its behaviour in Word. Those documents then became the basis for discussions with domain experts. Sometimes they confirmed that everything was correct. Sometimes they told us that the system had behaved differently for years than the business actually expected. And every now and then they looked at each other because nobody was completely sure anymore.</p>
 <p>I still find that fascinating.</p>
@@ -466,6 +594,9 @@ div.csl-indent {
 <p>The biggest challenge was understanding the business well enough that we could confidently change it.</p>
 <p>Only then could we start modernizing the software.</p>
 <p>So what were we actually creating during those two years?</p>
+</section>
+<section id="building-understanding-before-software" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="building-understanding-before-software"><span class="header-section-number">2.4</span> Building understanding before software</h2>
 <p>Today, I’d simply call it <em>shared understanding</em>.</p>
 <p>I don’t mean that everyone suddenly knew everything. That’s impossible in a business of that size, and even after two years I only understood a tiny part of it. Shared understanding doesn’t require everyone to know everything. It means that the people working together on a business capability develop the same mental model of <em>their</em> part of the business. They gradually learn to speak the same language, understand the same concepts and, just as importantly, know where the boundaries of their own understanding are.</p>
 <p>Looking back, that’s exactly what happened in our team.</p>
@@ -478,6 +609,9 @@ div.csl-indent {
 <p>The problem only appears later.</p>
 <p>Every change becomes more expensive because the team first has to recover the understanding that was lost between meetings, documents and source code. That’s exactly what we experienced during the modernization project. We weren’t only replacing COBOL. We spent a considerable amount of time recovering business knowledge that had slowly disappeared from the organization over many years.</p>
 <p>Since then, I’ve seen the same pattern again and again.</p>
+</section>
+<section id="the-discipline-of-shared-understanding" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="the-discipline-of-shared-understanding"><span class="header-section-number">2.5</span> The discipline of shared understanding</h2>
 <p>Whenever a project struggled, the visible problems were usually technical. The architecture wasn’t flexible enough. The backlog kept growing. Teams argued about requirements. Delivery became slower and slower. But when I looked a little deeper, the root cause was surprisingly often the same. Business and technology no longer shared the same understanding of the business they were trying to change.</p>
 <p>That’s why direct collaboration with domain experts has become a non-negotiable requirement for me. Not because I believe they can write better requirements, but because requirements are only snapshots of what people know at a particular moment in time. Shared understanding is what allows a team to continuously make good decisions long after those requirements have been written down. It enables a team to reason together when the business changes, new information becomes available or yesterday’s assumptions turn out to be wrong.</p>
 <p>Looking back, this is probably the biggest lesson I took away from those two years.</p>
@@ -490,8 +624,41 @@ div.csl-indent {
 Evans, Eric. 2003. <em>Domain-Driven Design: Tackling Complexity in the Heart of Software</em>. Addison-Wesley Professional.
 </div>
 </div>
+</section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const marginSidebar = document.querySelector('#quarto-margin-sidebar');
+  if (marginSidebar && !document.querySelector('.newsletter-cta')) {
+    // Derive the correct relative path to /images based on page depth.
+    // Root pages use "images/...", subpages use "../images/..." etc.
+    const favicon = document.querySelector('link[rel="icon"], link[rel="shortcut icon"]');
+    let imgBase = 'images/';
+    if (favicon) {
+      const href = favicon.getAttribute('href') || '';
+      imgBase = href.replace(/favicon\.[a-z]+$/i, '');
+    }
+    const iconSrc = imgBase + 'prooph-board-icon.png';
+
+    marginSidebar.insertAdjacentHTML('beforeend', `
+      <hr class="newsletter-divider">
+      <div class="newsletter-cta">
+        <p class="cta-title">Stay updated</p>
+        <a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7519337649959034880" target="_blank">Subscribe on LinkedIn</a>
+        <p class="cta-subtitle">More than chapter updates: get the thinking behind the book, making-of notes, and bonus insights.</p>
+      </div>
+      <a class="reference-model-cta" href="https://flow.prooph-board.com/workspaces/6a1e495d-a382-425c-a440-0503b2dea707/577e6648-bc16-4cf9-85a0-359ba95b0f39" target="_blank">
+        <img class="reference-model-icon" src="${iconSrc}" alt="prooph board" width="24" height="24">
+        <span class="reference-model-text">
+          <span class="reference-model-title">Animal Shelter Reference Model</span>
+          <span class="reference-model-desc">Explore the model the Shelter Flow team designs and uses as specification for Agentic Engineering, on prooph board. Free account required.</span>
+        </span>
+      </a>
+    `);
+  }
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

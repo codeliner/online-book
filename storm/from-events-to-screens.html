@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../design/from-understanding-to-structure.html" rel="next">
+<link href="../storm/after-the-storm.html" rel="next">
 <link href="../storm/discovering-the-big-picture.html" rel="prev">
 <link href="../images/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -69,6 +69,110 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>
+/* Thin, subtle scrollbar for the left navigation sidebar */
+#quarto-sidebar {
+  scrollbar-width: thin;                      /* Firefox */
+  scrollbar-color: hsl(220, 10%, 80%) transparent;
+}
+#quarto-sidebar::-webkit-scrollbar {          /* Chrome/Safari/Edge */
+  width: 6px;
+}
+#quarto-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+#quarto-sidebar::-webkit-scrollbar-thumb {
+  background-color: hsl(220, 10%, 80%);
+  border-radius: 3px;
+}
+#quarto-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(220, 10%, 65%);
+}
+
+/* Remove the right border on the right-hand ToC panel (it conflicts
+   with the newsletter box border). Left nav sidebar keeps its border. */
+#quarto-margin-sidebar.sidebar {
+  border-right: none;
+}
+
+#quarto-margin-sidebar .newsletter-divider {
+  margin: 32px 0 24px 0;
+  border: 0;
+  border-top: 1px solid hsl(220, 10%, 85%);
+}
+
+#quarto-margin-sidebar .newsletter-cta {
+  margin: 0 0 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+#quarto-margin-sidebar .newsletter-cta .cta-title {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#quarto-margin-sidebar .newsletter-cta .libutton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  width: 200px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #0A66C2;
+  font-family: "SF Pro Text", Helvetica, sans-serif;
+  margin: 10px auto;
+}
+
+#quarto-margin-sidebar .newsletter-cta .cta-subtitle {
+  font-size: 0.75em;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Secondary info: Animal Shelter Reference Model (minimal design) */
+#quarto-margin-sidebar .reference-model-cta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0 20px 0;
+  text-decoration: none !important;
+  color: inherit;
+}
+#quarto-margin-sidebar .reference-model-icon {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+#quarto-margin-sidebar .reference-model-text {
+  display: block;
+}
+#quarto-margin-sidebar .reference-model-title {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #444;
+}
+#quarto-margin-sidebar .reference-model-cta:hover .reference-model-title {
+  color: #0A66C2;
+}
+#quarto-margin-sidebar .reference-model-desc {
+  display: block;
+  font-size: 0.7em;
+  line-height: 1.4;
+  color: #888;
+  margin-top: 3px;
+}
+</style>
 
 
 </head>
@@ -193,6 +297,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">From Events To Screens</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../storm/after-the-storm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">After The Storm</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -207,31 +317,31 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/from-understanding-to-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/why-event-modeling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Why Event Modeling</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Why Event Modeling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/from-events-to-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">From Events to Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">From Events to Specifications</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/specifying-user-interfaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Specifying User Interfaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Specifying User Interfaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../design/organizing-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Organizing Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Organizing Specifications</span></span></a>
   </div>
 </li>
       </ul>
@@ -248,25 +358,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/given-when-then.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Given-When-Then</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Given-When-Then</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/finding-misconceptions-early.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Finding Misconceptions Early</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Finding Misconceptions Early</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/quality-gates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Quality Gates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Quality Gates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../validate/ai-review.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">AI Review</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">AI Review</span></span></a>
   </div>
 </li>
       </ul>
@@ -283,25 +393,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/handing-specifications-to-agents.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Handing Specifications to Agents</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Handing Specifications to Agents</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/human-agent-collaboration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Human-Agent Collaboration</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Human-Agent Collaboration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/tracking-progress.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Tracking Progress</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tracking Progress</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../build/refactoring-specifications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Refactoring Specifications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Refactoring Specifications</span></span></a>
   </div>
 </li>
       </ul>
@@ -318,25 +428,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/keeping-specifications-alive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Keeping Specifications Alive</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Keeping Specifications Alive</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/teams.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Teams</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Teams</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/product-engineering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Product Engineering</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Product Engineering</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../evolve/final-thoughts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Final Thoughts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Final Thoughts</span></span></a>
   </div>
 </li>
       </ul>
@@ -352,8 +462,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#how-do-you-make-toast" id="toc-how-do-you-make-toast" class="nav-link active" data-scroll-target="#how-do-you-make-toast"><span class="header-section-number">10.1</span> How do you make toast?</a></li>
+  <li><a href="#sketching-the-first-screens" id="toc-sketching-the-first-screens" class="nav-link" data-scroll-target="#sketching-the-first-screens"><span class="header-section-number">10.2</span> Sketching the first screens</a></li>
+  <li><a href="#what-sits-behind-a-screen" id="toc-what-sits-behind-a-screen" class="nav-link" data-scroll-target="#what-sits-behind-a-screen"><span class="header-section-number">10.3</span> What sits behind a screen</a></li>
+  <li><a href="#the-iceberg-beneath-the-board" id="toc-the-iceberg-beneath-the-board" class="nav-link" data-scroll-target="#the-iceberg-beneath-the-board"><span class="header-section-number">10.4</span> The iceberg beneath the board</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -411,6 +530,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Mina smiles. She knows exactly how easily a discussion about a button can consume half an hour.</p>
 <p>But before they start sketching screens for the shelter, Kim suggests a small exercise.</p>
+<section id="how-do-you-make-toast" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="how-do-you-make-toast"><span class="header-section-number">10.1</span> How do you make toast?</h2>
 <div class="quote-kim">
 <blockquote class="blockquote">
 <p>“Let’s try something first. Everyone gets a sheet of paper. Draw how to make toast. Don’t discuss it with anyone. Just draw the steps as you imagine them.”</p>
@@ -476,6 +597,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>The exercise takes barely ten minutes, but it changes the atmosphere. The team has a shared reference for the next step, and nobody feels the need to produce a beautiful design. In fact, the rougher the sketches, the easier it is to talk about them.</p>
 <p>Kim takes a large sheet of paper and draws a rough rectangle. She adds a few larger areas inside it, using the broad marker to make the structure visible.</p>
+</section>
+<section id="sketching-the-first-screens" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="sketching-the-first-screens"><span class="header-section-number">10.2</span> Sketching the first screens</h2>
 <div class="quote-kim">
 <blockquote class="blockquote">
 <p>“This is all we’re after. A sketch that helps us talk. We can add details later.”</p>
@@ -495,6 +619,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Leon nods. That’s the next step. For every screen, they want to identify the properties that need to be visible. And where the user enters information, they also want to capture the data collected by the interface.</p>
 <p>They introduce two more colors of sticky notes. Green for the properties displayed on a screen, blue for the data collected through the UI. These go below the corresponding screen, with the orange events remaining underneath. The arrangement gives them a vertical slice: the screen, the information it displays or collects, and the event associated with it.</p>
+</section>
+<section id="what-sits-behind-a-screen" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="what-sits-behind-a-screen"><span class="header-section-number">10.3</span> What sits behind a screen</h2>
 <p>At first, this sounds straightforward. They have the screens. They know the events. Surely, filling in the information between them is mostly a matter of listing fields.</p>
 <p>But the first few questions already suggest otherwise.</p>
 <p>The first screen they tackle in more detail is the Occupancy Board.</p>
@@ -537,6 +664,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Sarah continues explaining how they work today. Some of the information is recorded in a spreadsheet on a shared drive, some is kept in people’s heads, and some depends on staff knowing the current situation. The team realizes that the Occupancy Board is only the visible part of a much larger capability.</p>
 <p>They add a few more notes and mark questions they cannot answer yet. The original sketch has not become useless. Quite the opposite. It has helped them discover what they need to understand before they can design it properly.</p>
 <p>And this is where the afternoon starts to feel different from the morning.</p>
+</section>
+<section id="the-iceberg-beneath-the-board" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="the-iceberg-beneath-the-board"><span class="header-section-number">10.4</span> The iceberg beneath the board</h2>
 <p>During the Big Picture Event Storming, the team moved quickly. Events gave them a way to explore a broad domain without having to understand every detail. They could follow the story, add what happened, and keep moving. Three hours later, they had a timeline that felt complete.</p>
 <p>Now they are looking at one screen and discovering how much sits behind it.</p>
 <p>The Occupancy Board is a good example because nobody questioned its existence in the morning. Everyone could imagine a board showing the animals in the shelter. It sounded so obvious that there was no reason to stop and investigate it.</p>
@@ -548,8 +678,41 @@ ul.task-list li input[type="checkbox"] {
 <p>He slowly starts to realize what <a href="https://eventmodeling.org/posts/what-is-event-modeling/">Event Modeling</a> is about, and how it might indeed be the missing ingredient for Agentic Engineering.</p>
 
 
+</section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const marginSidebar = document.querySelector('#quarto-margin-sidebar');
+  if (marginSidebar && !document.querySelector('.newsletter-cta')) {
+    // Derive the correct relative path to /images based on page depth.
+    // Root pages use "images/...", subpages use "../images/..." etc.
+    const favicon = document.querySelector('link[rel="icon"], link[rel="shortcut icon"]');
+    let imgBase = 'images/';
+    if (favicon) {
+      const href = favicon.getAttribute('href') || '';
+      imgBase = href.replace(/favicon\.[a-z]+$/i, '');
+    }
+    const iconSrc = imgBase + 'prooph-board-icon.png';
+
+    marginSidebar.insertAdjacentHTML('beforeend', `
+      <hr class="newsletter-divider">
+      <div class="newsletter-cta">
+        <p class="cta-title">Stay updated</p>
+        <a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7519337649959034880" target="_blank">Subscribe on LinkedIn</a>
+        <p class="cta-subtitle">More than chapter updates: get the thinking behind the book, making-of notes, and bonus insights.</p>
+      </div>
+      <a class="reference-model-cta" href="https://flow.prooph-board.com/workspaces/6a1e495d-a382-425c-a440-0503b2dea707/577e6648-bc16-4cf9-85a0-359ba95b0f39" target="_blank">
+        <img class="reference-model-icon" src="${iconSrc}" alt="prooph board" width="24" height="24">
+        <span class="reference-model-text">
+          <span class="reference-model-title">Animal Shelter Reference Model</span>
+          <span class="reference-model-desc">Explore the model the Shelter Flow team designs and uses as specification for Agentic Engineering, on prooph board. Free account required.</span>
+        </span>
+      </a>
+    `);
+  }
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -974,8 +1137,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../design/from-understanding-to-structure.html" class="pagination-link" aria-label="From Understanding to Structure">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">From Understanding to Structure</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../storm/after-the-storm.html" class="pagination-link" aria-label="After The Storm">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">After The Storm</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
